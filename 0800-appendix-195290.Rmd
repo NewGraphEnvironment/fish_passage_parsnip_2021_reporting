@@ -1,0 +1,82 @@
+
+```{r setup-195290, eval = F}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+# source('R/packages.R')
+# source('R/functions.R')
+```
+
+
+
+```{r  load-data-195290}
+my_site <- 195290
+my_site2 <- 195288
+my_site2_xref <- 14000079
+
+
+# `r appendix_title2()`
+
+```
+
+# Appendix - 05000 - Iterative Title {-}
+
+## Header with no number {-}
+
+
+
+```{r model-195290, eval = identical(gitbook_on, TRUE)}
+model_url <- '<iframe src="https://www.mapsmadeeasy.com/maps/public_3D/9ee5bee50be8436abbeb1dc83f4235cb" scrolling="no" title="Maps Made Easy" width="100%" height="500" frameBorder ="0"></iframe>'
+
+knitr::asis_output(model_url)
+```
+
+
+```{r model-caption-195290, fig.cap= my_caption, out.width = "0.01%", eval = identical(gitbook_on, TRUE)}
+my_photo = 'fig/pixel.png'
+
+my_caption = paste0('Interactive 3D model of habitat immediately upstream and downstream of PSCIS crossing ', my_site, '.')
+
+knitr::include_graphics(my_photo, dpi = NA)
+
+```
+
+
+
+```{r photo-195290-01-prep, eval = F}
+my_photo1 = pull_photo_by_str(str_to_pull = '_d1_')
+
+my_caption1 = paste0('Typical habitat downstream of PSCIS crossing ', my_site, '.')
+
+```
+
+```{r photo-195290-01, fig.cap= my_caption1, out.width = photo_width, eval = F}
+grid::grid.raster(get_img(photo = my_photo1))
+
+# eval=gitbook_on
+```
+
+<br>
+
+```{r photo-195290-02, eval = F}
+my_photo2 = pull_photo_by_str(str_to_pull = '_f1_')
+
+my_caption2 = paste0('Coho captured downstream of PSCIS crossing ', my_site, '.')
+```
+
+```{r photo-195290-02-print, fig.cap= my_caption2, out.width = photo_width, eval = F}
+grid::grid.raster(get_img(photo = my_photo2))
+
+```
+
+<br>
+
+```{r photo-195290-d01, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval = F}
+
+# eval=identical(gitbook_on, FALSE)
+
+my_caption <- paste0('Left: ', my_caption1, ' Right: ', my_caption2)
+
+knitr::include_graphics(get_img_path(photo = my_photo1))
+knitr::include_graphics("fig/pixel.png")
+knitr::include_graphics(get_img_path(photo = my_photo2))
+```
+
