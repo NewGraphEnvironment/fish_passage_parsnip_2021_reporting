@@ -1,20 +1,22 @@
 
 
-# Introduction {#intro}
+# Introduction {-}
 
-`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/mybookdown-template/) at https://newgraphenvironment.github.io/mybookdown-template/. We recommend viewing online as the web-hosted html version contains more features and is more easily navigable.")` 
-
+`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the latest pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
 
 `r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br>")}`
 
 
 
 
-## Header with no number {-}
+This project builds on Society for Ecosystem Restoration Northern BC (SERNbc) work in 2019 - 2020 which can be referenced [here](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/). In 2019, following a literature review, analysis of fish habitat modelling data, the Provincial Stream Crossing Inventory System (PSCIS) and a community scoping exercise within the McLeod Lake Indian Band habitat confirmation assessments were conducted throughout the Parsnip River watershed. At 17 sites where habitat confirmation assessments were conducted, crossings were rated for fish passage remediation priority.
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+<br>
+
+ is working together with the Peace Region Fish and Wildlife Compensation Program (FWCP), the McLeod Lake Indian Band, the Provincial Fish Passage Technical Working Group (FPTWG), road/rail tenure holders and other FWCP stakeholders/partners to prioritize, plan and fund the restoration of fish passage at road crossing structure barriers throughout the Parsnip River watershed. 
+
+<br>
+
+
+The project aligns with the Fish and Wildlife Compensation Program Streams Action Plan [@fishandwildlifecompensationprogramPeaceBasinStreams2014] objective 1d-1 of reviewing existing information on stream restoration/enhancement opportunities and provide prioritized enhancement recommendations. Additionally, the project aims to conserve and enhance high priority species and habitats by aligning with @fishandwildlifecompensationprogramPeaceBasinStreams2014 objective 1d-3: restoring fish passage in streams.
+

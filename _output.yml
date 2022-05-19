@@ -1,18 +1,18 @@
 bookdown::gitbook:
-  toc_depth: 1
+  toc_depth: 2
   css: style.css
   config:
     toc:
       before: |
-        <li><a href="./">Template</a></li>
+        <li><a href="./">Parsnip Fish Passage 2021</a></li>
       after: |
-        <li><a href="https://github.com/NewGraphEnvironment/mybookdown-template" target="blank">Scripts and Data</a></li>
-    download: ["Template.pdf", "Template.html"]
+        <li><a href="https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting" target="blank">Scripts and Data</a></li>
+    download: ["parsnip2021.pdf", "Template.html"]
     fontsettings:
       theme: night
       family: sans
 pagedown::html_paged:
-  front_cover: "fig/new graph text only.png"
+  front_cover: "fig/nge-icon_name_black.png"
   css: ["style-pagedown.css", "default-page-custom.css", "default"] #
   toc: true
   toc_depth: 1

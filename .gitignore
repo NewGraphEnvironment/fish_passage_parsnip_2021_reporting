@@ -7,5 +7,10 @@ _bookdown_files
 rsconnect
 
 R/private_info.R
-
-
+fig/nge-icon.png
+fig/nge-full_white.png
+fig/collaboration.jpg
+packages.bib
+.git/objects/pack/pack-725faa3c85a7d1836010b7cd19d1de88604f85b9.pack
+.git/objects/pack/pack-be86005f068669db12fc7116ded816f467b391c0.pack
+.Rproj.user/2808B0D9/bibliography-index/biblio.json

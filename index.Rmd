@@ -1,10 +1,12 @@
 --- 
-title: "My Report"
+title: "PEA-F22-F-3577-DCA Restoring Fish Passage in the Peace Region"
 author: |
  |
  | Prepared for
-
- |
+ | Fish and Wildlife Compensation Program  
+ | Peace Region  
+ | 3333 22nd Avenue  
+ | Prince George, BC  V2N1B4  
  |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
@@ -12,8 +14,7 @@ author: |
 
 date: |
  |
- | Version 0.0.1
- | `r format(Sys.Date(), "%Y-%m-%d")`
+ | Version 0.0.1 `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site
 output: 
@@ -23,7 +24,7 @@ output:
 nocite: |
 
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib, packages.bib, references.bib]
 biblio-style: apalike
 link-citations: no
 github-repo: rstudio/bookdown-demo
