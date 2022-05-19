@@ -4,13 +4,15 @@ author: |
  |
  | Prepared for
  | Fish and Wildlife Compensation Program  
- | Peace Region  
- | 3333 22nd Avenue  
- | Prince George, BC  V2N1B4  
+ | Fish Passage Technical Working Group 
  |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
+ |
+ | Prepared with financial support of the Fish and Wildlife Compensation Program on
+ | behalf of its program partners BC Hydro, the Province of BC, Fisheries and Oceans
+ | Canada, First Nations and Public Stakeholders.
 
 date: |
  |

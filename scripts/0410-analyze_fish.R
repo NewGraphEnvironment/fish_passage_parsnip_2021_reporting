@@ -50,7 +50,7 @@ WHERE e.watershed_group_code IN ('PARS');"
 
 ##e.species_code = 'WCT' AND
 # unique(fiss_sum$species_code)
-species_of_interest <- c('BT', 'RB', 'GR', 'BMC')
+species_of_interest <- c('BT', 'RB', 'GR', 'KO')
 
 
 fiss_sum <- st_read(conn, query = query) %>%
@@ -60,12 +60,17 @@ fiss_sum2 <- fiss_sum %>%
   group_by(species_code) %>%
   summarise(total_spp = n())
 
+# get a summary of how many streams have chan width and map but no channel width
+fish_no_width
+
+
+
 #!!!!!!!!!all the width data is gone so we need to use our archived version!!!!!!!!!!!!
 
 
 ##burn it all to a file we can use later
-# fiss_sum %>% readr::write_csv(file = paste0(getwd(), '/data/extracted_inputs/fiss_sum.csv'))
-# fiss_sum <- readr::read_csv(file = paste0(getwd(), '/data/extracted_inputs/fiss_sum.csv'))
+# fiss_sum %>% readr::write_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum.csv'))
+# fiss_sum <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum.csv'))
 #
 # ##lets put it in the sqlite for safekeeping
 conn <- rws_connect("data/bcfishpass.sqlite")
@@ -118,7 +123,9 @@ fiss_sum_grad <- left_join(
 
 ##save this for the report
 ##burn it all to a file we can use later
-fiss_sum_grad %>% readr::write_csv(file = paste0(getwd(), '/data/extracted_inputs/fiss_sum_grad.csv'))
+fiss_sum_grad %>% readr::write_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_grad.csv'))
+
+
 
 
 plot_grad <- fiss_sum_grad %>%
@@ -126,7 +133,7 @@ plot_grad <- fiss_sum_grad %>%
   ggplot(aes(x = Gradient, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  theme_bw(base_size = 11)+
+  ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Average Stream Gradient", y = "Occurrences (%)")
 plot_grad
 
@@ -167,7 +174,7 @@ fiss_sum_width <- left_join(
 
 ##save this for the report
 ##burn it all to a file we can use later
-fiss_sum_width %>% readr::write_csv(file = paste0(getwd(), '/data/extracted_inputs/fiss_sum_width.csv'))
+fiss_sum_width %>% readr::write_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_width.csv'))
 
 
 
@@ -179,7 +186,6 @@ plot_width <- fiss_sum_width %>%
   ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Channel Width", y = "Occurrences (%)")
 plot_width
-
 
 #############WATERSHED SIZE#################################################
 # bin_1 <- min(fiss_sum$upstream_area_ha, na.rm = TRUE)
@@ -211,44 +217,46 @@ plot_wshed_hist <- ggplot(fiss_sum_wshed_filter, aes(x=upstream_area_ha
 plot_wshed_hist
 
 
-# fiss_sum_wshed_prep1 <- fiss_sum %>%
-#   mutate(Watershed = case_when(
-#     upstream_area_ha < 5 ~ '0 - 5m',
-#     upstream_area_ha >= 5 &  upstream_area_ha < 10 ~ '05 - 10m',
-#     upstream_area_ha >= 10 &  upstream_area_ha < 15 ~ '10 - 15m',
-#     upstream_area_ha >= 15 &  upstream_area_ha < 20 ~ '15 - 20m',
-#     upstream_area_ha >= 20  ~ '20m+')) %>%
-#   mutate(watershed_id = case_when(
-#     upstream_area_ha < 5 ~ 5,
-#     upstream_area_ha >= 5 &  upstream_area_ha < 10 ~ 10,
-#     upstream_area_ha >= 10 &  upstream_area_ha < 15 ~ 15,
-#     upstream_area_ha >= 15 &  upstream_area_ha < 20 ~ 20,
-#     upstream_area_ha >= 20  ~ 99))
+fiss_sum_wshed_prep1 <- fiss_sum %>%
+  mutate(Watershed = case_when(
+    upstream_area_ha < 2500 ~ '0 - 2500ha',
+    upstream_area_ha >= 2500 &  upstream_area_ha < 5000 ~ '02500 - 5000ha',
+    upstream_area_ha >= 5000 &  upstream_area_ha < 7500 ~ '05000 - 7500ha',
+    upstream_area_ha >= 7500 &  upstream_area_ha < 10000 ~ '07500 - 10000ha',
+    upstream_area_ha >= 10000 ~ '10000ha+')) %>%
+  mutate(watershed_id = case_when(
+    upstream_area_ha < 2500 ~ 25005,
+    upstream_area_ha >= 2500 &  upstream_area_ha < 5000 ~ 5000,
+    upstream_area_ha >= 5000 &  upstream_area_ha < 7500 ~ 7500,
+    upstream_area_ha >= 7500 &  upstream_area_ha < 10000 ~ 10000,
+    upstream_area_ha >= 10000  ~ 99999))
+
+fiss_sum_wshed_prep2 <- fiss_sum_wshed_prep1 %>%
+  group_by(species_code) %>%
+  summarise(total_spp = n())
+
+fiss_sum_wshed_prep3 <- fiss_sum_wshed_prep1 %>%
+  group_by(species_code, Watershed, upstream_area_ha)  %>%
+  summarise(Count = n())
+
+fiss_sum_wshed <- left_join(
+  fiss_sum_wshed_prep3,
+  fiss_sum_wshed_prep2,
+  by = 'species_code'
+) %>%
+  mutate(Percent = round(Count/total_spp * 100, 0))
+
+##save this for the report
+##burn it all to a file we can use later
+fiss_sum_wshed %>% readr::write_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_wshed.csv'))
 #
-# fiss_sum_width_prep2 <- fiss_sum_width_prep1 %>%
-#   group_by(species_code) %>%
-#   summarise(total_spp = n())
-#
-# fiss_sum_width_prep3 <- fiss_sum_width_prep1 %>%
-#   group_by(species_code, Width, width_id)  %>%
-#   summarise(Count = n())
-#
-# fiss_sum_width <- left_join(
-#   fiss_sum_width_prep3,
-#   fiss_sum_width_prep2,
-#   by = 'species_code'
-# ) %>%
-#   mutate(Percent = round(Count/total_spp * 100, 0))
-#
-# ##save this for the report
-# ##burn it all to a file we can use later
-# fiss_sum_width %>% readr::write_csv(file = paste0(getwd(), '/data/extracted_inputs/fiss_sum_width.csv'))
-#
-# plot_width <- fiss_sum_width %>%
-#   filter(!is.na(width_id)) %>%
-#   ggplot(aes(x = Width, y = Percent)) +
-#   geom_bar(stat = "identity")+
-#   facet_wrap(~species_code, ncol = 2)+
-#   theme_bw(base_size = 11)+
-#   labs(x = "Channel Width", y = "Occurrences (%)")
-# plot_width
+plot_width <- fiss_sum_wshed %>%
+  filter(!is.na(upstream_area_ha)) %>%
+  ggplot(aes(x = Watershed, y = Percent)) +
+  geom_bar(stat = "identity")+
+  facet_wrap(~species_code, ncol = 2)+
+  theme_bw(base_size = 11)+
+  labs(x = "Watershed Area", y = "Occurrences (%)")+
+  theme(axis.text.x=element_text(angle = 45, hjust = 1))
+plot_width
+

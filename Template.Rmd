@@ -4,13 +4,15 @@ author: |
  |
  | Prepared for
  | Fish and Wildlife Compensation Program  
- | Peace Region  
- | 3333 22nd Avenue  
- | Prince George, BC  V2N1B4  
+ | Fish Passage Technical Working Group 
  |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
+ |
+ | Prepared with financial support of the Fish and Wildlife Compensation Program on
+ | behalf of its program partners BC Hydro, the Province of BC, Fisheries and Oceans
+ | Canada, First Nations and Public Stakeholders.
 
 date: |
  |
@@ -190,7 +192,7 @@ A study of bull trout critical habitats in the Parsnip River was conducted in 20
 
 <br>
 
-In 2018, sub-basins of the Anzac River watershed, Homininka River, Missinka River and Table River watersheds were designated as fisheries sensitive watersheds under the authority of the *Forest and Range Practices Act* due to significant downstream fisheries values and significant watershed sensitivity [@anzac_sens; @hominka_sens; @table_sens; @missinka_sens]. Special management is required in these watersheds to protect habitat for fish species including bull trout and Arctic Grayling including measures (among others) to limit equivalent clearcut area, reduce impacts to natural stream channel morphology, retain old growth attributes and maintain fish habitat/movement [@fsw_order].    
+In 2018, sub-basins of the Anzac River watershed, Homininka River, Missinka River and Table River watersheds were designated as fisheries sensitive watersheds under the authority of the *Forest and Range Practices Act* due to significant downstream fisheries values and significant watershed sensitivity [@anzac_sens; @hominka_sens; @table_sens; @missinka_sens]. Special management is required in these watersheds to protect habitat for fish species including bull trout and Arctic grayling including measures (among others) to limit equivalent clearcut area, reduce impacts to natural stream channel morphology, retain old growth attributes and maintain fish habitat/movement [@fsw_order].    
 
 <br>
 
@@ -198,16 +200,16 @@ Tse'khene Elders from the McLeod Lake Indian Band report that sa'ba (Bull Trout)
 
 <br>
 
-#### Arctic Grayling
-A detailed review of Arctic Grayling life history can be referenced in @stamfordFWCPArcticGrayling. Since impoundment of the Williston Reservoir, it appears that physical habitat and ecological changes have been the most significant factors limiting Arctic Grayling productivity. Although these changes are not well understood they have likely resulted in the inundation of key low gradient juvenile rearing and overwintering habitats, isolation of previously connected populations and increases in abundance of predators such as bull trout [@shrimptonj.m.GeneticAnalysisArctic2012; @hagenTrendAbundanceArctic2018].  
+### Arctic Grayling {-}
+A detailed review of Arctic grayling life history can be referenced in @stamfordFWCPArcticGrayling. Since impoundment of the Williston Reservoir, it appears that physical habitat and ecological changes have been the most significant factors limiting Arctic grayling productivity. Although these changes are not well understood they have likely resulted in the inundation of key low gradient juvenile rearing and overwintering habitats, isolation of previously connected populations and increases in abundance of predators such as bull trout [@shrimptonj.m.GeneticAnalysisArctic2012; @hagenTrendAbundanceArctic2018].  
 
 <br>
 
-Migration of mature adult Arctic Grayling occurs in the spring with arrival at known spawning locations coinciding with water temperatures of 4$^\circ$C.  Spawning in the Parsnip watershed appears to occur between late-May and late-June within sites located primarily within the lower reaches of the Anzac and Table rivers as well as within the Parsnip River mainstem. Side-channel and multiple-channel locations containing small gravels appear to be selected for spawning. Currently, the primary distribution of Williston Arctic Grayling appears to be among fourth order and larger streams [@williamson_2004; @stamfordFWCPArcticGrayling]. @stewartFishLifeHistory2007 report that Arctic Grayling spawn in large and small tributaries to rivers and lakes, intermittent streams, within mainstem rivers as well as lakes, most commonly at tributary mouths.   Although past study results indicate that 0+ grayling appeared to overwinter in lower reaches of larger tributaries (i.e. Table, Anzac rivers) as well as the Parsnip River and that few age-1+ grayling have been sampled in tributaries, habitat use in small tributaries and the extent they are connected with the mainstem habitats of all core areas is not well understood. Between 1995 and 2019, Arctic Grayling population monitoring has been conducted in the Table River in nine out of 25 years (8 years for the Anzac) using snorkel surveys.  Results from 2018 are 2019 are intended to contribute to the assessment of the conservation status of the species in the Parsnip Core area [@hagenTrendAbundanceArctic2018].
+Migration of mature adult Arctic grayling occurs in the spring with arrival at known spawning locations coinciding with water temperatures of 4$^\circ$C.  Spawning in the Parsnip watershed appears to occur between late-May and late-June within sites located primarily within the lower reaches of the Anzac and Table rivers as well as within the Parsnip River mainstem. Side-channel and multiple-channel locations containing small gravels appear to be selected for spawning. Currently, the primary distribution of Williston Arctic grayling appears to be among fourth order and larger streams [@williamson_2004; @stamfordFWCPArcticGrayling]. @stewartFishLifeHistory2007 report that Arctic grayling spawn in large and small tributaries to rivers and lakes, intermittent streams, within mainstem rivers as well as lakes, most commonly at tributary mouths.   Although past study results indicate that 0+ grayling appeared to overwinter in lower reaches of larger tributaries (i.e. Table, Anzac rivers) as well as the Parsnip River and that few age-1+ grayling have been sampled in tributaries, habitat use in small tributaries and the extent they are connected with the mainstem habitats of all core areas is not well understood. Between 1995 and 2019, Arctic grayling population monitoring has been conducted in the Table River in nine out of 25 years (8 years for the Anzac) using snorkel surveys.  Results from 2018 are 2019 are intended to contribute to the assessment of the conservation status of the species in the Parsnip Core area [@hagenTrendAbundanceArctic2018].
 
 <br>
 
-Tse'khene Elders from the McLeod Lake Indian Band report that Arctic Grayling numbers have declined dramatically since the flooding of the reservoir and that few dusk'ihje (Arctic Grayling) have been caught in the territory in the past 30 years [@pearceTSEKHENEFIRST2019].
+Tse'khene Elders from the McLeod Lake Indian Band report that Arctic grayling numbers have declined dramatically since the flooding of the reservoir and that few dusk'ihje (Arctic Grayling) have been caught in the territory in the past 30 years [@pearceTSEKHENEFIRST2019].
 `r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("<br><br><br><br>")`
 
 <!--chapter:end:0200-background.Rmd-->

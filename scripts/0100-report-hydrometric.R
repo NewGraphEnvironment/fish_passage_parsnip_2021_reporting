@@ -8,24 +8,26 @@ source('R/packages.R')
 ##C:\Users\allan\AppData\Local\tidyhydat\tidyhydat
 # C:\Users\al\AppData\Local\tidyhydat\tidyhydat
 
-hydatr::hydat_load(source = "C://Users//allan//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
+# hydatr::hydat_load(source = "C://Users//allan//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
 # hydatr::hydat_load(source = "C://Users//al//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
 
 
-tidyhat_info <- search_stn_name("Elk")
+tidyhat_info <- search_stn_name("Parsnip")
 
 
 
-#elk river at Fernie
-station <- '08NK002'
-start_year = 1970
+#Parsnip River Above Misinchinka
+station <- '07EE007'
+# start_year = 1970
 
 flow_raw <- tidyhydat::hy_daily_flows(station)
 
 tidyhat_info <- search_stn_number(station) #08EE003 is near houston
-hy_stn_data_coll('08NK002')
+hy_stn_data_coll('station')
 
-##build caption for the figure
+min(flow_raw$Date)
+
+##build caption for the figure - We just jused the old one
 caption_info <- mutate(tidyhat_info, title_stats = paste0(stringr::str_to_title(STATION_NAME),
                                                     " (Station #",STATION_NUMBER," - Lat " ,round(LATITUDE,6),
                                                     " Lon ",round(LONGITUDE,6), "). Available daily discharge data from ", start_year,
@@ -36,7 +38,9 @@ hydrograph1_stats_caption <- caption_info$title_stats
 
 
 ##fasstr::plot_data_screening2 is a custom version of plot_data_screening
-hydrograph_stats_print <- fasstr::plot_data_screening(station_number = station, start_year = start_year)[["Data_Screening"]] + ggdark::dark_theme_bw() ##first version is not dark
+hydrograph_stats_print <- fasstr::plot_data_screening(station_number = station
+                                                      # start_year = start_year
+                                                      )[["Data_Screening"]] + ggdark::dark_theme_bw() ##first version is not dark
 hydrograph_stats_print
 
 ggsave(plot = hydrograph_stats_print, file=paste0("fig/hydrology_stats_", station, ".png"),

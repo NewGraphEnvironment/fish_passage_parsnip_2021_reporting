@@ -4,7 +4,6 @@ fig:ig-hydrology-plot-stats
 tab:fiss-species-table
 fig:fish-plot-grad
 fig:fish-plot-width
-arctic-grayling
 engagement
 environmental-stewardship-initiative
 habitat-modelling
