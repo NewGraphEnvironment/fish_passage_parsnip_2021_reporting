@@ -74,7 +74,8 @@ package_list <- c(
   'leaflet.extras',
   'ggdark',
   'geojsonio',
-  'pdftools'
+  'pdftools',
+  'fpr'
   # rgl,
   # geojsonsf,
   # bit64 ##to make integer column type for pg

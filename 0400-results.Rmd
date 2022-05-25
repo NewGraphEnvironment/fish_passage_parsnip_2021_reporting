@@ -31,6 +31,11 @@ Although this crossing is used to access an area of significant cultural value t
           
 Leveraging support from FWCP, Sinclar will obtain portions of the remaining funding for this work planned for the summer of 2022 through the forestry appraisal system.
 
+```{r}
+fpr::fpr_table_bcfp(site = 125179)
+```
+
+
 
 ### PSCIS 125000 - Tributary to Parsnip River {-}
 
@@ -44,6 +49,11 @@ We are working together with McLeod Lake and Sinclar to advance the replacement 
       + The FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
       + There are no other stream crossing structures on the mainstem of this tributary that impede fish passage.
       + The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
+      
+```{r}
+fpr::fpr_table_bcfp(site = 125000)
+```
+
 
 
 ### PSCIS 125231 - Tributary to Table River {-}
@@ -59,10 +69,22 @@ We are working together with McLeod Lake and Canfor to advance crossing [125231 
       + With an outlet drop of 60cm, the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any upstream fish migration.
       + There are no other stream crossing structures on the mainstem of this tributary that impede fish passage. There is a newly installed bridge upstream and the culvert under the CN railway downstream was considered passable according to the provincial protocol [@moe2011Fieldassessment].
       + The stream has a large channel width at the crossing location (4.0m) and has an estimated 875m habitat available upstream with average gradients mapped at less than 10%. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
+      
+      
+   
+```{r}
+fpr::fpr_table_bcfp(site = 125231)
+```
+
 
 ### PSCIS 125345 - Tributary to Parsnip River
 
 BCTS is planning to deactivate the Chuchinka-Colbourne FSR between where [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) is located and the Chuckhinka-Anzac FSR to the south. The work is schedule for July and August of 2022.  BCTS was able to engage the Forest Carbon Initiative about the project, who has confirmed that they have funding available for a full road rehabilitation on this section and are able to fund the replanting and road decompaction. This full scale rehabilitation will provide more intensity towards re-vegetation and access management than traditional deactivation practices. We have been in contact with CN Rail to advocate for the removal of crossing 57687 located under the railway immediately upstream of the PSCIS crossing 125345 and the FSR. Discussions are ongoing and we are hopeful action will be taken by CN this summer to remediate crossing 57687 as well. 
+
+```{r}
+fpr::fpr_table_bcfp(site = 125345)
+```
+
 
 ## Habitat Modelling {-}
 

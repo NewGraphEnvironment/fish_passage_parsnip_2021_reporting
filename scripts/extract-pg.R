@@ -1,4 +1,4 @@
-source('R/packages.R')
+source('scripts/packages.R')
 
 
 
@@ -13,11 +13,15 @@ conn <- DBI::dbConnect(
 
 
 # have a look at the channel width table
-query <- "SELECT * FROM bcfishpass.channel_width_modelled"
+query <- "SELECT * FROM bcfishpass.channel_width"
 cw <-  sf::st_read(conn, query = query)
 
 test <- cw %>%
-  filter(!is.na(channel_width_modelled))
+  filter(!is.na(channel_width))
+
+test <- cw %>%
+  group_by(waterbody_type) %>%
+  summarise(n = n())
 
 ##get our study area
 dat <- fwa_watershed_at_measure(

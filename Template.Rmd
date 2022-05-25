@@ -65,7 +65,7 @@ font_set <- 9
 source('scripts/packages.R')
 source('scripts/functions.R')
 source('scripts/private_info.R')
-
+source('scripts/tables.R')
 ```
 
 
@@ -270,7 +270,7 @@ Through this initiative as well as other SERNbc led initiatives [@irvine2021Bulk
 
 <br>
 
-Gradient, channel size and stream discharge are key determinants of channel morphology and subsequently fish distribution. High value  rearing, overwintering  and spawning habitat preferred by numerous species/life stages of fish are often located within channel types that have relatively low gradients and large channel widths (also quantified by the amount of flow in the stream).  Following delineation of "potentially accessible habitat", the average gradient of each stream segment within habitat classified as below the 20% and 25% thresholds was calculated and summed within species and life stage specific gradient categories.  Average gradient of stream line segments can be calculated from elevations contained in the provincial freshwater atlas streamline dataset. To obtain estimates of channel width upstream of crossing locations, where available, `bcfishpass` was utilized to pull average channel gradients from Fisheries Information Summary System (FISS) site assessment data [@moeStreamInventorySample] or PSCIS assessment data [@moe2021PSCISAssessments] and associate with stream segment lines. When both FISS and PSCIS values were associated with a particular stream segment, FISS channel width was used.  When multiple FISS sites were associated with a particular stream segment a mean of the average channel widths was taken.  To model channel width for 2nd order and above stream segments without associated FISS or PSCIS sites, first `fwapg` was used to estimate the drainage area upstream of the segment.  Then, rasters from ClimateBC [@wang_etal2012ClimateWNAHighResolution] were sampled for upstream watershed areas associated with each stream segment and a mean annual precipitation weighted by upstream watershed area was calculated. This data was used to model channel width using Bayesian statistical methods analyzing the relationship between input variables (n = 24849).  The details of this analysis and resulting formula used to estimate channel width on stream segments is included as a technical appendix `r if(gitbook_on){knitr::asis_output("[here](https://www.poissonconsulting.ca/f/859859031)")} else knitr::asis_output("at https://www.poissonconsulting.ca/f/859859031")`. 
+Gradient, channel size and stream discharge are key determinants of channel morphology and subsequently fish distribution. High value  rearing, overwintering  and spawning habitat preferred by numerous species/life stages of fish are often located within channel types that have relatively low gradients and large channel widths (also quantified by the amount of flow in the stream).  Following delineation of "potentially accessible habitat", the average gradient of each stream segment within habitat classified as below the 20% and 25% thresholds was calculated and summed within species and life stage specific gradient categories.  Average gradient of stream line segments can be calculated from elevations contained in the provincial freshwater atlas streamline dataset. To obtain estimates of channel width upstream of crossing locations, where available, `bcfishpass` was utilized to pull average channel gradients from Fisheries Information Summary System (FISS) site assessment data [@moeStreamInventorySample] or PSCIS assessment data [@moe2021PSCISAssessments] and associate with stream segment lines. When both FISS and PSCIS values were associated with a particular stream segment, FISS channel width was used.  When multiple FISS sites were associated with a particular stream segment a mean of the average channel widths was taken.  To model channel width for 2nd order and above stream segments without associated FISS or PSCIS sites, first `fwapg` was used to estimate the drainage area upstream of the segment.  Then, rasters from ClimateBC [@wang_etal2012ClimateWNAHighResolution] were sampled for upstream watershed areas associated with each stream segment and a mean annual precipitation weighted by upstream watershed area was calculated. In April of 2021, Bayesian statistical methods were used to model channel width in all provincial freshwater atlas stream segments where measurements had not previously been taken, based on the relationship between watershed area and mean annual precipitation weighted by upstream watershed area [@thorley_irvine2021ChannelWidth].  
 
 <br>
 
@@ -389,6 +389,11 @@ Although this crossing is used to access an area of significant cultural value t
           
 Leveraging support from FWCP, Sinclar will obtain portions of the remaining funding for this work planned for the summer of 2022 through the forestry appraisal system.
 
+```{r}
+fpr::fpr_table_bcfp(site = 125179)
+```
+
+
 
 ### PSCIS 125000 - Tributary to Parsnip River {-}
 
@@ -402,6 +407,11 @@ We are working together with McLeod Lake and Sinclar to advance the replacement 
       + The FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
       + There are no other stream crossing structures on the mainstem of this tributary that impede fish passage.
       + The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
+      
+```{r}
+fpr::fpr_table_bcfp(site = 125000)
+```
+
 
 
 ### PSCIS 125231 - Tributary to Table River {-}
@@ -417,10 +427,22 @@ We are working together with McLeod Lake and Canfor to advance crossing [125231 
       + With an outlet drop of 60cm, the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any upstream fish migration.
       + There are no other stream crossing structures on the mainstem of this tributary that impede fish passage. There is a newly installed bridge upstream and the culvert under the CN railway downstream was considered passable according to the provincial protocol [@moe2011Fieldassessment].
       + The stream has a large channel width at the crossing location (4.0m) and has an estimated 875m habitat available upstream with average gradients mapped at less than 10%. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
+      
+      
+   
+```{r}
+fpr::fpr_table_bcfp(site = 125231)
+```
+
 
 ### PSCIS 125345 - Tributary to Parsnip River
 
 BCTS is planning to deactivate the Chuchinka-Colbourne FSR between where [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) is located and the Chuckhinka-Anzac FSR to the south. The work is schedule for July and August of 2022.  BCTS was able to engage the Forest Carbon Initiative about the project, who has confirmed that they have funding available for a full road rehabilitation on this section and are able to fund the replanting and road decompaction. This full scale rehabilitation will provide more intensity towards re-vegetation and access management than traditional deactivation practices. We have been in contact with CN Rail to advocate for the removal of crossing 57687 located under the railway immediately upstream of the PSCIS crossing 125345 and the FSR. Discussions are ongoing and we are hopeful action will be taken by CN this summer to remediate crossing 57687 as well. 
+
+```{r}
+fpr::fpr_table_bcfp(site = 125345)
+```
+
 
 ## Habitat Modelling {-}
 

@@ -2,6 +2,10 @@ fig:overview-map
 fig:fig-hydrology-plot-flow
 fig:fig-hydrology-plot-stats
 tab:fiss-species-table
+tab:unnamed-chunk-4
+tab:unnamed-chunk-5
+tab:unnamed-chunk-6
+tab:unnamed-chunk-7
 tab:tab-fish-grad
 fig:fish-plot-grad
 tab:tab-fish-width

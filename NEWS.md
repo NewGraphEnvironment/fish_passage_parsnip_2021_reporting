@@ -1,9 +1,3 @@
 # mybookdown-template 0.0.2
 
-  * 20220516
-  * add references.bib
-  * add `NEWS.md` file
-  * update `README.md`
-  * update logos
-  * put date on line with version numbers
-  * tighten packages and functions
+  * stopped tracking the pscis submission templates in repo unless changes actually happen. Used `git update-index --assume-unchanged data/pscis_*` (#7) .  When changes actually occur we use `git update-index --no-assume-unchanged data/pscis_*.xlsm` to log a commit

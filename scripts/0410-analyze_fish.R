@@ -61,11 +61,7 @@ fiss_sum2 <- fiss_sum %>%
   summarise(total_spp = n())
 
 # get a summary of how many streams have chan width and map but no channel width
-fish_no_width
 
-
-
-#!!!!!!!!!all the width data is gone so we need to use our archived version!!!!!!!!!!!!
 
 
 ##burn it all to a file we can use later
@@ -171,6 +167,8 @@ fiss_sum_width <- left_join(
   by = 'species_code'
 ) %>%
   mutate(Percent = round(Count/total_spp * 100, 0))
+
+fiss_sum_width_tab <-
 
 ##save this for the report
 ##burn it all to a file we can use later

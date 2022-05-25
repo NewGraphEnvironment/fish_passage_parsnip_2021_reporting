@@ -2,30 +2,49 @@
 Let have a look to see if there are a bunch of good sites for next year.
 
 
-```{r}
+```{r connect-db}
+
 conn <- DBI::dbConnect(
   RPostgres::Postgres(),
-  dbname = dbname,
-  host = host,
-  port = port,
-  user = user,
-  password = password
+  dbname = dbname_mac,
+  host = host_mac,
+  port = port_mac,
+  user = user_mac,
+  password = password_mac
 )
 
 # # ##list tables in a schema
-dbGetQuery(conn,
+tables <- dbGetQuery(conn,
            "SELECT table_name
            FROM information_schema.tables
-           WHERE table_schema='whse_fish'")
-# # # # #
+           WHERE table_schema='bcfishpass'") %>% 
+  arrange(table_name)
+  
+  
+  # # # # #
 # # # # # ##list column names in a table
 dbGetQuery(conn,
            "SELECT column_name,data_type
            FROM information_schema.columns
            WHERE table_schema = 'bcfishpass'
-           and table_name='streams'")
+           and table_name='barriers_anthropogenic'")
 ```
 
 
+```{r munge}
+
+# grab the crossings and sort according to upstream hab potential
+  
+  
+query = "SELECT * FROM bcfishpass.crossings c WHERE c.watershed_group_code IN ('PARS');"
+
+
+xings_raw <- st_read(conn, query = query)  %>% 
+  filter(pscis_status != 'HABITAT CONFIRMATION' |
+           is.na(pscis_status)) 
+  select(aggregated_crossings_id, pscis_status, contains('wct'))
+  
+
+```
 
 
