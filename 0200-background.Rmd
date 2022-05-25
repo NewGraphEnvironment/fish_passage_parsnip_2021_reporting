@@ -1,18 +1,21 @@
 
 
-# Study Area {-}
+# Study Area and Background {-}
 
 ## Tse'khene {-}
 
-The Parsnip River watershed is located within the south-eastern portion of the 108,000 km^2^ traditional territory of the Tse'khene from the [McLeod Lake Indian Band](https://www.mlib.ca/about/History). The Tse'khene *"People of the Rocks"* are a south westerly extension of the Athabascan speaking people of northern Canada.  They were a nomadic hunting people whose language belongs to the Beaver-Sarcee-Tse'khene branch of Athapaskan [@HistoryWhoWeAre].  Extensive work is underway to preserve the language with resources such as First Voices available [online](https://www.firstvoices.com/explore/FV/sections/Data/Athabascan/Tse'Khene%20(McLeod%20Lake)/Tse'Khene%20(McLeod%20Lake)/learn) and in [app form](https://apps.apple.com/us/app/tsekhene-mcleod-lake/id1503929250) for iphone and ipad devices [@firstpeopleculturalcouncil2022LearnTse; @firstpeoplesheritagelanguageandculturecouncil2022TseKhene].
+The Parsnip River watershed is located within the south-eastern portion of the 108,000 km^2^ traditional territory of the Tse'khene from the [McLeod Lake Indian Band](https://www.mlib.ca/about/History). The Tse'khene *"People of the Rocks"* are a south westerly extension of the Athabascan speaking people of northern Canada.  They were nomadic hunters whose language belongs to the Beaver-Sarcee-Tse'khene branch of Athapaskan [@HistoryWhoWeAre].  Extensive work is underway to preserve the language with resources such as First Voices available [online](https://www.firstvoices.com/explore/FV/sections/Data/Athabascan/Tse'Khene%20(McLeod%20Lake)/Tse'Khene%20(McLeod%20Lake)/learn) and in [app form](https://apps.apple.com/us/app/tsekhene-mcleod-lake/id1503929250) for iphone and ipad devices [@firstpeopleculturalcouncil2022LearnTse; @firstpeoplesheritagelanguageandculturecouncil2022TseKhene].
 
 <br>
 
-The continental divide separates watersheds flowing north into the Arctic Ocean via the Mackenzie River and south and west into the Pacific Ocean via the Fraser River (Figure \@ref(fig:overview-map)). The Parsnip River is a 6th order stream with a watershed that drains an area of 5597km^2^. The mainstem of the river flows within the Rocky Mountain Trench in a north direction into Williston Reservoir starting from the continental divide adjacent to Arctic Lakes. Major tributaries include the Misinchinka, Colbourne, Reynolds, Anzac, Table, Hominka and Missinka sub-basins which drain the western slopes of the Hart Ranges of the Rocky Mountains.  The Parsnip River has a mean annual discharge of `r round(fasstr::calc_longterm_mean(station_number = "07EE007")$LTMAD,1)` m^3^/s with flow patterns typical of high elevation watersheds on the west side of the northern Rocky Mountains which receive large amounts of precipitation as snow leading to peak levels of discharge during snowmelt, typically from May to July (Figures \@ref(fig:hydrology2-print) - \@ref(fig:hydrosummaryplot)).
+The continental divide separates watersheds flowing north into the Arctic Ocean via the Mackenzie River and south and west into the Pacific Ocean via the Fraser River (Figure \@ref(fig:overview-map)). The Parsnip River is a 6th order stream with a watershed that drains an area of 5597km^2^. The mainstem of the river flows within the Rocky Mountain Trench in a north direction into Williston Reservoir starting from the continental divide adjacent to Arctic Lakes. Major tributaries include the Misinchinka, Colbourne, Reynolds, Anzac, Table, Hominka and Missinka sub-basins which drain the western slopes of the Hart Ranges of the Rocky Mountains.  The Parsnip River has a mean annual discharge of `r round(fasstr::calc_longterm_mean(station_number = "07EE007")$LTMAD,1)` m^3^/s with flow patterns typical of high elevation watersheds on the west side of the northern Rocky Mountains which receive large amounts of precipitation as snow leading to peak levels of discharge during snowmelt, typically from May to July (Figures \@ref(fig:fig-hydrology-plot-flow) - \@ref(fig:fig-hydrology-plot-stats)).
 
 <br>
 
 Construction of the 183 m high and 2134 m long W.A.C. Bennett Dam was completed in 1967 at Hudson's Hope, BC, creating the Williston Reservoir [@hirst1991Impactsoperations]. Filling of the 375km^2^ reservoir was complete in 1972 and flooded a substantial portion of the Parsnip River and major tributary valleys forming what is now known as the Peace and Parsnip reaches. The replacement of riverine habitat with an inundated reservoir environment resulted in profound changes to the ecology, resource use and human settlement patterns in these systems [@hagen_etal2015Criticalhabitats; @pearce2019FirstNations; @stamford_etal2017FWCPArctic]. Prior to the filling of the reservoir, the Pack River, into which McLeod Lake flows, was a major tributary to the Parsnip River.  The Pack River currently enters the Williston Reservoir directly as the historic location of the confluence of the two rivers lies within the reservoir's footprint.
+
+<br>
+
 
 ```{r overview-map, fig.cap = 'Overview map of study area',eval=T}
 knitr::include_graphics("fig/overview.jpg")
@@ -33,7 +36,7 @@ knitr::include_graphics("fig/hydrograph_07EE007.png")
 
 <br>
 
-```{r ig-hydrology-plot-stats, fig.dim = c(5.1, 3.4), fig.cap="Summary discharge statistics (annual maximum, minimum, mean and standard deviation) for Parsnip River at hydrometric station #07EE007."}
+```{r fig-hydrology-plot-stats, fig.dim = c(5.1, 3.4), fig.cap="Summary discharge statistics (annual maximum, minimum, mean and standard deviation) for Parsnip River at hydrometric station #07EE007."}
 # img <- png::readPNG("fig/hydrology2.png")
 # grid::grid.raster(img)
 
@@ -41,7 +44,9 @@ knitr::include_graphics("fig/hydrology_stats_07EE007.png")
 ```
 
 ## Fisheries {-}
-Fish species recorded in the Parsnip River watershed are detailed in Table \@ref(tab:table-fish) [@data_fish_obs]. In addition to flooding related to the formation of the Williston Reservoir, transmission lines, gas pipelines, rail, road networks, forestry, elevated water temperatures, interrupted connectivity, invasion from non-native species and insect infestations affecting forested areas pose threats to fisheries values in the Parsnip River watershed  [@hagen_2015_critical_habs; @stamfordFWCPArcticGrayling; @bull_trout_synthesis; @bt_cosewic]. A brief summary of trends and knowledge status related to Arctic grayling, bull trout, kokanee, mountain whitefish and rainbow Trout in Williston Watershed streams is provided in @fishandwildlifecompensationprogram2020PeaceRegion with a more detailed review of the state of knowledge for Parsnip River watershed populations of Arctic grayling and bull trout provided below.
+Fish species recorded in the Parsnip River watershed are detailed in Table \@ref(tab:table-fish) [@data_fish_obs]. In addition to flooding related to the formation of the Williston Reservoir, transmission lines, gas pipelines, rail, road networks, forestry, elevated water temperatures, interrupted connectivity, invasion from non-native species and insect infestations affecting forested areas pose threats to fisheries values in the Parsnip River watershed  [@hagen_2015_critical_habs; @stamfordFWCPArcticGrayling; @bull_trout_synthesis; @bt_cosewic]. A brief summary of trends and knowledge status related to Arctic grayling, bull trout, kokanee, mountain whitefish and rainbow trout in Williston Watershed streams is provided in @fishandwildlifecompensationprogram2020PeaceRegion with a more detailed review of the state of knowledge for Parsnip River watershed populations of Arctic grayling and bull trout provided below.
+
+<br>
 
 
 ```{r fiss-species-table}
@@ -67,7 +72,7 @@ In 2018, sub-basins of the Anzac River watershed, Homininka River, Missinka Rive
 
 <br>
 
-Tse'khene Elders from the McLeod Lake Indian Band report that sa'ba (Bull Trout) size and abundance has decreased in all rivers and tributaries from the reservoir with more injured and diseased fish captured in recent history than was common in the past [@pearceTSEKHENEFIRST2019]. 
+Tse'khene Elders from the McLeod Lake Indian Band report that sa'ba (bull trout) size and abundance has decreased in all rivers and tributaries from the reservoir with more injured and diseased fish captured in recent history than was common in the past [@pearce2019FirstNations]. 
 
 <br>
 
@@ -80,5 +85,6 @@ Migration of mature adult Arctic grayling occurs in the spring with arrival at k
 
 <br>
 
-Tse'khene Elders from the McLeod Lake Indian Band report that Arctic grayling numbers have declined dramatically since the flooding of the reservoir and that few dusk'ihje (Arctic Grayling) have been caught in the territory in the past 30 years [@pearceTSEKHENEFIRST2019].
-`r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("<br><br><br><br>")`
+Tse'khene Elders from the McLeod Lake Indian Band report that Arctic grayling numbers have declined dramatically since the flooding of the reservoir and that few dusk'ihje (Arctic Grayling) have been caught in the territory in the past 30 years [@pearce2019FirstNations].
+
+

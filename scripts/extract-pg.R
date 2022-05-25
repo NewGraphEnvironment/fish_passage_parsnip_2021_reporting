@@ -4,13 +4,20 @@ source('R/packages.R')
 
 conn <- DBI::dbConnect(
   RPostgres::Postgres(),
-  dbname = "postgis",
+  dbname = "bcfishpass",
   host = "localhost",
   port = "5432",
   user = "postgres",
   password = "postgres"
 )
 
+
+# have a look at the channel width table
+query <- "SELECT * FROM bcfishpass.channel_width_modelled"
+cw <-  sf::st_read(conn, query = query)
+
+test <- cw %>%
+  filter(!is.na(channel_width_modelled))
 
 ##get our study area
 dat <- fwa_watershed_at_measure(
