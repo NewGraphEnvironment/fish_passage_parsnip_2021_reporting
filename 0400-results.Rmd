@@ -6,10 +6,15 @@
 
 SERN was able to aquire \$105,000 of partnership funding from FLNR (\$80,000) and the Provincial Fish Passage Technical Working Group (\$25,000) towards the 2021/2022 program. Additionally, we have obtained a commitment for \$25,000 of partnership funding from the the Provincial Fish Passage Technical Working Group towards the 2022/2023 program.
 
+```{r}
+# define scroll box height for sites
+scroll_box_height <- '400px'
+```
+
 
 ## Planned Remediations {-}
 
-### PSCIS Crossing 125179 - Tributary to Missinka River
+### PSCIS Crossing 125179 - Tributary to Missinka River {-}
 
 We are working together with McLeod Lake and Sinclar to advance crossing [125179 (Tributary to Missinka River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125179.html). Works to replace the crossing are planned for summer of 2022. A map of the watershed is provided in map attachment [093I.116](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/FishPassage_093I.116.pdf).
 
@@ -17,22 +22,27 @@ We are working together with McLeod Lake and Sinclar to advance crossing [125179
 
 Although this crossing is used to access an area of significant cultural value to McLeod Lake due to high recreational values [(unmotorized primitive)](https://catalogue.data.gov.bc.ca/dataset/recreational-opportunity-spectrum-inventory), and is located within a watershed where expansion of "unmotorized primitive" values will occur in the future through deactivation of roads and reforestation, this site was selected as appropriate for restoration for the following reasons:
    
-      + At the time of reporting there was significant harvesting and silviculture obligations in areas accessed by the FSR.
-      + The Missinka River watershed is designated as a fisheries sensitive watershed under the *Forest and Range Practices Act* [@beaudry2013Assessmentassignmenta] 
-      + @hagen_etal2015Criticalhabitats have identified the Missinka River watershed as containing critical spawning and juvenile rearing habitat for large body adult sa'ba (bull trout) with potentially less than 50 spawners utilizing the watershed.
-      + The Missinka River watershed is utilized by a possibly genetically distinct, self-sustaining dusk'ihje (Arctic grayling) population with the mainstem of the river providing critical habitat for fry and adult fish  
-      + The subject tributary is documented as containing sa'ba.  
-      + A bridge design was commissioned for the site in 2020 through funding from FWCP (project PEA-F20-F-2967) so preparations for replacement could be made in a timely fashion.  
-      + $80,000 of partnership funding was acquired by SERNbc from FLNR to implement fish passage restoration at the site in 2022 according to the design aquired for the site in 2019/2020. Sinclar Forest Projects Ltd. is the road permit holder at this site and was awarded a contract to initiate delivery of the bridge installation. Sinclar will be sending out a request for proposals for the structure replacement to three qualified contractors soon in hopes to have a contract in place this winter so we can hit the ground running next summer.  Project coordination expertise by Sinclar are being provided in-kind.  The \$80,000 awarded to Sinclar by FLNR was spent on the following measures:
-          - Water Sustainability Act Permit Application
-          - Environmental Management Plan assessment and documentation
-          - Source, purchase and mobilization of steel girders, modular timber deck and lock block abutment as per site design
+  * At the time of reporting there was significant harvesting and silviculture obligations in areas accessed by the FSR.
+  * The Missinka River watershed is designated as a fisheries sensitive watershed under the *Forest and Range Practices Act* [@beaudry2013Assessmentassignmenta] 
+  * @hagen_etal2015Criticalhabitats have identified the Missinka River watershed as containing critical spawning and juvenile rearing habitat for large body adult sa'ba (bull trout) with potentially less than 50 spawners utilizing the watershed.
+  * The Missinka River watershed is utilized by a possibly genetically distinct, self-sustaining dusk'ihje (Arctic grayling) population with the mainstem of the river providing critical habitat for fry and adult fish  
+  * The subject tributary is documented as containing sa'ba.  
+  * A bridge design was commissioned for the site in 2020 through funding from FWCP (project PEA-F20-F-2967) so preparations for replacement could be made in a timely fashion.  
+  * $80,000 of partnership funding was acquired by SERNbc from FLNR to implement fish passage restoration at the site in 2022 according to the design aquired for the site in 2019/2020. Sinclar Forest Projects Ltd. is the road permit holder at this site and was awarded a contract to initiate delivery of the bridge installation. Sinclar has sent out a request for proposals for the structure replacement to three qualified contractors.  Project coordination expertise by Sinclar are being provided in-kind.  The \$80,000 awarded to Sinclar by FLNR was spent on the following measures:
+    + Water Sustainability Act Permit Application
+    + Environmental Management Plan assessment and documentation
+    + Source, purchase and mobilization of steel girders, modular timber deck and lock block abutment as per site design
+          
+<br>
           
           
-Leveraging support from FWCP, Sinclar will obtain portions of the remaining funding for this work planned for the summer of 2022 through the forestry appraisal system.
+Leveraging support from FWCP, Sinclar will obtain remaining portions of funding for this work through the forestry appraisal system. At the time of reporting, bridge installation had been scheduled for the summer of 2022. 
+
+<br>
 
 ```{r}
-fpr::fpr_table_bcfp(site = 125179)
+fpr::fpr_table_bcfp(site = 125179,
+                    scroll_box_height = scroll_box_height)
 ```
 
 
@@ -41,17 +51,20 @@ fpr::fpr_table_bcfp(site = 125179)
 
 We are working together with McLeod Lake and Sinclar to advance the replacement of crossing [125000 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125000.html) on the Chuchinka-Arctic FSR.  A map of the watershed is provided in map attachment  [093I.111](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/FishPassage_093I.111.pdf).  The crossing was prioritized for restoration for the following reasons:
   
-      + At the time of reporting there was significant harvesting and silviculture obligations in areas accessed by the FSR.
-      + With an outlet drop of 40cm the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any fish movement upstream.
-      + The culvert in place is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road and negative impacts on local fisheries values.  
-      + The FSR accesses McLeod Lake reservation lands  (ID: Arctic Lake 10) located near the outlet of Arctic Lake.
-      + This site is in the general vicinity of the outlet of Arctic Lake which has been identified as a high priority area for taloo'azi (kokanee) and sa'ba by participants in FWCP supported information gathering work [@pearce2019FirstNations].
-      + The FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
-      + There are no other stream crossing structures on the mainstem of this tributary that impede fish passage.
-      + The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
-      
+  * At the time of reporting there was significant harvesting and silviculture obligations in areas accessed by the FSR.
+  * With an outlet drop of 40cm the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any fish movement upstream.
+  * The culvert in place is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road and negative impacts on local fisheries values.  
+  * The FSR accesses McLeod Lake reservation lands  (ID: Arctic Lake 10) located near the outlet of Arctic Lake.
+  * This site is in the general vicinity of the outlet of Arctic Lake which has been identified as a high priority area for taloo'azi (kokanee) and sa'ba by participants in FWCP supported information gathering work [@pearce2019FirstNations].
+  * The FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
+  * There are no other stream crossing structures on the mainstem of this tributary that impede fish passage.
+  * The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
+
+<br>
+
 ```{r}
-fpr::fpr_table_bcfp(site = 125000)
+fpr::fpr_table_bcfp(site = 125000,
+                    scroll_box_height = scroll_box_height)
 ```
 
 
@@ -60,29 +73,33 @@ fpr::fpr_table_bcfp(site = 125000)
 
 We are working together with McLeod Lake and Canfor to advance crossing [125231 (Tributary to Table River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125231.html) on the Chuchinka-Table FSR for the following reasons:
 
-      + Table River watershed is designated as a fisheries sensitive watershed under the authority of the *Forest and Range Practices Act* due to significant downstream fisheries values and watershed sensitivity [@beaudry2014Assessmentassignmenta]. Special management is required in the crossing’s watershed to protect habitat for sa'ba and dusk'ihje and includes measures (among others) to limit equivalent clearcut area, reduce impacts to natural stream channel morphology, retain old growth attributes and maintain fish habitat/movement.
-      + @hagen_etal2015Criticalhabitats have identified the Table River watershed and several tributaries as containing critical spawning and juvenile rearing habitat for large body sa'ba with an estimated minimum spawner abundance of 100 fish.
-      + The Table River (along with the Anzac River) is identified as the primary core of post-Williston dusk'ihje distribution in the Parsnip River watershed with life history, migration behaviours and critical habitats summarized in @hagen_etal2015Criticalhabitats. The mainstem of the Table River contains critical habitats for all life stages of dusk'ihje with adults observed moving among mainstem locations and tributaries during summer. 
-      + The culvert in place is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road and negative impacts on local fisheries values. 
-      + The subject tributary is documented as containing rainbow trout with habitat present also suitable for sa'ba rearing and spawning.
-      + At the time of reporting there was significant harvesting planned and silviculture obligations outstanding in areas accessed by the FSR.
-      + With an outlet drop of 60cm, the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any upstream fish migration.
-      + There are no other stream crossing structures on the mainstem of this tributary that impede fish passage. There is a newly installed bridge upstream and the culvert under the CN railway downstream was considered passable according to the provincial protocol [@moe2011Fieldassessment].
-      + The stream has a large channel width at the crossing location (4.0m) and has an estimated 875m habitat available upstream with average gradients mapped at less than 10%. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
+  * Table River watershed is designated as a fisheries sensitive watershed under the authority of the *Forest and Range Practices Act* due to significant downstream fisheries values and watershed sensitivity [@beaudry2014Assessmentassignmenta]. Special management is required in the crossing’s watershed to protect habitat for sa'ba and dusk'ihje and includes measures (among others) to limit equivalent clearcut area, reduce impacts to natural stream channel morphology, retain old growth attributes and maintain fish habitat/movement.
+  * @hagen_etal2015Criticalhabitats have identified the Table River watershed and several tributaries as containing critical spawning and juvenile rearing habitat for large body sa'ba with an estimated minimum spawner abundance of 100 fish.
+  * The Table River (along with the Anzac River) is identified as the primary core of post-Williston dusk'ihje distribution in the Parsnip River watershed with life history, migration behaviours and critical habitats summarized in @hagen_etal2015Criticalhabitats. The mainstem of the Table River contains critical habitats for all life stages of dusk'ihje with adults observed moving among mainstem locations and tributaries during summer. 
+  * The culvert in place is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road and negative impacts on local fisheries values. 
+  * The subject tributary is documented as containing rainbow trout with habitat present also suitable for sa'ba rearing and spawning.
+  * At the time of reporting there was significant harvesting planned and silviculture obligations outstanding in areas accessed by the FSR.
+  * With an outlet drop of 60cm, the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any upstream fish migration.
+  * There are no other stream crossing structures on the mainstem of this tributary that impede fish passage. There is a newly installed bridge upstream and the culvert under the CN railway downstream was considered passable according to the provincial protocol [@moe2011Fieldassessment].
+  * The stream has a large channel width at the crossing location (4.0m) and has an estimated 875m habitat available upstream with average gradients mapped at less than 10%. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
       
-      
+<br>      
    
 ```{r}
-fpr::fpr_table_bcfp(site = 125231)
+fpr::fpr_table_bcfp(site = 125231,
+                    scroll_box_height = scroll_box_height)
 ```
 
 
-### PSCIS 125345 - Tributary to Parsnip River
+### PSCIS 125345 - Tributary to Parsnip River {-}
 
 BCTS is planning to deactivate the Chuchinka-Colbourne FSR between where [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) is located and the Chuckhinka-Anzac FSR to the south. The work is schedule for July and August of 2022.  BCTS was able to engage the Forest Carbon Initiative about the project, who has confirmed that they have funding available for a full road rehabilitation on this section and are able to fund the replanting and road decompaction. This full scale rehabilitation will provide more intensity towards re-vegetation and access management than traditional deactivation practices. We have been in contact with CN Rail to advocate for the removal of crossing 57687 located under the railway immediately upstream of the PSCIS crossing 125345 and the FSR. Discussions are ongoing and we are hopeful action will be taken by CN this summer to remediate crossing 57687 as well. 
 
+<br>
+
 ```{r}
-fpr::fpr_table_bcfp(site = 125345)
+fpr::fpr_table_bcfp(site = 125345,
+                    scroll_box_height = scroll_box_height)
 ```
 
 
@@ -120,9 +137,12 @@ fiss_sum_wshed <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted
 my_caption <- 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.'
 fiss_sum_grad %>% 
   select(-gradient_id) %>% 
-  fpr::fpr_kable(caption_text = my_caption)
+  fpr::fpr_kable(caption_text = my_caption,
+                 scroll = gitbook_on)
 ```
 
+
+<br>
 ```{r fish-plot-grad, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.', eval=T}
 ##bar graph
 plot_grad <- fiss_sum_grad %>% 
@@ -142,7 +162,8 @@ plot_grad
 my_caption <- 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.'
 fiss_sum_width %>% 
   select(-width_id) %>% 
-  fpr::fpr_kable(caption_text = my_caption)
+  fpr::fpr_kable(caption_text = my_caption,
+                 scroll = gitbook_on)
 ```
 
 <br>
@@ -164,7 +185,8 @@ plot_width
 ```{r tab-fish-wshed}
 my_caption <- 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.'
 fiss_sum_wshed %>% 
-  fpr::fpr_kable(caption_text = my_caption)
+  fpr::fpr_kable(caption_text = my_caption,
+                 scroll = gitbook_on)
 ```
 
 
@@ -181,3 +203,209 @@ plot_wshed <- fiss_sum_wshed %>%
   theme(axis.text.x=element_text(angle = 45, hjust = 1))
 plot_wshed
 ```
+
+
+## Field Planning 2022  {-}
+Georeferenced field maps are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")` 
+
+<br>
+
+
+Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf).")`  
+
+```{r widget-planning-prep}
+# join bcfishpass to some pscis columns for the screening table
+# get our dataframe to link to a map
+# xings filtered by >1km of potential rearing habitat
+xf <- left_join(
+  bcfishpass %>% 
+    st_as_sf(coords = c('utm_easting', 'utm_northing'), crs = 26910, remove = F) %>% 
+    filter(pscis_status != 'HABITAT CONFIRMATION' &
+             barrier_status != 'PASSABLE' &
+             barrier_status != 'UNKNOWN') %>% 
+    # is.na(pscis_status)) %>% 
+    filter(bt_rearing_km > 1 &
+             crossing_subtype_code != 'BRIDGE') %>%
+    rename(bt_rearing_km_raw = bt_rearing_km) %>% 
+    mutate(bt_rearing_km = case_when(
+      bt_rearing_km_raw >= 1 & bt_rearing_km_raw < 2 ~ '1-2km',
+      bt_rearing_km_raw >= 2 & bt_rearing_km_raw <= 5 ~ '2-5km',
+      bt_rearing_km_raw >= 5 & bt_rearing_km_raw <= 10 ~ '5-10km',
+      T ~ '>10km') 
+    ) %>% 
+    mutate(bt_rearing_km = factor(bt_rearing_km, levels = c('1-2km', '2-5km', '5-10km', '>10km'))) %>% 
+    select(id = aggregated_crossings_id, 
+           pscis_status, 
+           barrier_status, 
+           contains('bt_'), 
+           utm_easting,
+           utm_northing,
+           gradient_gis = gradient,
+           mapsheet = dbm_mof_50k_grid) %>% 
+    # need to run rowise for our fpr function to hit each row
+    rowwise() %>% 
+    mutate(mapsheet = fpr::fpr_my_mapsheet(wshd = 'parsnip', archive_date = '2022-05-27', site = id),
+           mapsheet = paste0("<a href ='", mapsheet,"'target='_blank'>Field Map","</a>")) %>% 
+    arrange(id) %>% 
+    st_transform(crs = 4326),
+  
+  pscis %>% 
+    select(
+      stream_crossing_id, 
+      stream_name, 
+      road_name, 
+      outlet_drop,
+      channel_width = downstream_channel_width,
+      habitat_value_code,
+      image_view_url,
+      assessment_comment) %>% 
+    mutate(image_view_url = paste0("<a href ='", image_view_url,"'target='_blank'>Culvert Photos","</a>")) %>% 
+    st_drop_geometry(),
+    
+  by = c('id' = 'stream_crossing_id')) %>% 
+  select(id,
+         stream_name,
+         habitat_value = habitat_value_code,
+         mapsheet,
+         image_view_url,
+         pscis_status:bt_slopeclass15_km, 
+         bt_spawning_km,
+         bt_rearing_km_raw:gradient_gis,
+         road_name:assessment_comment)
+  # dplyr::relocate(assessment_comment, .after = last_col())
+  
+  
+  
+
+# xf %>%
+#   filter(!is.na(pscis_status))
+# 
+# t <- xf %>%
+#   group_by(bt_rearing_km) %>%
+#   summarise(n = n())
+
+```
+
+```{r widget-planning, eval = gitbook_on}
+# Wrap data frame in SharedData
+sd <- SharedData$new(xf)
+
+
+# Use SharedData like a dataframe with Crosstalk-enabled widgets
+map <- sd %>% 
+  
+  leaflet(height=500) %>% #height=500, width=780
+  # addTiles() %>% 
+  addProviderTiles("Esri.WorldTopoMap", group = "Topo") %>%
+  
+  addProviderTiles("Esri.WorldImagery", group = "ESRI Aerial") %>% 
+  
+  addCircleMarkers(
+    label = xf$id,
+    labelOptions = labelOptions(noHide = T, textOnly = TRUE),
+    popup = leafpop::popupTable(xf %>% st_drop_geometry() %>% 
+                                select(id, 
+                                       stream_name,
+                                       bt_rearing_km = bt_rearing_km_raw,
+                                       bt_spawning_km,
+                                       mapsheet, 
+                                       image_view_url, 
+                                       assessment_comment),
+                                feature.id = F,
+                                row.numbers = F),
+    radius = 9,
+    fillColor = "red",
+    color= "#ffffff",
+    stroke = TRUE,
+    fillOpacity = 1.0,
+    weight = 2,
+    opacity = 1.0
+  ) %>% 
+  addLayersControl(
+    baseGroups = c(
+      "Esri.DeLorme",
+      "ESRI Aerial"),
+    options = layersControlOptions(collapsed = F)) %>% 
+leaflet.extras::addFullscreenControl(position = "bottomright")
+
+# tbl <- reactable::reactable(
+#   sd,
+#   selection = "multiple",
+#   onClick = "select",
+#   rowStyle = list(cursor = "pointer"),
+#   defaultPageSize = 5
+#   # minRows = 10
+# )
+
+# htmltools::browsable(
+#   htmltools::tagList(map, tbl)
+# )
+
+
+
+checkbox_map <- bscols(
+  widths = c(2, 10),
+  filter_checkbox("label", "bt_rearing_km", sd, ~bt_rearing_km),
+  map
+)
+
+htmltools::browsable(
+  htmltools::tagList(checkbox_map,
+                     datatable(sd, 
+                               class = 'cell-border stripe',
+                               extensions=c("Scroller","Buttons","FixedColumns"), 
+                               style="bootstrap",
+                               # class="compact",
+                               width="100%",
+                               rownames = F,
+                               options=list(
+                                 deferRender=TRUE, 
+                                 scrollY=300, 
+                                 scrollX = T,
+                                 scroller=TRUE,
+                                 dom = 'Bfrtip',
+                                 buttons = list(
+                                   'copy',
+                                   list(
+                                     extend = 'collection',
+                                     buttons = c('csv'),
+                                     text = 'Download csv')),
+                               fixedColumns = list(leftColumns = 2),
+                               initComplete = JS("function(settings, json) {","$(this.api().table().container()).css({'font-size': '11px'});","}")),
+                               escape = F)
+  ))
+
+```
+
+```{r widget-planning-caption, fig.cap= my_caption, out.width = "0.01%",  eval = gitbook_on}
+my_photo = 'fig/pixel.png'
+my_caption= 'Field planning widget to facilitate planning for 2022 field surveys.'
+knitr::include_graphics(my_photo, dpi = NA)
+```
+
+```{r tab-planning-pdf, eval= identical(gitbook_on, FALSE)}
+
+caption_text = 'Field planning results to facilitate selection of restoration opportunities for 2022 field surveys.'
+
+xf %>% 
+  select(id:habitat_value,
+         outlet_drop,
+         bt_spawning_km, 
+         bt_rearing_km,
+         mapsheet,
+         utm_easting,
+         utm_northing,
+         assessment_comment) %>% 
+  fpr_kable(caption_text = caption_text,
+            scroll = gitbook_on)
+
+```
+
+```{r}
+kable(xref_bcfishpass_names_prep)
+```
+
+```{r}
+kable(xref_bcfishpass_names_prep)
+```
+
