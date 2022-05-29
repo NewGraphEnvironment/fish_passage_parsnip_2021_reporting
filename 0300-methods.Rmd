@@ -18,7 +18,6 @@ From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been ac
   *  Fisheries experts
    
 
-
 ### Environmental Stewardship Initiative {-}
 
 The [Environmental Stewardship Initiative](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/consulting-with-first-nations/collaborative-stewardship-bc/environmental-stewardship-initiative)(ESI) is a collaborative partnership between the Province and First Nations with projects designed to focus on ecosystem assessment, restoration, enhancement, research and education . To date, four regional environmental stewardship projects have been developed. A governance working group with representatives from all four stewardship forums provides governance oversight and guidance for the ESI. The Parsnip River watershed group is within the Regional Strategic Environmental Assessment Forum (RSEA) area.
@@ -52,12 +51,14 @@ Gradient, channel size and stream discharge are key determinants of channel morp
 ```{r tab-fish-spawning-rearing, eval=F}
 #`r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br><br><br>")}`
 bcfishpass_spawn_rear_model %>% 
+  filter(species_code %in% c('BT', 'RB', 'GR', 'KO')) %>% 
   mutate(Species = fishbc::fbc_common_name(species_code), 
          spawn_gradient_max = round(spawn_gradient_max * 100 ,1),
          rear_gradient_max = round(rear_gradient_max * 100 ,1)) %>%
   select(Species, 
          `Spawning Gradient  Max (%)`= spawn_gradient_max,
          `Spawning Width Min (m)` = spawn_channel_width_min,
+         `Rearing Width Min (m)` = rear_channel_width_min,
          # `Spawning Width Max (m)` = spawn_channel_width_max,
          # `Spawning MAD Min (m3/s)` = spawn_mad_min,
          # `Spawning MAD Max (m3/s)` = spawn_mad_max,
@@ -118,6 +119,6 @@ xref_bcfishpass_names %>%
 
 ## Online Mapping {-}
 
-An online mapping portal was
+An online mapping portal has been set up for engagement and planning purposes at  
 
 
