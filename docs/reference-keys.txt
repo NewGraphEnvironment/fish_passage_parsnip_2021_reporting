@@ -12,5 +12,4 @@ tab:tab-fish-width
 fig:fish-plot-width
 tab:tab-fish-wshed
 fig:fish-plot-wshed
-pscis-crossing-125179---tributary-to-missinka-river
-pscis-125345---tributary-to-parsnip-river
+fig:widget-planning-caption

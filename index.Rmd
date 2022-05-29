@@ -2,13 +2,17 @@
 title: "PEA-F22-F-3577-DCA Restoring Fish Passage in the Peace Region"
 author: |
  |
+ |
  | Prepared for
  | Fish and Wildlife Compensation Program  
  | Fish Passage Technical Working Group 
  |
+ |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
+ |      on behalf of
+ | Society for Ecosystem Restoration in Northern British Columbia
  |
  | Prepared with financial support of the Fish and Wildlife Compensation Program on
  | behalf of its program partners BC Hydro, the Province of BC, Fisheries and Oceans
@@ -80,16 +84,20 @@ knitr::write_bib(c(
 
 
 Modern civilization has a long journey ahead to acknowledge and address the historic and ongoing impacts of colonialism that have resulted in harm to the cultures and livelihoods living interconnected with our ecosystems for many thousands of years. 
+
 <br>
 
-Many thanks to the McLeod Lake members of council that took the time to meet and discuss big picture goals for this collaboration. Than you to Nathan Prince for viewing sites in the field, liaising with numerous players and tying this work together with the numerous other initiatives the Nation is advising and steering.
+Mussi to John DeGagne from SERNbc for wrangling cash together to expedite Missinka River watershed rehabilitation and for providing guidance for multiple aspects of the project. Thank you Jenn Lawson from FWCP for connecting our team and facilitating collaboration from the office and the field. Much gratitude to Simon Norris for leveraging decades of hard work towards the GIS, modeling and mapping that were key to the success of this work. Thank you to Karla Graf from CN Rail for reviewing our study plan and providing funding for field work assistance for crossings under the CN Railway.
 
+<br>
+
+Many thanks to the McLeod Lake members of council that took the time to meet and discuss big picture goals for this collaboration. Mussi cho to Nathan Prince for guidance, viewing sites in the field, liaising with numerous players and tying this work together with the numerous other initiatives the Nation is advising and steering.
 
 
 
 
 ```{js, logo-header, echo = FALSE, eval= T}
 title=document.getElementById('header');
-title.innerHTML = '<img src="fig/nge-full_white.png" alt="NewGraph">' + title.innerHTML
+title.innerHTML = '<img src="fig/logo_fwcp_sern.png" alt="NewGraph">' + title.innerHTML
 ```
 

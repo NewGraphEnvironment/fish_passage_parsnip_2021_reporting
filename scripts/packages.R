@@ -75,13 +75,16 @@ package_list <- c(
   'ggdark',
   'geojsonio',
   'pdftools',
-  'fpr'
+  'fpr',
+  'crosstalk',
+  'DT'
   # rgl,
   # geojsonsf,
   # bit64 ##to make integer column type for pg
   # gert  ##to track git moves
   ##leafpop I think
 )
+
 
 lapply(package_list,
        require,

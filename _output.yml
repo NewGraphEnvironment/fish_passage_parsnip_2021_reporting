@@ -12,7 +12,7 @@ bookdown::gitbook:
       theme: night
       family: sans
 pagedown::html_paged:
-  front_cover: "fig/nge-icon_name_black.png"
+  front_cover: "fig/nge-full_black.png"
   css: ["style-pagedown.css", "default-page-custom.css", "default"] #
   toc: true
   toc_depth: 1

@@ -31,7 +31,7 @@ preview_chapter('0100-intro.Rmd')
 
 
 # define the _bookfile_name from _bookdown.yml
-filename_html <- 'Skeena2021'
+filename_html <- 'parsnip2021'
 
 {
 
@@ -42,7 +42,7 @@ filename_html <- 'Skeena2021'
                          encoding = 'UTF-8')
 
   #move the phase 1 appendix back to main directory
-  file.rename('hold/0600-appendix.Rmd', '0600-appendix.Rmd')
+  # file.rename('hold/0600-appendix.Rmd', '0600-appendix.Rmd')
 
   # print to pdf
   pagedown::chrome_print(
@@ -51,13 +51,13 @@ filename_html <- 'Skeena2021'
     timeout = 180
   )
 
-  # reduce the size
-  tools::compactPDF(paste0(getwd(), "/docs/", filename_html, ".pdf"),
-                    gs_quality = 'screen',
-                    ##this was on the windows machine
-                    # gs_cmd = "C:/Program Files/gs/gs9.56.1/bin/gswin64.exe"
-                    gs_cmd = "opt/homebrew/bin/gs"
-  )
+  # reduce the size if we need to but we don't here so hashed out
+  # tools::compactPDF(paste0(getwd(), "/docs/", filename_html, ".pdf"),
+  #                   gs_quality = 'screen',
+  #                   ##this was on the windows machine
+  #                   # gs_cmd = "C:/Program Files/gs/gs9.56.1/bin/gswin64.exe"
+  #                   gs_cmd = "opt/homebrew/bin/gs"
+  # )
 
   # get rid of the html as its too big and not needed
   file.remove(paste0(getwd(), '/', filename_html, '.html'))

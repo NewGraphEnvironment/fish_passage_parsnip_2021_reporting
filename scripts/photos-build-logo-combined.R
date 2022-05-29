@@ -1,17 +1,17 @@
 ##need to line up a logo for the report
 
-##resize sern logo
-image_read("fig/SERNbc-Logo-HALF.jpg") %>%
-  image_scale("1252x439.5") %>%
-  image_write(path = "fig/logo_sern.png", format = 'png')
+
 
 
 ##resize newgraph logo
-image_read('fig/logo_html3.png') %>%
+image_read('fig/fwcp.jpg') %>%
   image_scale("626x163.5") %>%
-  image_write(path = "fig/logo_newgraph_forcombine.png", format = 'png')
+  image_write(path = "fig/logo_fwcp_forcombine.png", format = 'png')
 
-##combine sern and newgraph logos
+##combine sern and fwcp logos
+img <- c(image_read("fig/logo_sern.png"), image_read("fig/logo_fwcp_forcombine.png"))
+image_mosaic(img) %>%
+  image_write(path = "fig/logo_fwcp_sern.png", format = 'png')
 
 images_to_combine <- paste0(getwd(), c('/fig/logo_sern.png','/fig/logo_html3.png')) %>%
   image_read() %>%

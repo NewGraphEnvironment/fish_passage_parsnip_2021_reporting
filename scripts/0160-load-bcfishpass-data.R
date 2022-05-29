@@ -16,11 +16,11 @@ source('scripts/private_info.R')
 
 conn <- DBI::dbConnect(
   RPostgres::Postgres(),
-  dbname = dbname,
-  host = host,
-  port = port,
-  user = user,
-  password = password
+  dbname = dbname_mac,
+  host = host_mac,
+  port = port_mac,
+  user = user_mac,
+  password = password_mac
 )
 
 #
@@ -87,6 +87,16 @@ and table_name = 'crossings';"
 bcfishpass_column_comments <- st_read(conn, query =  query) %>%
   select(column_name, column_comment)
 
+# get the pscis data
+query <- "SELECT p.*, wsg.watershed_group_code
+   FROM whse_fish.pscis_assessment_svw p
+   INNER JOIN whse_basemapping.fwa_watershed_groups_poly wsg
+ON ST_Intersects(wsg.geom,p.geom)
+WHERE wsg.watershed_group_code IN ('PARS', 'CARP', 'CRKD');"
+
+
+##import and grab the coordinates - this is already done
+pscis<- st_read(conn, query =  query)
 # porphyryr <- st_read(conn, query =
 # "SELECT * FROM bcfishpass.crossings
 #    WHERE stream_crossing_id = '124487'")
@@ -110,6 +120,8 @@ rws_write(bcfishpass_archive, exists = F, delete = TRUE,
 rws_drop_table("bcfishpass", conn = conn) ##now drop the table so you can replace it
 rws_write(bcfishpass, exists = F, delete = TRUE,
           conn = conn, x_name = "bcfishpass")
+rws_write(pscis, exists = F, delete = TRUE,
+          conn = conn, x_name = "pscis")
 # write in the xref
 # rws_drop_table("xref_pscis_my_crossing_modelled", conn = conn) ##now drop the table so you can replace it
 # rws_write(my_pscis_modelledcrossings_streams_xref, exists = F, delete = TRUE,
@@ -118,7 +130,7 @@ rws_write(bcfishpass, exists = F, delete = TRUE,
  # bcfishpass_column_comments_archive <- readwritesqlite::rws_read_table("bcfishpass_column_comments", conn = conn)
 # rws_write(bcfishpass_column_comments_archive, exists = F, delete = TRUE,
 #            conn = conn, x_name = paste0("bcfishpass_column_comments_archive_", format(Sys.time(), "%Y-%m-%d-%H%m")))
-# rws_drop_table("bcfishpass_column_comments", conn = conn) ##now drop the table so you can replace it
+rws_drop_table("bcfishpass_column_comments", conn = conn) ##now drop the table so you can replace it
 rws_write(bcfishpass_column_comments, exists = F, delete = TRUE,
           conn = conn, x_name = "bcfishpass_column_comments")
 # rws_drop_table("my_pscis_modelledcrossings_streams_xref", conn = conn)
@@ -128,7 +140,7 @@ rws_list_tables(conn)
 rws_disconnect(conn)
 
 ##grab the bcfishpass spawning and rearing table and put in the database so it can be used to populate the methods and tie to the references table
-urlfile="https://github.com/NewGraphEnvironment/bcfishpass/raw/ngtest20220510/parameters/habitat.csv"
+urlfile="https://github.com/NewGraphEnvironment/bcfishpass/raw/pars2022ng/parameters/habitat.csv"
 
 bcfishpass_spawn_rear_model <- read_csv(url(urlfile))
 
@@ -139,7 +151,7 @@ rws_list_tables(conn)
 # archive <- readwritesqlite::rws_read_table("bcfishpass_spawn_rear_model", conn = conn)
 # rws_write(archive, exists = F, delete = TRUE,
 #           conn = conn, x_name = paste0("bcfishpass_spawn_rear_model_archive_", format(Sys.time(), "%Y-%m-%d-%H%m")))
-# rws_drop_table("bcfishpass_spawn_rear_model", conn = conn)
+rws_drop_table("bcfishpass_spawn_rear_model", conn = conn)
 rws_write(bcfishpass_spawn_rear_model, exists = F, delete = TRUE,
           conn = conn, x_name = "bcfishpass_spawn_rear_model")
 rws_list_tables(conn)
