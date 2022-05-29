@@ -6,5 +6,5 @@ _book
 _bookdown_files
 rsconnect
 
-R/private_info.R
+scripts/private_info.R
 
