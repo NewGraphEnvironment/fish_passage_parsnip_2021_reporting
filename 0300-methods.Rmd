@@ -2,7 +2,7 @@
 
 # Methods {-}
 
-## Engagement {-}
+## Engage Partners {-}
 
 From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been actively engaging with the following groups to discuss the project, solicit input, prioritize sites and plan fish passage remediation.
 
@@ -27,7 +27,9 @@ The [Environmental Stewardship Initiative](https://www2.gov.bc.ca/gov/content/en
 Working together with McLeod Lake Indian Band we are leveraging RSEA initiatives by overlaying Parsnip River watershed group fish passage planning data with the [Recreational Opportunity Spectrum Inventory data](https://catalogue.data.gov.bc.ca/dataset/recreational-opportunity-spectrum-inventory) to facilitate discussions with partners and stakeholders about how long term landscape stewardship goals of McLeod Lake Indian Band relate to stream crossing infrastructure upgrades/removals within their traditional territory.  The inventory data summarizes recreation opportunities as combinations of settings and probable human experience opportunities organized along a spectrum of classes. The spectrum is set out in terms of seven classes as follows: Primitive (P), Semi-primitive Non-motorized (SPNM), Semi-primitive Motorized (SPM), Roaded Natural (RN), Roaded Modified (RM), Rural (R), Urban (U).  The general idea is that areas towards the primitive end of the spectrum provide more opportunities for First Nations groups such as the McLeod Lake Indian Band to exercise their rights as indigenous people in pristine areas within their traditional territory [@unitednationsgeneralassembly2007UnitedNations].
 
 
-## Habitat Modelling {-}
+## Identify and Communicate Connectivity Issues {-}
+
+### Habitat Modelling {-}
 
 Through this initiative as well as other SERNbc led initiatives [@irvine2021BulkleyRiver; @irvine2022BulkleyRiver], as well as through direction from the Provincial Fish Passage Remediation Program and connectivity restoration planning conducted by Canadian Wildlife Federation and others [@mazany-wright_etal2021BulkleyRiver; @irvine2022ElkRiver], `bcfishpass` has been designed to prioritize potential fish passage barriers for assessment or remediation. The software is under continual development and has been designed and constructed by @norris2021smnorrisbcfishpass using of sql and python based shell script libraries to generate a simple model of aquatic habitat connectivity.  The model identifies natural barriers (ex. steep gradients for extended distances) and hydroelectric dams to classifying the accessibility upstream by fish [@norris2021smnorrisbcfishpass]. On potentially accessible streams, scripts identify known barriers (ex. waterfalls >5m high) and additional anthropogenic features which are primarily road/railway stream crossings (i.e. culverts) that are potentially barriers. To prioritize these features for assessment or remediation, scripts report on how much modelled potentially accessible aquatic habitat the barriers may obstruct. The model can be refined with known fish observations upstream of identified barriers and for each crossing location, the area of lake and wetland habitat upstream, species documented upstream/downstream, an estimate of watershed area (on 2nd order and higher streams), mean annual precipitation weighted to upstream watershed area and channel width can be collated using `bcfishpass`, `fwapg` and `bcfishobs`.  This, information, can be used to provide an indication of the potential quantity and quality of habitat potentially gained should fish passage be restored by comparing to user defined thresholds for the aforementioned parameters. 
  
@@ -41,14 +43,14 @@ Gradient, channel size and stream discharge are key determinants of channel morp
 
 <br>
 
-`bcfishpass` and associated tools have been designed to be flexible in analysis, accepting user defined gradient, channel width and stream discharge categories [@moeStreamInventorySample].  Although currently in draft form, and subject to development revisions, gradient and channel width thresholds for habitat with the highest intrinsic value for a number of fish species in the Parsnip River watershed group have been specified and applied to model habitat upstream of stream crossing locations with the highest potential intrinsic value (Table \@ref(tab:tab-fish-spawning-rearing)).  Thresholds were derived based on a literature review with references provided in Table \@ref(tab:tab-fish-spawning-rearing-references). Output parameters for modelling are presented in Table \@ref(tab:tab-bcfp-def).
+`bcfishpass` and associated tools have been designed to be flexible in analysis, accepting user defined gradient, channel width and stream discharge categories [@moeStreamInventorySample].  Although currently in draft form, and subject to development revisions, gradient and channel width thresholds for habitat with the highest intrinsic value for a number of fish species in the Parsnip River watershed group have been specified and applied to model habitat upstream of stream crossing locations with the highest potential intrinsic value (Table \@ref(tab:tab-fish-spawning-rearing)).Output parameters for modelling are presented in Table \@ref(tab:tab-bcfp-def).
 
 
 
 `r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("<br><br><br>")`
 
 
-```{r tab-fish-spawning-rearing, eval=F}
+```{r tab-fish-spawning-rearing, eval=T}
 #`r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br><br><br>")}`
 bcfishpass_spawn_rear_model %>% 
   filter(species_code %in% c('BT', 'RB', 'GR', 'KO')) %>% 
@@ -71,7 +73,9 @@ bcfishpass_spawn_rear_model %>%
   as_tibble(rownames = "row_names") %>% 
   janitor::row_to_names(row_number = 1) %>% 
   rename(Variable = Species) %>% 
-  fpr::fpr_kable(caption_text = 'Stream gradient and channel width thresholds used to model potentially highest value fish habitat.', scroll = F)
+  fpr::fpr_kable(caption_text = 'Stream gradient and channel width thresholds used to model potentially highest value fish habitat.', 
+                 footnote_text = 'Models for RB, GR and KO are under a process of development and have not yet been released.  All models parameters are preliminary and subject to collaborative development.',
+                 scroll = gitbook_on)
 
 ```
 
@@ -105,20 +109,34 @@ bcfishpass_spawn_rear_model_references %>%
 
 <br>
 
-```{r tab-bcfp-def, eval = F}
+```{r tab-bcfp-def, eval = T}
 xref_bcfishpass_names %>% 
   filter(id_side == 1) %>% 
   arrange(id_join) %>%  
   select(Attribute = report, Definition = column_comment) %>% 
   fpr::fpr_kable(caption_text = 'bcfishpass outputs and associated definitions',
-                 footnote_text = 'Steelhead model uses a gradient threshold of maximum 20% to determine if access if likely possible',
+                 footnote_text = 'Bull trout model uses a gradient threshold of maximum 25% to determine if access if likely possible',
                  scroll = gitbook_on)
-
 ```
 
+### Field Planning {-}
 
-## Online Mapping {-}
+As there have been significant advancements in our ability to scope for restoration opportunities such as `bcfishpass` and the newly developed bull trout spawning and rearing model we built an interactive widget to plan for 2022 field surveys. The widget allows screeening of previously inventoried as well as modelled stream crossing locations based on the likely amount and type of habitat modelled upstream.
 
-An online mapping portal has been set up for engagement and planning purposes at  
+<br>
+
+In addition to increasing our state of knowledge and ensuring that we identify the best and most efficient opportunities for fish passage restoration, 2022 field surveys are also intended to build McLeod Lake Indian Band capacity for natural resource management and stewardship in their territory.   
+
+### Mapping {-}
+
+#### QGIS {-}
+
+Updated mapping incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model was developed by Hillcrest Geographics.  `pdf` maps were generated using `QGIS` with data supplied via a `postgreSQL` database.  A QGIS layer file defining and symbolizing all layers required for general fish passage mapping was developed and at the time of reporting was kept under version control within [`bcfishpass`](https://github.com/smnorris/bcfishpass/tree/main/qgis). Use of the QGIS layer file allows load and representation all map component layers provided the user points to a postgresql database containing the necessary data.
+
+
+
+#### Web Mapping {-}
+
+An online mapping portal has been developed up for engagement and planning purposes.  The [template](https://github.com/smnorris/bcfishpass/tree/main/app) for the repository was developed within `bcfishpass` by Simon Norris of Hillcrest Geographics based on a basic mapbox gl style using vector tiles served from `pg_tileserve` and `pg_featureserve`.   At the time of reporting, an upstream version of the web mapping app was located within with development of the interface expected to evolve significantly over the coming months. 
 
 
