@@ -7,7 +7,7 @@
 filename_html <- 'Parsnip2021'
 
 maps_location <- 'https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/'
-maps_location_zip <- 'https://hillcrestgeo.ca/outgoing/fishpassage/projects/bulkley/archive/2022-05-27/parsnip_2022-05-27.zip'
+maps_location_zip <- 'https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip'
 
 
 pscis_list <- fpr::fpr_import_pscis_all()
@@ -855,31 +855,31 @@ bcfishpass_names_updated <- left_join(
 #this is how we line up our new column names and put things in order for reporting on the fish habitat modeling
 # we need to update this sometimes.  When we do we update 02_prep_reporting/0160-load-bcfishpass-data.R,
 # get the data from  rename the xref_bcfishpass_names tribble to xref_bcfishpass_names_old  and go through the following procedure
-xref_bcfishpass_names_old <- xref_bcfishpass_names
+# xref_bcfishpass_names_old <- xref_bcfishpass_names
 
 
 # ## join the new with the old so you can kable(xref_bcfishpass_names_prep) then run in Rmd chunk and copy paste tribble yo
-xref_bcfishpass_names_prep <- left_join(
-  bcfishpass_names_updated,
-  xref_bcfishpass_names_old %>% select(-column_comment),
-  by = c('bcfishpass')
-) %>%
-    mutate(report = stringr::str_replace_all(bcfishpass, '_', ' ') %>%
-             stringr::str_to_title() %>%
-             stringr::str_replace_all('Km', '(km)') %>%
-             stringr::str_replace_all('Ha', '(ha)') %>%
-             stringr::str_replace_all('Lakereservoir', 'Lake Reservoir') %>%
-             stringr::str_replace_all('Co ', 'CO ') %>%
-             stringr::str_replace_all('Ch', 'CH ') %>%
-             stringr::str_replace_all('St ', 'ST ') %>%
-             stringr::str_replace_all('Sk ', 'SK ') %>%
-             stringr::str_replace_all('Bt ', 'BT ') %>%
-             stringr::str_replace_all('Wct ', 'WCT ') %>%
-             stringr::str_replace_all('Pscis', 'PSCIS') %>%
-             stringr::str_replace_all('Spawningrearing', 'Spawning Rearing') %>%
-             stringr::str_replace_all('Betweenbarriers', 'Between Barriers') %>%
-             stringr::str_replace_all('Belowupstrbarriers', 'Below Barriers')) %>%
-  select(bcfishpass, report, id_join, id_side, column_comment)
+# xref_bcfishpass_names_prep <- left_join(
+#   bcfishpass_names_updated,
+#   xref_bcfishpass_names_old %>% select(-column_comment),
+#   by = c('bcfishpass')
+# ) %>%
+#     mutate(report = stringr::str_replace_all(bcfishpass, '_', ' ') %>%
+#              stringr::str_to_title() %>%
+#              stringr::str_replace_all('Km', '(km)') %>%
+#              stringr::str_replace_all('Ha', '(ha)') %>%
+#              stringr::str_replace_all('Lakereservoir', 'Lake Reservoir') %>%
+#              stringr::str_replace_all('Co ', 'CO ') %>%
+#              stringr::str_replace_all('Ch', 'CH ') %>%
+#              stringr::str_replace_all('St ', 'ST ') %>%
+#              stringr::str_replace_all('Sk ', 'SK ') %>%
+#              stringr::str_replace_all('Bt ', 'BT ') %>%
+#              stringr::str_replace_all('Wct ', 'WCT ') %>%
+#              stringr::str_replace_all('Pscis', 'PSCIS') %>%
+#              stringr::str_replace_all('Spawningrearing', 'Spawning Rearing') %>%
+#              stringr::str_replace_all('Betweenbarriers', 'Between Barriers') %>%
+#              stringr::str_replace_all('Belowupstrbarriers', 'Below Barriers')) %>%
+#   select(bcfishpass, report, id_join, id_side, column_comment)
 
 xref_bcfishpass_names <- tibble::tribble(
                                                                          ~bcfishpass,                                                 ~report, ~id_join, ~id_side,                                                                                                                                                                                                                                          ~column_comment,
@@ -1109,7 +1109,7 @@ xref_bcfishpass_names <- tibble::tribble(
                                                       "barriers_anthropogenic_dnstr",                          "Barriers Anthropogenic Dnstr",       NA,       NA,                                                                                                                                  "List of the aggregated_crossings_id values of barrier crossings downstream of the given crossing, in order downstream",
                                                       "barriers_anthropogenic_upstr",                          "Barriers Anthropogenic Upstr",       NA,       NA,                                                                                                                                                         "List of the aggregated_crossings_id values of barrier crossings upstream of the given crossing",
                                                                     "bt_spawning_km",                                      "BT Spawning (km)",       20,       1L,                                                                                                                                                                   "Length of stream upstream of point modelled as potential Bull Trout spawning habitat",
-                                                                     "bt_rearing_km",                                       "BT Rearing (km)",       10,       2L,                                                                                                                                                                    "Length of stream upstream of point modelled as potential Bull Trout rearing habitat",
+                                                                     "bt_rearing_km",                                       "BT Rearing (km)",       10,       1L,                                                                                                                                                                    "Length of stream upstream of point modelled as potential Bull Trout rearing habitat",
                                                  "bt_spawning_belowupstrbarriers_km",                       "BT Spawning Below Barriers (km)",       20,       2L,                                                                                                                       "Length of stream upstream of point and below any additional upstream barriers, modelled as potential Bull Trout spawning habitat",
                                                   "bt_rearing_belowupstrbarriers_km",                        "BT Rearing Below Barriers (km)",       10,       2L,                                                                                                                        "Length of stream upstream of point and below any additional upstream barriers, modelled as potential Bull Trout rearing habitat"
                            )
