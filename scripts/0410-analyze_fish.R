@@ -2,8 +2,7 @@ source('scripts/functions.R')
 source('scripts/packages.R')
 source('scripts/private_info.R')
 
-#!!!!!!!!!all the width data is gone so we need to use our archived version!!!!!!!!!!!!Scroll down to the hashed out section
-##get the road info from the database
+# we need to use bcbarriers for now untill we get bcdata running again
 conn <- DBI::dbConnect(
   RPostgres::Postgres(),
   dbname = dbname,
@@ -56,6 +55,7 @@ species_of_interest <- c('BT', 'RB', 'GR', 'KO')
 fiss_sum <- st_read(conn, query = query) %>%
   filter(species_code %in% species_of_interest)
 
+dbDisconnect(conn)
 fiss_sum2 <- fiss_sum %>%
   group_by(species_code) %>%
   summarise(total_spp = n())
@@ -168,7 +168,6 @@ fiss_sum_width <- left_join(
 ) %>%
   mutate(Percent = round(Count/total_spp * 100, 0))
 
-fiss_sum_width_tab <-
 
 ##save this for the report
 ##burn it all to a file we can use later
@@ -217,44 +216,56 @@ plot_wshed_hist
 
 fiss_sum_wshed_prep1 <- fiss_sum %>%
   mutate(Watershed = case_when(
-    upstream_area_ha < 2500 ~ '0 - 2500ha',
-    upstream_area_ha >= 2500 &  upstream_area_ha < 5000 ~ '02500 - 5000ha',
-    upstream_area_ha >= 5000 &  upstream_area_ha < 7500 ~ '05000 - 7500ha',
-    upstream_area_ha >= 7500 &  upstream_area_ha < 10000 ~ '07500 - 10000ha',
-    upstream_area_ha >= 10000 ~ '10000ha+')) %>%
+    upstream_area_ha < 2500 ~ '0 - 25km2',
+    upstream_area_ha >= 2500 &  upstream_area_ha < 5000 ~ '25 - 50km2',
+    upstream_area_ha >= 5000 &  upstream_area_ha < 7500 ~ '50 - 75km2',
+    upstream_area_ha >= 7500 &  upstream_area_ha < 10000 ~ '75 - 100km2',
+    upstream_area_ha >= 10000 ~ '100km2+')) %>%
   mutate(watershed_id = case_when(
-    upstream_area_ha < 2500 ~ 25005,
+    upstream_area_ha < 2500 ~ 2500,
     upstream_area_ha >= 2500 &  upstream_area_ha < 5000 ~ 5000,
     upstream_area_ha >= 5000 &  upstream_area_ha < 7500 ~ 7500,
     upstream_area_ha >= 7500 &  upstream_area_ha < 10000 ~ 10000,
     upstream_area_ha >= 10000  ~ 99999))
 
+
+
+
 fiss_sum_wshed_prep2 <- fiss_sum_wshed_prep1 %>%
-  group_by(species_code) %>%
-  summarise(total_spp = n())
+  group_by(species_code, Watershed) %>%
+  summarise(count_wshd = n())
 
 fiss_sum_wshed_prep3 <- fiss_sum_wshed_prep1 %>%
-  group_by(species_code, Watershed, upstream_area_ha)  %>%
-  summarise(Count = n())
+  group_by(species_code)  %>%
+  summarise(total_spp = n())
 
 fiss_sum_wshed <- left_join(
-  fiss_sum_wshed_prep3,
   fiss_sum_wshed_prep2,
-  by = 'species_code'
+  fiss_sum_wshed_prep3,
+  by = c('species_code')
 ) %>%
-  mutate(Percent = round(Count/total_spp * 100, 0))
+  mutate(Percent = round(count_wshd/total_spp * 100, 0),
+         Watershed = factor(Watershed, levels = c('0 - 25km2',
+                                                  '25 - 50km2',
+                                                  '50 - 75km2',
+                                                  '75 - 100km2',
+                                                  '100km2+'))
+         ) %>%
+  arrange(species_code, Watershed)
 
 ##save this for the report
 ##burn it all to a file we can use later
 fiss_sum_wshed %>% readr::write_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_wshed.csv'))
 #
-plot_width <- fiss_sum_wshed %>%
-  filter(!is.na(upstream_area_ha)) %>%
+
+plot_wshed <- fiss_sum_wshed %>%
+  filter(!is.na(Watershed)) %>%
   ggplot(aes(x = Watershed, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  theme_bw(base_size = 11)+
+  ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Watershed Area", y = "Occurrences (%)")+
   theme(axis.text.x=element_text(angle = 45, hjust = 1))
-plot_width
+plot_wshed
+
 
