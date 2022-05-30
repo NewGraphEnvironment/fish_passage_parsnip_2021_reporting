@@ -2,7 +2,9 @@
 
 # Results and Discussion {-}
 
-## Partnership Funding {-}
+## Engage Partners {-}
+
+### Partnership Funding {-}
 
 SERN was able to aquire \$105,000 of partnership funding from FLNR (\$80,000) and the Provincial Fish Passage Technical Working Group (\$25,000) towards the 2021/2022 program. Additionally, we have obtained a commitment for \$25,000 of partnership funding from the the Provincial Fish Passage Technical Working Group towards the 2022/2023 program.
 
@@ -12,11 +14,11 @@ scroll_box_height <- '400px'
 ```
 
 
-## Planned Remediations {-}
+### Planned Remediations {-}
 
-### PSCIS Crossing 125179 - Tributary to Missinka River {-}
+#### PSCIS Crossing 125179 - Tributary to Missinka River {-}
 
-We are working together with McLeod Lake and Sinclar to advance crossing [125179 (Tributary to Missinka River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125179.html). Works to replace the crossing are planned for summer of 2022. A map of the watershed is provided in map attachment [093I.116](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/FishPassage_093I.116.pdf).
+We are working together with McLeod Lake and Sinclar to advance crossing [125179 (Tributary to Missinka River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125179.html). Works to replace the crossing are planned for summer of 2022. A map of the watershed is provided in map attachment [093I.116](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27//FishPassage_093I.116.pdf). Outputs of `bcfihspass` modelling are presented in (Table \@ref(tab:bcfp-125179))
 
 <br>
 
@@ -40,16 +42,17 @@ Leveraging support from FWCP, Sinclar will obtain remaining portions of funding 
 
 <br>
 
-```{r}
+```{r bcfp-125179}
 fpr::fpr_table_bcfp(site = 125179,
-                    scroll_box_height = scroll_box_height)
+                    scroll_box_height = scroll_box_height,
+                    scroll = gitbook_on)
 ```
 
 
 
-### PSCIS 125000 - Tributary to Parsnip River {-}
+#### PSCIS 125000 - Tributary to Parsnip River {-}
 
-We are working together with McLeod Lake and Sinclar to advance the replacement of crossing [125000 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125000.html) on the Chuchinka-Arctic FSR.  A map of the watershed is provided in map attachment  [093I.111](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/FishPassage_093I.111.pdf).  The crossing was prioritized for restoration for the following reasons:
+We are working together with McLeod Lake and Sinclar to advance the replacement of crossing [125000 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125000.html) on the Chuchinka-Arctic FSR.  A map of the watershed is provided in map attachment  [093I.111](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27//FishPassage_093I.111.pdf).  The crossing was prioritized for restoration for the following reasons:
   
   * At the time of reporting there was significant harvesting and silviculture obligations in areas accessed by the FSR.
   * With an outlet drop of 40cm the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any fish movement upstream.
@@ -58,22 +61,37 @@ We are working together with McLeod Lake and Sinclar to advance the replacement 
   * This site is in the general vicinity of the outlet of Arctic Lake which has been identified as a high priority area for taloo'azi (kokanee) and sa'ba by participants in FWCP supported information gathering work [@pearce2019FirstNations].
   * The FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
   * There are no other stream crossing structures on the mainstem of this tributary that impede fish passage.
-  * The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
+  * The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing (Table \@ref(tab:bcfp-125000)). Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
 
 <br>
 
-```{r}
+```{r bcfp-125000}
 fpr::fpr_table_bcfp(site = 125000,
-                    scroll_box_height = scroll_box_height)
+                    scroll_box_height = scroll_box_height,
+                    scroll = gitbook_on)
 ```
 
 
 
-### PSCIS 125231 - Tributary to Table River {-}
+#### PSCIS 125345 - Tributary to Parsnip River {-}
 
-We are working together with McLeod Lake and Canfor to advance crossing [125231 (Tributary to Table River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125231.html) on the Chuchinka-Table FSR for the following reasons:
+BCTS is planning to deactivate the Chuchinka-Colbourne FSR between where [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) is located and the Chuckhinka-Anzac FSR to the south (Table \@ref(tab:bcfp-125345)). The work is schedule for July and August of 2022.  BCTS was able to engage the Forest Carbon Initiative about the project, who has confirmed that they have funding available for a full road rehabilitation on this section and are able to fund the replanting and road decompaction. This full scale rehabilitation will provide more intensity towards re-vegetation and access management than traditional deactivation practices. We have been in contact with CN Rail to advocate for the removal of crossing 57687 located under the railway immediately upstream of the PSCIS crossing 125345 and the FSR. Discussions are ongoing and we are hopeful action will be taken by CN this summer to remediate crossing 57687 as well. 
 
-  * Table River watershed is designated as a fisheries sensitive watershed under the authority of the *Forest and Range Practices Act* due to significant downstream fisheries values and watershed sensitivity [@beaudry2014Assessmentassignmenta]. Special management is required in the crossing’s watershed to protect habitat for sa'ba and dusk'ihje and includes measures (among others) to limit equivalent clearcut area, reduce impacts to natural stream channel morphology, retain old growth attributes and maintain fish habitat/movement.
+<br>
+
+```{r bcfp-125345}
+fpr::fpr_table_bcfp(site = 125345,
+                    scroll_box_height = scroll_box_height,
+                    scroll = gitbook_on)
+```
+
+
+
+#### PSCIS 125231 - Tributary to Table River {-}
+
+We are working together with McLeod Lake and Canfor to explore opportunities to advance crossing [125231 (Tributary to Table River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125231.html) on the Chuchinka-Table FSR for the following reasons:
+
+  * Table River watershed is designated as a fisheries sensitive watershed under the authority of the *Forest and Range Practices Act* due to significant downstream fisheries values and watershed sensitivity [@beaudry2014Assessmentassignmenta]. Special management is required in the crossing’s watershed to protect habitat for sa'ba (bull trout) and dusk'ihje (Arctic grayling) and includes measures (among others) to limit equivalent clearcut area, reduce impacts to natural stream channel morphology, retain old growth attributes and maintain fish habitat/movement.
   * @hagen_etal2015Criticalhabitats have identified the Table River watershed and several tributaries as containing critical spawning and juvenile rearing habitat for large body sa'ba with an estimated minimum spawner abundance of 100 fish.
   * The Table River (along with the Anzac River) is identified as the primary core of post-Williston dusk'ihje distribution in the Parsnip River watershed with life history, migration behaviours and critical habitats summarized in @hagen_etal2015Criticalhabitats. The mainstem of the Table River contains critical habitats for all life stages of dusk'ihje with adults observed moving among mainstem locations and tributaries during summer. 
   * The culvert in place is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road and negative impacts on local fisheries values. 
@@ -81,32 +99,22 @@ We are working together with McLeod Lake and Canfor to advance crossing [125231 
   * At the time of reporting there was significant harvesting planned and silviculture obligations outstanding in areas accessed by the FSR.
   * With an outlet drop of 60cm, the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any upstream fish migration.
   * There are no other stream crossing structures on the mainstem of this tributary that impede fish passage. There is a newly installed bridge upstream and the culvert under the CN railway downstream was considered passable according to the provincial protocol [@moe2011Fieldassessment].
-  * The stream has a large channel width at the crossing location (4.0m) and has an estimated 875m habitat available upstream with average gradients mapped at less than 10%. Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
+  * The stream has a large channel width at the crossing location (4.0m) and has an estimated 2.7km habitat available upstream with average gradients mapped at less than 15% (Table \@ref(tab:bcfp-125231)). Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
       
 <br>      
    
-```{r}
+```{r bcfp-125231}
 fpr::fpr_table_bcfp(site = 125231,
-                    scroll_box_height = scroll_box_height)
+                    scroll_box_height = scroll_box_height,
+                    scroll = gitbook_on)
 ```
 
 
-### PSCIS 125345 - Tributary to Parsnip River {-}
-
-BCTS is planning to deactivate the Chuchinka-Colbourne FSR between where [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) is located and the Chuckhinka-Anzac FSR to the south. The work is schedule for July and August of 2022.  BCTS was able to engage the Forest Carbon Initiative about the project, who has confirmed that they have funding available for a full road rehabilitation on this section and are able to fund the replanting and road decompaction. This full scale rehabilitation will provide more intensity towards re-vegetation and access management than traditional deactivation practices. We have been in contact with CN Rail to advocate for the removal of crossing 57687 located under the railway immediately upstream of the PSCIS crossing 125345 and the FSR. Discussions are ongoing and we are hopeful action will be taken by CN this summer to remediate crossing 57687 as well. 
-
-<br>
-
-```{r}
-fpr::fpr_table_bcfp(site = 125345,
-                    scroll_box_height = scroll_box_height)
-```
+## Identify and Communicate Connectivity Issues {-}
+### Habitat Modelling {-}
 
 
-## Habitat Modelling {-}
-
-
-In December of 2021, Bayesian statistical methods were used to update our model of stream channel width based on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  This data used to model channel width using Bayesian statistical methods analyzing the relationship between the input variables.  The details of this analysis and resulting formula are documented in @thorley_etal2021ChannelWidth and were used to estimate channel width of stream segments in the Parsnip River watershed to facilitate modelling of highest intrinsic fisheries habitat value.  The analysis is attached as a technical appendix `r if(gitbook_on){knitr::asis_output("[here](https://www.poissonconsulting.ca/f/859859031)")} else knitr::asis_output("at https://www.poissonconsulting.ca/f/859859031")`. 
+In December of 2021, Bayesian statistical methods were used to update our model of stream channel width based on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  This data used to model channel width using Bayesian statistical methods analyzing the relationship between the input variables.  The details of this analysis and resulting formula are documented in @thorley_etal2021ChannelWidth and were used to estimate channel width of stream segments in the Parsnip River watershed to facilitate modelling of highest intrinsic fisheries habitat value.  The analysis is included as [Attachment 2](https://www.poissonconsulting.ca/f/859859031) [@thorley_etal2021ChannelWidth].
 
 <br>
 
@@ -115,103 +123,71 @@ We are leveraging this project together with numerous others to contributing to 
 
 <br>
 
-Working with Ministry of Environment and Climate Change Strategy we have accessed historic electrofishing data for the entire province from British Columbia databases to begin developing evidence based approaches to modelling the highest value habitat for individual fish species.  This work is an important step to increasing our state of knowledge, informing our field data collection and data management protocols provincially as well as for informing fish passage restoration investment decisions and monitoring outcomes.  This work leverages many initiatives throughout the province and is briefly detailed [here](https://www.newgraphenvironment.com/fissr_explore/big-picture.html) with preliminary results presented as a digital attachment [here](https://www.poissonconsulting.ca/temporary-hidden-link/1386346791/fissr-explore-21/) [@amies-galonski_etal2022FISSFish].
+Working with Ministry of Environment and Climate Change Strategy we have accessed historic electrofishing data for the entire province from British Columbia databases to begin developing evidence based approaches to modelling the highest value habitat for individual fish species.  This work is an important step to increasing our state of knowledge, informing our field data collection and data management protocols provincially as well as for informing fish passage restoration investment decisions and monitoring outcomes.  This work leverages many initiatives throughout the province and is briefly detailed [here](https://www.newgraphenvironment.com/fissr_explore/big-picture.html) with preliminary results presented as [Attachment 3] (https://www.poissonconsulting.ca/temporary-hidden-link/1386346791/fissr-explore-21/) [@amies-galonski_etal2022FISSFish].
 
 <br>
 
-## Fisheries {-}
+Utilizing modelled channel widths,  a summary of select `bcfishpass` outputs for the 17 sites surveyed with habitat confirmation assessments in 2019 are presented in  `r if(gitbook_on){knitr::asis_output("Table \\@ref(tab:hab-sum-gitbook)")}else knitr::asis_output("Table \\@ref(tab:hab-sum-pdf).")` Complete modelling outputs for the entire watershed group (n = `r bcfishpass %>% pull(aggregated_crossings_id) %>% length()`) are included in an sqlite database available for download [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/blob/master/data/bcfishpass.sqlite). 
 
+`r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("\\pagebreak<br>")`
 
-Although it should not be assumed that all habitat types have been historically sampled equally, a review of available fisheries data for the Parsnip River watershed stratified by different habitat characteristics can provide insight into which habitats may provide the highest intrinsic value for fish species based on the number of fish captured in those habitats in past assessment work. Figures \@ref(fig:fish-plot-grad) - \@ref(fig:fish-plot-wshed).
-
-
-```{r fish-fiss-summary, eval=T}
-# fiss_sum <- readr::read_csv(file = paste0(getwd(), '/data/extracted_inputs/fiss_sum.csv'))
-fiss_sum_grad <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_grad.csv'))
-fiss_sum_width <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_width.csv'))
-fiss_sum_wshed <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_wshed.csv'))
-# A summary of historical westslope cutthrout trout observations in the Elk River watershed group by average gradient category of associated stream segment is provided in Figure \@ref(fig:fish-wct-bar). Of `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(total)` observations, `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(Percent) + wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent) + wct_elkr_grad %>% filter(gradient_id == 8) %>% pull(Percent)`% were within stream segments with average gradients ranging from 0 - 8%.  A total of `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(Percent)`% of historic observations were within stream segments with gradients between 0 - 3%, `r wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent)`% were within stream segments with gradients ranging from 3 - 5% and `r wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent)`% were within stream segments with gradients between 5 - 8% [@data_fish_obs; @norris2020bcfishobs]. 
+```{r hab-sum-caption}
+my_caption <- 'Summary of updated fish habitat modelling outputs (bull trout model) for habitat confirmation sites surveyed in 2019.'
 ```
 
-```{r tab-fish-grad}
-my_caption <- 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.'
-fiss_sum_grad %>% 
-  select(-gradient_id) %>% 
+```{r hab-sum-gitbook, eval= gitbook_on}
+
+hab_sum <- bcfishpass_phase2 %>% 
+  mutate(map_link = fpr::fpr_my_mapsheet(wshd = 'parsnip', archive_date = '2022-05-27', site = stream_crossing_id),
+           map_link = paste0("<a href ='", dbm_mof_50k_grid,"'target='_blank'>Field Map","</a>")) %>% 
+  select(stream_crossing_id, 
+         pscis_stream_name,
+         pscis_road_name,
+         stream_order,
+         observedspp_upstr,
+         dbm_mof_50k_grid,
+         map_link,
+         contains('bt_'),
+         -contains(c('22','30','waterbodies','belowupstrbarriers','bt_stream_km'))) %>% 
+  arrange(stream_crossing_id) %>% 
+  select(stream_crossing_id:map_link,
+         bt_spawning_km,
+         bt_rearing_km,
+         bt_network_km:bt_slopeclass15_km)
+
+hab_sum %>% 
+  select(-dbm_mof_50k_grid) %>% 
   fpr::fpr_kable(caption_text = my_caption,
                  scroll = gitbook_on)
 ```
 
+```{r hab-sum-pdf, eval = identical(gitbook_on, FALSE)}
+hab_sum_names_pdf <- names(hab_sum) %>% 
+  str_replace_all(c('bt_'), '') %>% 
+  str_replace_all(c('pscis_'), '') %>% 
+  str_replace_all(c('_name'), '')
+  
 
-<br>
-```{r fish-plot-grad, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.', eval=T}
-##bar graph
-plot_grad <- fiss_sum_grad %>% 
-  filter(gradient_id != 99) %>% 
-  ggplot(aes(x = Gradient, y = Percent)) +
-  geom_bar(stat = "identity")+
-  facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
-  labs(x = "Average Stream Gradient", y = "Occurrences (%)")
-plot_grad
-
-```
-
-<br>
-
-```{r tab-fish-width}
-my_caption <- 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.'
-fiss_sum_width %>% 
-  select(-width_id) %>% 
+hab_sum %>%
+  purrr::set_names(nm = hab_sum_names_pdf) %>% 
+  select(id = stream_crossing_id,
+         stream:road,
+         map = dbm_mof_50k_grid,
+         spawning_km,
+         rearing_km,
+         network_km,
+         slopeclass03_km:slopeclass15_km) %>% 
+  mutate(stream = str_replace_all(stream, 'tributary', 'trib'),
+         stream = str_replace_all(stream, 'River', 'R'),
+         stream = str_replace_all(stream, 'Creek', 'Ck')) %>% 
   fpr::fpr_kable(caption_text = my_caption,
-                 scroll = gitbook_on)
-```
+                 scroll = F) 
 
+```
 <br>
 
-```{r fish-plot-width, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.', eval=T}
-##bar graph
-plot_width <- fiss_sum_width %>% 
-  filter(!is.na(width_id)) %>%
-  ggplot(aes(x = Width, y = Percent)) +
-  geom_bar(stat = "identity")+
-  facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
-  labs(x = "Channel Width", y = "Occurrences (%)")
-plot_width
-```
-
-<br>
-
-```{r tab-fish-wshed}
-my_caption <- 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.'
-fiss_sum_wshed %>% 
-  fpr::fpr_kable(caption_text = my_caption,
-                 scroll = gitbook_on)
-```
-
-
-<br>
-
-```{r fish-plot-wshed, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.', eval=T}
-plot_wshed <- fiss_sum_wshed %>%
-  filter(!is.na(upstream_area_ha)) %>%
-  ggplot(aes(x = Watershed, y = Percent)) +
-  geom_bar(stat = "identity")+
-  facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
-  labs(x = "Watershed Area", y = "Occurrences (%)")+
-  theme(axis.text.x=element_text(angle = 45, hjust = 1))
-plot_wshed
-```
-
-
-## Field Planning 2022  {-}
-Georeferenced field maps are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")` 
-
-<br>
-
-
-Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf).")`  
+### Field Planning  {-}
+ Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf). Please not that an interactive fieldwork planning widget prototype has been developed for the project and is located within the online interactive version of the report located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/).")`  Georeferenced field maps containing updated modelling outputs are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")`
 
 ```{r widget-planning-prep}
 # join bcfishpass to some pscis columns for the screening table
@@ -244,8 +220,8 @@ xf <- left_join(
            mapsheet = dbm_mof_50k_grid) %>% 
     # need to run rowise for our fpr function to hit each row
     rowwise() %>% 
-    mutate(mapsheet = fpr::fpr_my_mapsheet(wshd = 'parsnip', archive_date = '2022-05-27', site = id),
-           mapsheet = paste0("<a href ='", mapsheet,"'target='_blank'>Field Map","</a>")) %>% 
+    mutate(map_link = fpr::fpr_my_mapsheet(wshd = 'parsnip', archive_date = '2022-05-27', site = id),
+           map_link = paste0("<a href ='", mapsheet,"'target='_blank'>Field Map","</a>")) %>% 
     arrange(id) %>% 
     st_transform(crs = 4326),
   
@@ -267,6 +243,7 @@ xf <- left_join(
          stream_name,
          habitat_value = habitat_value_code,
          mapsheet,
+         map_link,
          image_view_url,
          pscis_status:bt_slopeclass15_km, 
          bt_spawning_km,
@@ -286,9 +263,10 @@ xf <- left_join(
 
 ```
 
+
 ```{r widget-planning, eval = gitbook_on}
 # Wrap data frame in SharedData
-sd <- SharedData$new(xf)
+sd <- SharedData$new(xf %>% select(-mapsheet))
 
 
 # Use SharedData like a dataframe with Crosstalk-enabled widgets
@@ -383,29 +361,38 @@ my_caption= 'Field planning widget to facilitate planning for 2022 field surveys
 knitr::include_graphics(my_photo, dpi = NA)
 ```
 
+
 ```{r tab-planning-pdf, eval= identical(gitbook_on, FALSE)}
 
-caption_text = 'Field planning results to facilitate selection of restoration opportunities for 2022 field surveys.'
+# identical(gitbook_on, FALSE)
+my_caption = 'Field planning results to facilitate selection of restoration opportunities for 2022 field surveys.'
 
 xf %>% 
+  sf::st_drop_geometry() %>% 
   select(id:habitat_value,
          outlet_drop,
          bt_spawning_km, 
-         bt_rearing_km,
+         bt_rearing_km = bt_rearing_km_raw,
          mapsheet,
          utm_easting,
          utm_northing,
          assessment_comment) %>% 
-  fpr_kable(caption_text = caption_text,
-            scroll = gitbook_on)
+  
+  # test by removing the html
+  select(-mapsheet) %>% 
+  fpr::fpr_kable(caption_text = my_caption,
+                 scroll = gitbook_on)
+  # fpr_kable(caption_text = caption_text,
+  #           scroll = gitbook_on)
 
 ```
 
-```{r}
-kable(xref_bcfishpass_names_prep)
-```
+### Mapping {-}
 
-```{r}
-kable(xref_bcfishpass_names_prep)
-```
+#### QGIS {-}
 
+Updated map fo the study area incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model are available [here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/). A QGIS layer file defining and symbolizing all layers required for general fish passage mapping was developed and at the time of reporting was kept under version control within [`bcfishpass`](https://github.com/smnorris/bcfishpass/tree/main/qgis). Use of the QGIS layer file allows load and representation all map component layers provided the user points to a postgresql database containing the necessary data.
+
+
+#### Web Mapping {-}
+The online connectivity mapping portal for the Peace Region is located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_webmap). At the time of reporting the site was undergoing development so the interface is expected to evolve significantly over the coming months.  Future layers to be added to map include fisheries observations, the  [Recreational Opportunity Spectrum Inventory data](https://catalogue.data.gov.bc.ca/dataset/recreational-opportunity-spectrum-inventory), hydrometric station locations, historic fish sampling sites, wetlands, etc.  
