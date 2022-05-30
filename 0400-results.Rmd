@@ -129,11 +129,8 @@ Utilizing modelled channel widths,  a summary of select `bcfishpass` outputs for
 
 `r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("\\pagebreak<br>")`
 
-```{r hab-sum-caption}
+```{r hab-sum-prep}
 my_caption <- 'Summary of updated fish habitat modelling outputs (bull trout model) for habitat confirmation sites surveyed in 2019.'
-```
-
-```{r hab-sum-gitbook, eval= gitbook_on}
 
 hab_sum <- bcfishpass_phase2 %>% 
   mutate(map_link = fpr::fpr_my_mapsheet(wshd = 'parsnip', archive_date = '2022-05-27', site = stream_crossing_id),
@@ -152,6 +149,11 @@ hab_sum <- bcfishpass_phase2 %>%
          bt_spawning_km,
          bt_rearing_km,
          bt_network_km:bt_slopeclass15_km)
+
+```
+
+```{r hab-sum-gitbook, eval= gitbook_on}
+
 
 hab_sum %>% 
   select(-dbm_mof_50k_grid) %>% 

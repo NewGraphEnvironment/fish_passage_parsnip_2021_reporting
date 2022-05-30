@@ -4,7 +4,7 @@ preview_chapter('0100-intro.Rmd')
 #################################################################################################
 ##go to the index.Rmd and change gitbook_on <- TRUE
 #################################################################################################
-
+source('scripts/packages.R')
 {
   # These files are included in the gitbook version already so we move them out of the build
   files_to_move <- list.files(pattern = ".Rmd$") %>%
