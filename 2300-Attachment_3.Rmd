@@ -1,6 +1,6 @@
 
 
-# **Attachment 3 - FISS Fish Density Exploratory Analysis 2021 (Amies-Galonski, E.C., Thorley, J.L., Irvine, A., and Norris, S. 2022) ** {-}
+# **Attachment 3 - Bayesian analysis of how lineal fish density varies with stream gradient and/or channel width** {-}
 
 [Attachment 3](https://www.poissonconsulting.ca/f/1386346791)
 

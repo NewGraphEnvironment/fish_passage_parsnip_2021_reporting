@@ -18,7 +18,7 @@ scroll_box_height <- '400px'
 
 #### PSCIS Crossing 125179 - Tributary to Missinka River {-}
 
-We are working together with McLeod Lake and Sinclar to advance crossing [125179 (Tributary to Missinka River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125179.html). Works to replace the crossing are planned for summer of 2022. A map of the watershed is provided in map attachment [093I.116](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27//FishPassage_093I.116.pdf). Outputs of `bcfihspass` modelling are presented in (Table \@ref(tab:bcfp-125179))
+We are working together with McLeod Lake and Sinclar to advance crossing [125179 (Tributary to Missinka River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125179.html) on the Chuchinka-Missinka FSR. Works to replace the crossing are planned for summer of 2022. A map of the watershed is provided in map attachment [093I.116](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27//FishPassage_093I.116.pdf). Outputs of `bcfihspass` modelling are presented in (Table \@ref(tab:bcfp-125179))
 
 <br>
 
@@ -30,15 +30,14 @@ Although this crossing is used to access an area of significant cultural value t
   * The Missinka River watershed is utilized by a possibly genetically distinct, self-sustaining dusk'ihje (Arctic grayling) population with the mainstem of the river providing critical habitat for fry and adult fish  
   * The subject tributary is documented as containing sa'ba.  
   * A bridge design was commissioned for the site in 2020 through funding from FWCP (project PEA-F20-F-2967) so preparations for replacement could be made in a timely fashion.  
-  * $80,000 of partnership funding was acquired by SERNbc from FLNR to implement fish passage restoration at the site in 2022 according to the design aquired for the site in 2019/2020. Sinclar Forest Projects Ltd. is the road permit holder at this site and was awarded a contract to initiate delivery of the bridge installation. Sinclar has sent out a request for proposals for the structure replacement to three qualified contractors.  Project coordination expertise by Sinclar are being provided in-kind.  The \$80,000 awarded to Sinclar by FLNR was spent on the following measures:
-    + Water Sustainability Act Permit Application
-    + Environmental Management Plan assessment and documentation
+  * Portions of artnership funding acquired by SERNbc was used to implement key steps towards fish passage restoration at the site in 2022.  Following the design acquired for the site in 2019/2020 [@irvine2020ParsnipRiver], Sinclar Forest Projects Ltd. has begun delivery of the bridge installation with the following measures completed at the time of reporting:
+    + Submission of a Water Sustainability Act Permit Application
+    + Development of an Environmental Management Plan 
     + Source, purchase and mobilization of steel girders, modular timber deck and lock block abutment as per site design
           
 <br>
-          
-          
-Leveraging support from FWCP, Sinclar will obtain remaining portions of funding for this work through the forestry appraisal system. At the time of reporting, bridge installation had been scheduled for the summer of 2022. 
+
+Sinclar has sent out a request for proposals for the structure replacement to three qualified contractors.  Project coordination expertise by Sinclar are being provided in-kind. Leveraging support from SERNbc and FWCP, Sinclar will obtain portions of funding for this work through the forestry appraisal system. Bridge installation has been scheduled for the summer of 2022. 
 
 <br>
 
@@ -52,14 +51,14 @@ fpr::fpr_table_bcfp(site = 125179,
 
 #### PSCIS 125000 - Tributary to Parsnip River {-}
 
-We are working together with McLeod Lake and Sinclar to advance the replacement of crossing [125000 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125000.html) on the Chuchinka-Arctic FSR.  A map of the watershed is provided in map attachment  [093I.111](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27//FishPassage_093I.111.pdf).  The crossing was prioritized for restoration for the following reasons:
+Working together with McLeod Lake and Sinclar, we are advanceing the replacement of crossing [125000 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125000.html) on the Chuchinka-Arctic FSR.  A map of the watershed is provided in map attachment  [093I.111](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27//FishPassage_093I.111.pdf) and video from an unmanned aerial vehicle taken in 2019 is available [here](https://www.youtube.com/watch?v=-foWvX1MSkg).  The crossing was prioritized for restoration for the following reasons:
   
   * At the time of reporting there was significant harvesting and silviculture obligations in areas accessed by the FSR.
   * With an outlet drop of 40cm the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any fish movement upstream.
-  * The culvert in place is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road and negative impacts on local fisheries values.  
+  * The culvert is likely over 30 years old, is undersized and is at risk of washout.  A washout event would result in significant deposition of material downstream of the road (including the mainstem of the Parnip River) and negative impacts on local fisheries values.  
   * The FSR accesses McLeod Lake reservation lands  (ID: Arctic Lake 10) located near the outlet of Arctic Lake.
-  * This site is in the general vicinity of the outlet of Arctic Lake which has been identified as a high priority area for taloo'azi (kokanee) and sa'ba by participants in FWCP supported information gathering work [@pearce2019FirstNations].
-  * The FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
+  * This site is in the general vicinity of the outlet of Arctic Lake which has been identified as a high priority area for taloo'azi (kokanee) and sa'ba (bull trout) by participants in FWCP supported information gathering work [@pearce2019FirstNations].
+  * The Chuchinka-Arctic FSR accesses the Arctic Lake Provincial Park which has significant historic and recreational values.  A canoe launch area for the Parsnip River is also located at the upper Parsnip River Bridge.
   * There are no other stream crossing structures on the mainstem of this tributary that impede fish passage.
   * The stream has a large channel width at the crossing location (4.4m) and has an estimated 3.5km of mainstem habitat less than 5% gradient available upstream of the crossing with rainbow Trout and sculpin confirmed as present immediately below the crossing (Table \@ref(tab:bcfp-125000)). Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019.
 
@@ -75,7 +74,7 @@ fpr::fpr_table_bcfp(site = 125000,
 
 #### PSCIS 125345 - Tributary to Parsnip River {-}
 
-BCTS is planning to deactivate the Chuchinka-Colbourne FSR between where [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) is located and the Chuckhinka-Anzac FSR to the south (Table \@ref(tab:bcfp-125345)). The work is schedule for July and August of 2022.  BCTS was able to engage the Forest Carbon Initiative about the project, who has confirmed that they have funding available for a full road rehabilitation on this section and are able to fund the replanting and road decompaction. This full scale rehabilitation will provide more intensity towards re-vegetation and access management than traditional deactivation practices. We have been in contact with CN Rail to advocate for the removal of crossing 57687 located under the railway immediately upstream of the PSCIS crossing 125345 and the FSR. Discussions are ongoing and we are hopeful action will be taken by CN this summer to remediate crossing 57687 as well. 
+British Columbia Timber Sales is planning to deactivate the Chuchinka-Colbourne FSR between the location of [125345 (Tributary to Parsnip River)](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/03_Parsnip_report_125345.html) and the Chuckhinka-Anzac FSR (Table \@ref(tab:bcfp-125345)) (pers comm. Stephanie Sundquist, BCTS Planning Forester). The work is schedule for July and August of 2022.  BCTS was able to obtain funding for the work through the Forest Carbon Initiative and the work will include a full road rehabilitation as well as decompaction and replanting. This full scale rehabilitation approach provides more intensity towards re-vegetation and access management than traditional deactivation practices. Working with BCTS and McLeod Lake we have been in contact with CN Rail to advocate for the removal of crossing 57687 under the railway immediately upstream of the PSCIS crossing 125345 and the Chuchinka-Colbourne FSR. Discussions are ongoing to advocate that action will be taken by CN this summer to remediate crossing 57687 before the access road from the south is deactivated. 
 
 <br>
 
@@ -99,7 +98,7 @@ We are working together with McLeod Lake and Canfor to explore opportunities to 
   * At the time of reporting there was significant harvesting planned and silviculture obligations outstanding in areas accessed by the FSR.
   * With an outlet drop of 60cm, the culvert in place is a complete barrier to upstream fish passage with very low likelihood of any upstream fish migration.
   * There are no other stream crossing structures on the mainstem of this tributary that impede fish passage. There is a newly installed bridge upstream and the culvert under the CN railway downstream was considered passable according to the provincial protocol [@moe2011Fieldassessment].
-  * The stream has a large channel width at the crossing location (4.0m) and has an estimated 2.7km habitat available upstream with average gradients mapped at less than 15% (Table \@ref(tab:bcfp-125231)). Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
+  * Although, relatively steep, with gradients falling just outside the currently specified thresholds for highest value bull trout rearing, the stream is capable of supporting bull trout, has a large channel width at the crossing location (4.0m) and has an estimated 2.7km habitat available upstream with average gradients mapped at less than 15% (Table \@ref(tab:bcfp-125231)). Habitat was rated as high value for salmonid rearing and spawning in surveys conducted in 2019. 
       
 <br>      
    
@@ -113,17 +112,16 @@ fpr::fpr_table_bcfp(site = 125231,
 ## Identify and Communicate Connectivity Issues {-}
 ### Habitat Modelling {-}
 
+We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass), [`fwapg`](https://github.com/smnorris/fwapg), [`bcdata`](https://github.com/smnorris/bcdata), [bcfishobs](https://github.com/smnorris/bcfishobs) and [`fpr`](https://github.com/NewGraphEnvironment/fpr).  We are using these database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Parsnip River watershed in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
+
+<br>
 
 In December of 2021, Bayesian statistical methods were used to update our model of stream channel width based on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  This data used to model channel width using Bayesian statistical methods analyzing the relationship between the input variables.  The details of this analysis and resulting formula are documented in @thorley_etal2021ChannelWidth and were used to estimate channel width of stream segments in the Parsnip River watershed to facilitate modelling of highest intrinsic fisheries habitat value.  The analysis is included as [Attachment 2](https://www.poissonconsulting.ca/f/859859031) [@thorley_etal2021ChannelWidth].
 
-<br>
-
-
-We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass) and [`fwapg`](https://github.com/smnorris/fwapg) and using these database building and habitat/connectivity modeling tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Parsnip River watershed in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
 
 <br>
 
-Working with Ministry of Environment and Climate Change Strategy we have accessed historic electrofishing data for the entire province from British Columbia databases to begin developing evidence based approaches to modelling the highest value habitat for individual fish species.  This work is an important step to increasing our state of knowledge, informing our field data collection and data management protocols provincially as well as for informing fish passage restoration investment decisions and monitoring outcomes.  This work leverages many initiatives throughout the province and is briefly detailed [here](https://www.newgraphenvironment.com/fissr_explore/big-picture.html) with preliminary results presented as [Attachment 3] (https://www.poissonconsulting.ca/temporary-hidden-link/1386346791/fissr-explore-21/) [@amies-galonski_etal2022FISSFish].
+Working with Ministry of Environment and Climate Change Strategy we have accessed historic electrofishing data for the entire province from British Columbia databases to begin developing evidence based approaches to modelling the highest value habitat for individual fish species.  This work is an important step to increasing our state of knowledge, informing our field data collection and data management protocols provincially as well as for informing fish passage restoration investment decisions and monitoring outcomes.  This work leverages many initiatives throughout the province and is briefly detailed [here](https://www.newgraphenvironment.com/fissr_explore/big-picture.html) with preliminary results presented as [Attachment 3](https://www.poissonconsulting.ca/f/1386346791) [@amies-galonski_etal2022FISSFish].
 
 <br>
 
@@ -189,7 +187,7 @@ hab_sum %>%
 ### Field Planning  {-}
  Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf). Please not that an interactive fieldwork planning widget prototype has been developed for the project and is located within the online interactive version of the report located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/).")`  Georeferenced field maps containing updated modelling outputs are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")`
 
-```{r widget-planning-prep}
+```{r field-planning-prep}
 # join bcfishpass to some pscis columns for the screening table
 # get our dataframe to link to a map
 # xings filtered by >1km of potential rearing habitat
@@ -391,8 +389,9 @@ xf %>%
 
 #### QGIS {-}
 
-Updated map fo the study area incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model are available [here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/). A QGIS layer file defining and symbolizing all layers required for general fish passage mapping was developed and at the time of reporting was kept under version control within [`bcfishpass`](https://github.com/smnorris/bcfishpass/tree/main/qgis). Use of the QGIS layer file allows load and representation all map component layers provided the user points to a postgresql database containing the necessary data.
+Updated map for the Parsnip River, Carp River and Crooked River watershed groups incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model are available [here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/). 
 
 
 #### Web Mapping {-}
-The online connectivity mapping portal for the Peace Region is located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_webmap). At the time of reporting the site was undergoing development so the interface is expected to evolve significantly over the coming months.  Future layers to be added to map include fisheries observations, the  [Recreational Opportunity Spectrum Inventory data](https://catalogue.data.gov.bc.ca/dataset/recreational-opportunity-spectrum-inventory), hydrometric station locations, historic fish sampling sites, wetlands, etc.  
+
+An online connectivity mapping portal for the Peace Region is located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_webmap). At the time of reporting the site was undergoing development with the interface expected to evolve significantly over the coming months.  Future layers to be added to map include fisheries observations, the  [Recreational Opportunity Spectrum Inventory data](https://catalogue.data.gov.bc.ca/dataset/recreational-opportunity-spectrum-inventory), hydrometric station locations, historic fish sampling sites, wetlands, etc.  
