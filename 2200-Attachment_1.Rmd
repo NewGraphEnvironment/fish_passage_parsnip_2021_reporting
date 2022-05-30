@@ -1,0 +1,7 @@
+
+
+# **Attachment 1 - Maps** {-}
+
+All georeferenced field maps are presented at [`r knitr::asis_output(maps_location)`](`r knitr::asis_output(maps_location)`) and available for bulk download as [Attachment 1 - `r knitr::asis_output(maps_location_zip)`](`r maps_location_zip`).
+
+
