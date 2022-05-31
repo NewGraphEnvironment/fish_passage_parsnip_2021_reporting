@@ -2,7 +2,7 @@
 
 # Introduction {-}
 
-`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the latest pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
+`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the most up to date pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
 
 `r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br>")}`
 
@@ -22,29 +22,9 @@ This project builds on Society for Ecosystem Restoration Northern BC (SERNbc) wo
 
 <br>
 
-In 2021/2022, through this collaborative project, and leveraging numerous other connectivity restoration initiatives underway throughout the province, we were able to source funding from the Ministry of Forests, Lands and Natural Resource Operations and Rural Development to catalyze project activities including initiation of the replacement of a high priority crossing in the Missinka River watershed (PSCIS crossing 125179 on the Chuchinka-Missinka FSR) with a clearspan bridge.  Through financial support from FWCP and the Fish Passage Technical Working Group, as well as in-kind and monetary support from Sinclar Group Forest Products, remediation of fish passage at this site will be completed in 2022.  Additionally, works at another high priority site identified in 2020 (PSCIS crossing 125000 on the Chuchinka-Arctic FSR) will be initiated.
+In 2021/2022, through this collaborative project, and leveraging numerous other connectivity restoration initiatives underway throughout the province, we engaged numerous project partners and were able to source funding to catalyze fish passage restoration activities at multiple sites identified as high priorities in 2019/2020.
 
 <br>
 
-Through the ongoing development of open source analysis and data presentation tools we are identifying and highlighting additional sites with potential connectivity issues and are planning on the ground works to assess opportunities, build the capacity and provide the data necessary to implement and monitor restoration actions.  Planning, field assessments and follow up reporting will continue to include engagement with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community and build capacity for ecosystem restoration in the Peace Region. 
-
-<br>
-
-We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass), [`fwapg`](https://github.com/smnorris/fwapg), [`bcdata`](https://github.com/smnorris/bcdata), [bcfishobs](https://github.com/smnorris/bcfishobs) and [`fpr`](https://github.com/NewGraphEnvironment/fpr).  We are using these database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Peace Region in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
-
-<br>
-
-As there have been significant advancements in our ability to scope for restoration opportunities since the 2019 habitat confirmations were conducted in the Parsnip River watershed (ie. `bcfishpass` outputs such as the bull trout spawning and rearing model developed in part through this project) we built a prototype of an interactive map/table widget tool to facilitate planning for future field surveys in the Peace Region. The interactive interface allows screening of previously inventoried as well as modelled stream crossing locations based on PSCIS information as well as the likely amount and type of habitat modelled upstream.  Users can download csv results from those screening processes as well as associated georeferenced field maps to facilitate field surveys. 
-
-<br>
-
-Field surveys planned for 2022 and beyond will contribute to McLeod Lake Indian Band capacity building programs, helping facilitate the continued evolution back to indigenous led natural resource management and stewardship within their traditional territory. On the ground research and monitoring is an essential part of any restoration program and is necessary to ensure that we identify the best and most efficient opportunities for fish passage restoration while incorporating adaptive management informed by traditional knowledge and real-time planning/monitoring data.
-
-<br>
-
-Updated maps for the Parsnip River, Carp River and Crooked River watershed groups incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model have been made available for viewing and download. 
-
-<br>
-
-An online connectivity mapping portal for the Peace Region has been launched. At the time of reporting the site was undergoing development with the interface expected to evolve significantly over the coming months.  
+Through the ongoing development of open source analysis and data presentation tools (including pdf and web-hosted mapping tools) we are identifying new restoration opportunities, clarifying restoration benefits, communicating with the broader community and planning on the ground works. Partner engagement, planning, field assessments and reporting planned for 2022/2023 will continue to include relationship building with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community, assess opportunities, build capacity for ecosystem restoration and provide the data necessary to implement and monitor restoration actions. 
 

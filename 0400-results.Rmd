@@ -6,7 +6,7 @@
 
 ### Partnership Funding {-}
 
-SERN was able to aquire \$105,000 of partnership funding from FLNR (\$80,000) and the Provincial Fish Passage Technical Working Group (\$25,000) towards the 2021/2022 program. Additionally, we have obtained a commitment for \$25,000 of partnership funding from the the Provincial Fish Passage Technical Working Group towards the 2022/2023 program.
+Through partnership engagement SERN was able to aquire \$105,000 of partnership funding from FLNR (\$80,000) and the Provincial Fish Passage Technical Working Group (\$25,000) towards the 2021/2022 program. Additionally, we have obtained a commitment for \$25,000 of funding from the the Provincial Fish Passage Technical Working Group towards the 2022/2023 program.
 
 ```{r}
 # define scroll box height for sites
@@ -110,13 +110,15 @@ fpr::fpr_table_bcfp(site = 125231,
 
 
 ## Identify and Communicate Connectivity Issues {-}
+
+
 ### Habitat Modelling {-}
 
 We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass), [`fwapg`](https://github.com/smnorris/fwapg), [`bcdata`](https://github.com/smnorris/bcdata), [bcfishobs](https://github.com/smnorris/bcfishobs) and [`fpr`](https://github.com/NewGraphEnvironment/fpr).  We are using these database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Parsnip River watershed in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
 
 <br>
 
-In December of 2021, Bayesian statistical methods were used to update our model of stream channel width based on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  This data used to model channel width using Bayesian statistical methods analyzing the relationship between the input variables.  The details of this analysis and resulting formula are documented in @thorley_etal2021ChannelWidth and were used to estimate channel width of stream segments in the Parsnip River watershed to facilitate modelling of highest intrinsic fisheries habitat value.  The analysis is included as [Attachment 2](https://www.poissonconsulting.ca/f/859859031) [@thorley_etal2021ChannelWidth].
+Results from the Bayesian analysis using on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation are documented in @thorley_etal2021ChannelWidth.  We used this predictor of channel width to model stream segments in the Parsnip River watershed with potentially high intrinsic fisheries habitat value.  Analysis details and resulting predictive formula are included as [Attachment 2](https://www.poissonconsulting.ca/f/859859031) [@thorley_etal2021ChannelWidth].
 
 
 <br>
@@ -187,7 +189,7 @@ hab_sum %>%
 <br>
 
 ### Field Planning  {-}
- Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf). Please not that an interactive fieldwork planning widget prototype has been developed for the project and is located within the online interactive version of the report located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/).")`  Georeferenced field maps containing updated modelling outputs are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")`
+ Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning-caption).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf). Please not that an interactive fieldwork planning widget prototype has been developed for the project and is located within the online interactive version of the report located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/).")`  Georeferenced field maps containing updated modelling outputs are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")`
 
 ```{r field-planning-prep}
 # join bcfishpass to some pscis columns for the screening table

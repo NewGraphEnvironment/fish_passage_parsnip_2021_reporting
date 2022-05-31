@@ -4,7 +4,7 @@
 
 ## Engage Partners {-}
 
-From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been actively engaging with the following groups to discuss the project, solicit input, prioritize sites and plan fish passage remediation. Engagement actions have included video conference calls, meetings, emails, presentations and phone calls.
+From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been actively engaging with the following groups to discuss the project, solicit input, prioritize sites, raise partnership funding and plan fish passage remediations. Engagement actions have included video conference calls, meetings, emails, presentations and phone calls.
 
   * McLeod Lake Indian Band members of council
   * BCTS Engineering
@@ -14,12 +14,10 @@ From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been ac
   * Northern Engineering - Forests, Lands, Natural Resource Operations and Rural Development (FLNR)
   * BC Ministry of Transportation and Infrastructure
   * Fish Passage Technical Working Group
+  * Coastal Gasliink
   * Planning foresters and biologists Ministry of Forests, Lands, Natural Resource Operations and Rural Development (restructured into Ministry of Forests and Ministry of Land, Water and Resource Stewardship)
   *  Fisheries experts
    
-
-### Environmental Stewardship Initiative {-}
-
 The [Environmental Stewardship Initiative](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/consulting-with-first-nations/collaborative-stewardship-bc/environmental-stewardship-initiative)(ESI) is a collaborative partnership between the Province and First Nations with projects designed to focus on ecosystem assessment, restoration, enhancement, research and education. To date, four regional environmental stewardship projects have been developed throughout northern British Columbia. A governance working group with representatives from all four stewardship forums provides governance oversight and guidance for the ESI. The Parsnip River watershed group is within the Regional Strategic Environmental Assessment Forum (RSEA) area. Indigenous partners for RSEA include McLeod lake, Blueberry River, Halfway River, Doig River, West Moberly, Prophet River and Sauteau.  Forum values of focus to date include old forest/forest biodiversity, water, moose, peaceful enjoyment and environmental livelihoods.
 
 <br>
@@ -39,7 +37,15 @@ Regarding gradients, `bcfishpass` calculates the average gradient of BC Freshwat
 
 <br>
 
-Gradient, channel size and stream discharge are key determinants of channel morphology and subsequently fish distribution. High value  rearing, overwintering  and spawning habitat preferred by numerous species/life stages of fish are often located within channel types that have relatively low gradients and large channel widths (also quantified by the amount of flow in the stream).  Following delineation of "potentially accessible habitat", the average gradient of each stream segment within habitat classified as below the 20% and 25% thresholds was calculated and summed within species and life stage specific gradient categories.  Average gradient of stream line segments can be calculated from elevations contained in the provincial freshwater atlas streamline dataset. To obtain estimates of channel width upstream of crossing locations, where available, `bcfishpass` was utilized to pull average channel gradients from Fisheries Information Summary System (FISS) site assessment data [@moeStreamInventorySample] or PSCIS assessment data [@moe2021PSCISAssessments] and associate with stream segment lines. When both FISS and PSCIS values were associated with a particular stream segment, FISS channel width was used.  When multiple FISS sites were associated with a particular stream segment a mean of the average channel widths was taken.  To model channel width for 2nd order and above stream segments without associated FISS or PSCIS sites, first `fwapg` was used to estimate the drainage area upstream of the segment.  Then, rasters from ClimateBC [@wang_etal2012ClimateWNAHighResolution] were downloaded to a `postgresql` database, sampled for upstream watershed areas associated with each stream segment and a mean annual precipitation weighted by upstream watershed area was calculated. In April of 2021, Bayesian statistical methods were used to model channel width in all provincial freshwater atlas stream segments where measurements had not previously been taken, based on the relationship between watershed area and mean annual precipitation weighted by upstream watershed area [@thorley_irvine2021ChannelWidth].  
+Gradient, channel size and stream discharge are key determinants of channel morphology and subsequently fish distribution. High value  rearing, overwintering  and spawning habitat preferred by numerous species/life stages of fish are often located within channel types that have relatively low gradients and large channel widths (also quantified by the amount of flow in the stream).  Following delineation of "potentially accessible habitat", the average gradient of each stream segment within habitat classified as below the 20% and 25% thresholds was calculated and summed within species and life stage specific gradient categories.  Average gradient of stream line segments can be calculated from elevations contained in the provincial freshwater atlas streamline dataset. To obtain estimates of channel width upstream of crossing locations, where available, `bcfishpass` was utilized to pull average channel gradients from Fisheries Information Summary System (FISS) site assessment data [@moeStreamInventorySample] or PSCIS assessment data [@moe2021PSCISAssessments] and associate with stream segment lines. When both FISS and PSCIS values were associated with a particular stream segment, FISS channel width was used.  When multiple FISS sites were associated with a particular stream segment a mean of the average channel widths was taken.  To model channel width for 2nd order and above stream segments without associated FISS or PSCIS sites, first `fwapg` was used to estimate the drainage area upstream of the segment.  Then, rasters from ClimateBC [@wang_etal2012ClimateWNAHighResolution] were downloaded to a `postgresql` database, sampled for upstream watershed areas associated with each stream segment and a mean annual precipitation weighted by upstream watershed area was calculated. 
+
+<br>
+
+In April of 2021, Bayesian statistical methods were used to model channel width in all provincial freshwater atlas stream segments where width measurements had not previously been taken, based on the relationship between watershed area and mean annual precipitation weighted by upstream watershed area [@thorley_irvine2021ChannelWidth]. Details of this analysis and subsequent outputs can be reviewed [here](https://www.poissonconsulting.ca/f/1792764180).
+
+<br>
+
+In December of 2021, Bayesian statistical methods were used to update results from @thorley_irvine2021ChannelWidth using on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  Using Bayesian statistical methods, the relationship between the input variables was analyzed to update a predictive model of channel width.
 
 <br>
 
@@ -75,7 +81,8 @@ bcfishpass_spawn_rear_model %>%
   rename(Variable = Species) %>% 
   fpr::fpr_kable(caption_text = 'Stream gradient and channel width thresholds used to model potentially highest value fish habitat.', 
                  footnote_text = 'Models for RB, GR and KO are under a process of development and have not yet been released.  All models parameters are preliminary and subject to collaborative development.',
-                 scroll = gitbook_on)
+                 scroll = gitbook_on,
+                 scroll_box_height = '300px')
 
 ```
 

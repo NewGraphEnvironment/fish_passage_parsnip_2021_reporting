@@ -4,14 +4,15 @@ author: |
  |
  |
  | Prepared for
- | Fish and Wildlife Compensation Program  
+ | Fish and Wildlife Compensation Program 
+ |       and  
  | Fish Passage Technical Working Group 
  |
  |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
- |      on behalf of
+ |       on behalf of
  | Society for Ecosystem Restoration in Northern British Columbia
  |
  | Prepared with financial support of the Fish and Wildlife Compensation Program on
@@ -20,7 +21,7 @@ author: |
 
 date: |
  |
- | Version 0.1.0 `r format(Sys.Date(), "%Y-%m-%d")`
+ | Version 0.1.1 `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site
 output: 

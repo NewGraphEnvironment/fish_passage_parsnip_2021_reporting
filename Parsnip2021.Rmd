@@ -4,14 +4,15 @@ author: |
  |
  |
  | Prepared for
- | Fish and Wildlife Compensation Program  
+ | Fish and Wildlife Compensation Program 
+ |       and  
  | Fish Passage Technical Working Group 
  |
  |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
- |      on behalf of
+ |       on behalf of
  | Society for Ecosystem Restoration in Northern British Columbia
  |
  | Prepared with financial support of the Fish and Wildlife Compensation Program on
@@ -20,7 +21,7 @@ author: |
 
 date: |
  |
- | Version 0.1.0 `r format(Sys.Date(), "%Y-%m-%d")`
+ | Version 0.1.1 `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site
 output: 
@@ -41,7 +42,7 @@ description: "Fish Passage in the Peace Region"
 
 ```{r switch-gitbook-html, echo=FALSE}
 gitbook_on <- TRUE
-# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 ```
 
@@ -116,11 +117,7 @@ title.innerHTML = '<img src="fig/logo_fwcp_sern.png" alt="NewGraph">' + title.in
 
 # Executive Summary {-}
 
-This document can be considered a living document.  Version numbers are logged for each release with modifications, enhancements and other changes tracked [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/blob/master/NEWS.md) with issues and proposed/planned enhancements tracked [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/issues). 
-
-<br>
-
-The health and viability of freshwater fish populations can depend on access to tributary and off channel areas which provide refuge during high flows, opportunities for foraging, overwintering habitat, spawning habitat and summer rearing habita. As road crossing structures are commonly upgraded or removed there are numerous opportunities to restore connectivity by ensuring that fish passage considerations are incorporated into repair, replacement, relocation and deactivation designs. 
+The health and viability of freshwater fish populations can depend on access to tributary and off channel areas which provide refuge during high flows, opportunities for foraging, overwintering habitat, spawning habitat and summer rearing habitat. As road crossing structures are commonly upgraded or removed there are numerous opportunities to restore connectivity by ensuring that fish passage considerations are incorporated into repair, replacement, relocation and deactivation designs. 
 
 <br>
 
@@ -132,36 +129,45 @@ This project builds on Society for Ecosystem Restoration Northern BC (SERNbc) wo
 
 <br>
 
-In 2021/2022, through this collaborative project, and leveraging numerous other connectivity restoration initiatives underway throughout the province, we were able to source funding from the Ministry of Forests, Lands and Natural Resource Operations and Rural Development to catalyze project activities including initiation of the replacement of a high priority crossing in the Missinka River watershed (PSCIS crossing 125179 on the Chuchinka-Missinka FSR) with a clearspan bridge.  Through financial support from FWCP and the Fish Passage Technical Working Group, as well as in-kind and monetary support from Sinclar Group Forest Products, remediation of fish passage at this site will be completed in 2022.  Additionally, works at another high priority site identified in 2020 (PSCIS crossing 125000 on the Chuchinka-Arctic FSR) will be initiated. British Columbia Timber Sales is planning to deactivate the Chuchinka-Colbourne FSR between the location of high priority crossing PSCIS 125345 on a tributary to the Parsnip River and the Chuchinka-Anzac FSR. The work is schedule for July and August of 2022.  Working with BCTS and McLeod Lake we have been in contact with CN Rail to advocate for the removal of crossing 57687 under the railway immediately upstream of the PSCIS crossing 125345 and the Chuchinka-Colbourne FSR. Discussions are ongoing, and it is hoped that action will be taken by CN this summer to remediate crossing 57687 before the access road from the south is deactivated. 
+In 2021/2022, through support from FWCP for this collaborative project, and leveraging numerous other connectivity restoration initiatives underway throughout the province, we were able to source funding from the Ministry of Forests, Lands and Natural Resource Operations and Rural Development and the Fish Passage Technical Working Group to catalyze fish passage restoration actions in the Parsnip River watershed group.
 
 <br>
 
-Through the ongoing development of open source analysis and data presentation tools we are identifying and highlighting additional sites with potential connectivity issues and are planning on the ground works to assess opportunities, build the capacity and provide the data necessary to implement and monitor restoration actions.  Planning, field assessments and follow up reporting will continue to include engagement with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community and build capacity for ecosystem restoration in the Peace Region. 
+In 2021/2022 actions were initiated to facilitate replacement of high priority PSCIS crossing 125179 on the Chuchinka-Missinka FSR with a clearspan bridge in the summer of 2022. The bridge structure and associated materials were purchased and environmental permitting/management planning has been initiated. Through financial support from FWCP and the Fish Passage Technical Working Group, as well as in-kind and monetary support from Sinclar Group Forest Products, remediation of fish passage at this site will be completed in 2022.  
+
+<br>
+
+Engineering design, project permitting, environmental management planning as well as the purchase/mobilization of the bridge structure, abutment riprap and materials is planned for 2022/2023 at high priority PSCIS crossing 125000 on the Chuchinka-Arctic FSR.  Installation of the clearspan structure has been scheduled for 2023. 
+
+<br>
+
+British Columbia Timber Sales is planning to deactivate the Chuchinka-Colbourne FSR between the location of high priority crossing PSCIS 125345 on a tributary to the Parsnip River and the Chuchinka-Anzac FSR. The work is schedule for July and August of 2022. 
+
+<br>
+
+Through the ongoing development of open source analysis and data presentation tools we are identifying and communicating connectivity issues while planning on the ground works to assess opportunities, build capacity and provide the data necessary to implement and monitor restoration actions.  Planning, field assessments and follow up reporting will continue to include engagement with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community and build capacity for ecosystem restoration in the Peace Region. 
 
 
 <br>
 
-We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass), [`fwapg`](https://github.com/smnorris/fwapg), [`bcdata`](https://github.com/smnorris/bcdata), [bcfishobs](https://github.com/smnorris/bcfishobs) and [`fpr`](https://github.com/NewGraphEnvironment/fpr).  We are using these database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Peace Region in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
+We are leveraging this project together with numerous others to contributing to the open source development of database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Peace Region.  This work facilitates outreach, prioritizes sites and provides the background information necessary to communicate restoration plans/actions effectively. 
+
 
 <br>
 
-As there have been significant advancements in our ability to scope for restoration opportunities since the 2019 habitat confirmations were conducted in the Parsnip River watershed (ie. `bcfishpass` outputs such as the bull trout spawning and rearing model developed in part through this project) we built a prototype of an interactive map/table widget tool to facilitate planning for future field surveys in the Peace Region. The interactive interface allows screening of previously inventoried as well as modelled stream crossing locations based on PSCIS information as well as the likely amount and type of habitat modelled upstream.  Users can download csv results from those screening processes as well as associated georeferenced field maps to facilitate field surveys. 
+Field surveys planned for 2022 and beyond will contribute to McLeod Lake Indian Band capacity building programs, helping facilitate indigenous partnerships in natural resource management and stewardship within traditional territories. On the ground research and monitoring is an essential part of any restoration program and is necessary to ensure the best and most efficient opportunities for fish passage restoration are realized while incorporating adaptive management informed by traditional knowledge and defensible planning/monitoring data.
 
 <br>
 
-Field surveys planned for 2022 and beyond will contribute to McLeod Lake Indian Band capacity building programs, helping facilitate the continued evolution back to indigenous led natural resource management and stewardship within their traditional territory. On the ground research and monitoring is an essential part of any restoration program and is necessary to ensure that we identify the best and most efficient opportunities for fish passage restoration while incorporating adaptive management informed by traditional knowledge and real-time planning/monitoring data.
+Updated maps for the Parsnip River, Carp River and Crooked River watershed groups incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model have been produced and are available [here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/). 
 
 <br>
 
-Updated maps for the Parsnip River, Carp River and Crooked River watershed groups incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model are available [here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/). 
+An online connectivity mapping portal for the Peace Region has been launched and is located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_webmap). At the time of reporting the site was undergoing development with the interface expected to evolve significantly over the coming months.   
 
 <br>
 
-An online connectivity mapping portal for the Peace Region has been launched and is located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_webmap). At the time of reporting the site was undergoing development with the interface expected to evolve significantly over the coming months.  Future layers to be added to map include fisheries observations, the  [Recreational Opportunity Spectrum Inventory data](https://catalogue.data.gov.bc.ca/dataset/recreational-opportunity-spectrum-inventory), hydrometric station locations, historic fish sampling sites, wetlands, etc.  
-
-<br>
-
-Although remediation and replacement of stream crossing structures can have significant benefits to local fish populations, the costs of remedial works can be significant and the impacts of the work often complex to evaluate and quantify. Additionally, allocation of ecosystem restoration funding towards infrastructure upgrades on transportation right of ways are not always considered ethical under all circumstances from all perspectives. When funds are finite and invested groups are engaged in fund raising, cost benefits and the ethics of crossing replacements should be explored collaboratively alongside the cost benefits and ethics of alternative investment activities including transportation corridor relocation/deactivation, land procurement/covenant, cattle exclusion, riparian/floodplain restoration, habitat complexing, water conservation, commercial/recreational fishing management, instream infrastructure removal and research.
+Although remediation and replacement of stream crossing structures can have significant benefits to local fish populations, the costs of remedial works can be significant and the impacts of the work often complex to evaluate and quantify. Additionally, allocation of ecosystem restoration funding towards infrastructure upgrades on transportation right of ways are not always considered ethical under all circumstances from all perspectives. When funds are finite and invested groups are engaged in fund raising, cost benefits and the ethics of crossing replacements should be explored collaboratively alongside the cost benefits and ethics of alternative/complimentary investments including transportation corridor relocation/deactivation, land procurement/covenant, cattle exclusion, riparian/floodplain restoration, habitat complexing, water conservation, commercial/recreational fishing management and research.
 
 <!--chapter:end:0090-executive-summary.Rmd-->
 
@@ -169,7 +175,7 @@ Although remediation and replacement of stream crossing structures can have sign
 
 # Introduction {-}
 
-`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the latest pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
+`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the most up to date pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
 
 `r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br>")}`
 
@@ -189,31 +195,11 @@ This project builds on Society for Ecosystem Restoration Northern BC (SERNbc) wo
 
 <br>
 
-In 2021/2022, through this collaborative project, and leveraging numerous other connectivity restoration initiatives underway throughout the province, we were able to source funding from the Ministry of Forests, Lands and Natural Resource Operations and Rural Development to catalyze project activities including initiation of the replacement of a high priority crossing in the Missinka River watershed (PSCIS crossing 125179 on the Chuchinka-Missinka FSR) with a clearspan bridge.  Through financial support from FWCP and the Fish Passage Technical Working Group, as well as in-kind and monetary support from Sinclar Group Forest Products, remediation of fish passage at this site will be completed in 2022.  Additionally, works at another high priority site identified in 2020 (PSCIS crossing 125000 on the Chuchinka-Arctic FSR) will be initiated.
+In 2021/2022, through this collaborative project, and leveraging numerous other connectivity restoration initiatives underway throughout the province, we engaged numerous project partners and were able to source funding to catalyze fish passage restoration activities at multiple sites identified as high priorities in 2019/2020.
 
 <br>
 
-Through the ongoing development of open source analysis and data presentation tools we are identifying and highlighting additional sites with potential connectivity issues and are planning on the ground works to assess opportunities, build the capacity and provide the data necessary to implement and monitor restoration actions.  Planning, field assessments and follow up reporting will continue to include engagement with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community and build capacity for ecosystem restoration in the Peace Region. 
-
-<br>
-
-We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass), [`fwapg`](https://github.com/smnorris/fwapg), [`bcdata`](https://github.com/smnorris/bcdata), [bcfishobs](https://github.com/smnorris/bcfishobs) and [`fpr`](https://github.com/NewGraphEnvironment/fpr).  We are using these database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Peace Region in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
-
-<br>
-
-As there have been significant advancements in our ability to scope for restoration opportunities since the 2019 habitat confirmations were conducted in the Parsnip River watershed (ie. `bcfishpass` outputs such as the bull trout spawning and rearing model developed in part through this project) we built a prototype of an interactive map/table widget tool to facilitate planning for future field surveys in the Peace Region. The interactive interface allows screening of previously inventoried as well as modelled stream crossing locations based on PSCIS information as well as the likely amount and type of habitat modelled upstream.  Users can download csv results from those screening processes as well as associated georeferenced field maps to facilitate field surveys. 
-
-<br>
-
-Field surveys planned for 2022 and beyond will contribute to McLeod Lake Indian Band capacity building programs, helping facilitate the continued evolution back to indigenous led natural resource management and stewardship within their traditional territory. On the ground research and monitoring is an essential part of any restoration program and is necessary to ensure that we identify the best and most efficient opportunities for fish passage restoration while incorporating adaptive management informed by traditional knowledge and real-time planning/monitoring data.
-
-<br>
-
-Updated maps for the Parsnip River, Carp River and Crooked River watershed groups incorporating the newly developed sa'ba (bull trout) spawning and rearing habitat model have been made available for viewing and download. 
-
-<br>
-
-An online connectivity mapping portal for the Peace Region has been launched. At the time of reporting the site was undergoing development with the interface expected to evolve significantly over the coming months.  
+Through the ongoing development of open source analysis and data presentation tools (including pdf and web-hosted mapping tools) we are identifying new restoration opportunities, clarifying restoration benefits, communicating with the broader community and planning on the ground works. Partner engagement, planning, field assessments and reporting planned for 2022/2023 will continue to include relationship building with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community, assess opportunities, build capacity for ecosystem restoration and provide the data necessary to implement and monitor restoration actions. 
 
 
 <!--chapter:end:0100-intro.Rmd-->
@@ -415,7 +401,7 @@ plot_wshed
 
 ## Engage Partners {-}
 
-From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been actively engaging with the following groups to discuss the project, solicit input, prioritize sites and plan fish passage remediation. Engagement actions have included video conference calls, meetings, emails, presentations and phone calls.
+From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been actively engaging with the following groups to discuss the project, solicit input, prioritize sites, raise partnership funding and plan fish passage remediations. Engagement actions have included video conference calls, meetings, emails, presentations and phone calls.
 
   * McLeod Lake Indian Band members of council
   * BCTS Engineering
@@ -425,12 +411,10 @@ From May 2021 to the time of reporting SERNbc and McLeod Lake staff have been ac
   * Northern Engineering - Forests, Lands, Natural Resource Operations and Rural Development (FLNR)
   * BC Ministry of Transportation and Infrastructure
   * Fish Passage Technical Working Group
+  * Coastal Gasliink
   * Planning foresters and biologists Ministry of Forests, Lands, Natural Resource Operations and Rural Development (restructured into Ministry of Forests and Ministry of Land, Water and Resource Stewardship)
   *  Fisheries experts
    
-
-### Environmental Stewardship Initiative {-}
-
 The [Environmental Stewardship Initiative](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/consulting-with-first-nations/collaborative-stewardship-bc/environmental-stewardship-initiative)(ESI) is a collaborative partnership between the Province and First Nations with projects designed to focus on ecosystem assessment, restoration, enhancement, research and education. To date, four regional environmental stewardship projects have been developed throughout northern British Columbia. A governance working group with representatives from all four stewardship forums provides governance oversight and guidance for the ESI. The Parsnip River watershed group is within the Regional Strategic Environmental Assessment Forum (RSEA) area. Indigenous partners for RSEA include McLeod lake, Blueberry River, Halfway River, Doig River, West Moberly, Prophet River and Sauteau.  Forum values of focus to date include old forest/forest biodiversity, water, moose, peaceful enjoyment and environmental livelihoods.
 
 <br>
@@ -450,7 +434,15 @@ Regarding gradients, `bcfishpass` calculates the average gradient of BC Freshwat
 
 <br>
 
-Gradient, channel size and stream discharge are key determinants of channel morphology and subsequently fish distribution. High value  rearing, overwintering  and spawning habitat preferred by numerous species/life stages of fish are often located within channel types that have relatively low gradients and large channel widths (also quantified by the amount of flow in the stream).  Following delineation of "potentially accessible habitat", the average gradient of each stream segment within habitat classified as below the 20% and 25% thresholds was calculated and summed within species and life stage specific gradient categories.  Average gradient of stream line segments can be calculated from elevations contained in the provincial freshwater atlas streamline dataset. To obtain estimates of channel width upstream of crossing locations, where available, `bcfishpass` was utilized to pull average channel gradients from Fisheries Information Summary System (FISS) site assessment data [@moeStreamInventorySample] or PSCIS assessment data [@moe2021PSCISAssessments] and associate with stream segment lines. When both FISS and PSCIS values were associated with a particular stream segment, FISS channel width was used.  When multiple FISS sites were associated with a particular stream segment a mean of the average channel widths was taken.  To model channel width for 2nd order and above stream segments without associated FISS or PSCIS sites, first `fwapg` was used to estimate the drainage area upstream of the segment.  Then, rasters from ClimateBC [@wang_etal2012ClimateWNAHighResolution] were downloaded to a `postgresql` database, sampled for upstream watershed areas associated with each stream segment and a mean annual precipitation weighted by upstream watershed area was calculated. In April of 2021, Bayesian statistical methods were used to model channel width in all provincial freshwater atlas stream segments where measurements had not previously been taken, based on the relationship between watershed area and mean annual precipitation weighted by upstream watershed area [@thorley_irvine2021ChannelWidth].  
+Gradient, channel size and stream discharge are key determinants of channel morphology and subsequently fish distribution. High value  rearing, overwintering  and spawning habitat preferred by numerous species/life stages of fish are often located within channel types that have relatively low gradients and large channel widths (also quantified by the amount of flow in the stream).  Following delineation of "potentially accessible habitat", the average gradient of each stream segment within habitat classified as below the 20% and 25% thresholds was calculated and summed within species and life stage specific gradient categories.  Average gradient of stream line segments can be calculated from elevations contained in the provincial freshwater atlas streamline dataset. To obtain estimates of channel width upstream of crossing locations, where available, `bcfishpass` was utilized to pull average channel gradients from Fisheries Information Summary System (FISS) site assessment data [@moeStreamInventorySample] or PSCIS assessment data [@moe2021PSCISAssessments] and associate with stream segment lines. When both FISS and PSCIS values were associated with a particular stream segment, FISS channel width was used.  When multiple FISS sites were associated with a particular stream segment a mean of the average channel widths was taken.  To model channel width for 2nd order and above stream segments without associated FISS or PSCIS sites, first `fwapg` was used to estimate the drainage area upstream of the segment.  Then, rasters from ClimateBC [@wang_etal2012ClimateWNAHighResolution] were downloaded to a `postgresql` database, sampled for upstream watershed areas associated with each stream segment and a mean annual precipitation weighted by upstream watershed area was calculated. 
+
+<br>
+
+In April of 2021, Bayesian statistical methods were used to model channel width in all provincial freshwater atlas stream segments where width measurements had not previously been taken, based on the relationship between watershed area and mean annual precipitation weighted by upstream watershed area [@thorley_irvine2021ChannelWidth]. Details of this analysis and subsequent outputs can be reviewed [here](https://www.poissonconsulting.ca/f/1792764180).
+
+<br>
+
+In December of 2021, Bayesian statistical methods were used to update results from @thorley_irvine2021ChannelWidth using on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  Using Bayesian statistical methods, the relationship between the input variables was analyzed to update a predictive model of channel width.
 
 <br>
 
@@ -486,7 +478,8 @@ bcfishpass_spawn_rear_model %>%
   rename(Variable = Species) %>% 
   fpr::fpr_kable(caption_text = 'Stream gradient and channel width thresholds used to model potentially highest value fish habitat.', 
                  footnote_text = 'Models for RB, GR and KO are under a process of development and have not yet been released.  All models parameters are preliminary and subject to collaborative development.',
-                 scroll = gitbook_on)
+                 scroll = gitbook_on,
+                 scroll_box_height = '300px')
 
 ```
 
@@ -558,7 +551,7 @@ An open source online mapping portal has been developed for engagement and plann
 
 ### Partnership Funding {-}
 
-SERN was able to aquire \$105,000 of partnership funding from FLNR (\$80,000) and the Provincial Fish Passage Technical Working Group (\$25,000) towards the 2021/2022 program. Additionally, we have obtained a commitment for \$25,000 of partnership funding from the the Provincial Fish Passage Technical Working Group towards the 2022/2023 program.
+Through partnership engagement SERN was able to aquire \$105,000 of partnership funding from FLNR (\$80,000) and the Provincial Fish Passage Technical Working Group (\$25,000) towards the 2021/2022 program. Additionally, we have obtained a commitment for \$25,000 of funding from the the Provincial Fish Passage Technical Working Group towards the 2022/2023 program.
 
 ```{r}
 # define scroll box height for sites
@@ -662,13 +655,15 @@ fpr::fpr_table_bcfp(site = 125231,
 
 
 ## Identify and Communicate Connectivity Issues {-}
+
+
 ### Habitat Modelling {-}
 
 We are leveraging this project together with numerous others to contributing to the open source development of [`bcfishpass`](https://github.com/smnorris/bcfishpass), [`fwapg`](https://github.com/smnorris/fwapg), [`bcdata`](https://github.com/smnorris/bcdata), [bcfishobs](https://github.com/smnorris/bcfishobs) and [`fpr`](https://github.com/NewGraphEnvironment/fpr).  We are using these database building, habitat/connectivity modeling and data presentation tools to conduct reproducible analysis/presentation of fish passage restoration opportunities in the Parsnip River watershed in order to facilitate outreach, prioritize sites and provide the background information necessary to communicate restoration plans/actions effectively. 
 
 <br>
 
-In December of 2021, Bayesian statistical methods were used to update our model of stream channel width based on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation. Data (n = 24849) on watershed size, mean annual precipitation and measured channel width was extracted from the provincial freshwater atlas [@flnrord2021FreshwaterAtlasb;  @geobc2022FreshwaterAtlas], the BC Data Catalouge fisheries datasets [@moe2020StreamInventory; @moe2021PSCISAssessments] and @wang_etal2012ClimateWNAHighResolution utilizing `bcfishpass` [@norris2021smnorrisbcfishpass] and `fwapg` [@norris2021smnorrisfwapg].  This data used to model channel width using Bayesian statistical methods analyzing the relationship between the input variables.  The details of this analysis and resulting formula are documented in @thorley_etal2021ChannelWidth and were used to estimate channel width of stream segments in the Parsnip River watershed to facilitate modelling of highest intrinsic fisheries habitat value.  The analysis is included as [Attachment 2](https://www.poissonconsulting.ca/f/859859031) [@thorley_etal2021ChannelWidth].
+Results from the Bayesian analysis using on a power model derived by @finnegan_etal2005Controlschannel which relates stream discharge to watershed area and mean annual precipitation are documented in @thorley_etal2021ChannelWidth.  We used this predictor of channel width to model stream segments in the Parsnip River watershed with potentially high intrinsic fisheries habitat value.  Analysis details and resulting predictive formula are included as [Attachment 2](https://www.poissonconsulting.ca/f/859859031) [@thorley_etal2021ChannelWidth].
 
 
 <br>
@@ -739,7 +734,7 @@ hab_sum %>%
 <br>
 
 ### Field Planning  {-}
- Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf). Please not that an interactive fieldwork planning widget prototype has been developed for the project and is located within the online interactive version of the report located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/).")`  Georeferenced field maps containing updated modelling outputs are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")`
+ Planning for potential 2022 field survey sites is presented `r if(gitbook_on){knitr::asis_output("interactively in Figure \\@ref(fig:widget-planning-caption).")}else knitr::asis_output("in Table \\@ref(tab:tab-planning-pdf). Please not that an interactive fieldwork planning widget prototype has been developed for the project and is located within the online interactive version of the report located [here](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/).")`  Georeferenced field maps containing updated modelling outputs are presented in `r if(gitbook_on){knitr::asis_output("[here](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/) and available for bulk download as [Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")} else knitr::asis_output("[Attachment 1](https://hillcrestgeo.ca/outgoing/fishpassage/projects/parsnip/archive/2022-05-27/parsnip_2022-05-27.zip).")`
 
 ```{r field-planning-prep}
 # join bcfishpass to some pscis columns for the screening table
@@ -1005,4 +1000,34 @@ xfun::session_info()
 ```
 
 <!--chapter:end:2100-session-info.Rmd-->
+
+
+
+# **Attachment 1 - Maps** {-}
+
+All georeferenced field maps are presented at [`r knitr::asis_output(maps_location)`](`r knitr::asis_output(maps_location)`) and available for bulk download as [Attachment 1 - `r knitr::asis_output(maps_location_zip)`](`r maps_location_zip`).
+
+
+
+<!--chapter:end:2200-Attachment_1.Rmd-->
+
+
+
+# **Attachment 2 - Bayesian analysis of how stream channel width is influenced by watershed area and precipitation** {-}
+
+[Attachment 2](https://www.poissonconsulting.ca/f/859859031)
+
+
+
+<!--chapter:end:2300-Attachment_2.Rmd-->
+
+
+
+# **Attachment 3 - Bayesian analysis of how lineal fish density varies with stream gradient and/or channel width** {-}
+
+[Attachment 3](https://www.poissonconsulting.ca/f/1386346791)
+
+
+
+<!--chapter:end:2300-Attachment_3.Rmd-->
 
