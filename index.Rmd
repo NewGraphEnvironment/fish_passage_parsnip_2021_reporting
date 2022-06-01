@@ -21,7 +21,7 @@ author: |
 
 date: |
  |
- | Version 0.1.1 `r format(Sys.Date(), "%Y-%m-%d")`
+ | Version 0.1.2 `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site
 output: 
@@ -42,7 +42,7 @@ description: "Fish Passage in the Peace Region"
 
 ```{r switch-gitbook-html, echo=FALSE}
 gitbook_on <- TRUE
-# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 ```
 
@@ -88,7 +88,11 @@ Modern civilization has a long journey ahead to acknowledge and address the hist
 
 <br>
 
-Mussi cho to the McLeod Lake members of council that took the time to meet and discuss big picture goals for this collaboration. Mussi to Nathan Prince for guidance, viewing sites in the field, liaising with numerous players and tying this work together with the numerous other initiatives the Nation is advising and steering.
+Mussi cho to the McLeod Lake members of council that took the time to meet and discuss big picture goals for this collaboration. Margie Chingee, Jayde Durnleau, Jenin Solonas, Sundance Inyallie, Yasmin Prince and Fay Masear. Thank you.
+
+<br>
+
+Mussi to Nathan Prince from McLeod Lake for guidance, viewing sites in the field, liaising with numerous players and tying this work together with the numerous other initiatives the Nation is advising and steering. Thank you also to the rest of the team that have been contributing - mussi Stephanie Rocheleau, Eran Spence and Debra Pinkston. 
 
 <br>
 

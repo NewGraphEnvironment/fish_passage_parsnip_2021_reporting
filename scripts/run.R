@@ -35,7 +35,7 @@ filename_html <- 'parsnip2021'
 
 {
 
-  file.rename('0600-appendix.Rmd', 'hold/0600-appendix.Rmd')
+  # file.rename('0600-appendix.Rmd', 'hold/0600-appendix.Rmd')
 
   ##   then make our printable pdf
   rmarkdown::render_site(output_format = 'pagedown::html_paged',

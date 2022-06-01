@@ -14,5 +14,5 @@ tab:bcfp-125179
 tab:bcfp-125000
 tab:bcfp-125345
 tab:bcfp-125231
-tab:hab-sum-gitbook
-fig:widget-planning-caption
+tab:hab-sum-pdf
+tab:tab-planning-pdf

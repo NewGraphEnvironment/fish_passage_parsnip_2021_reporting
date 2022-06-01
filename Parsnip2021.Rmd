@@ -21,7 +21,7 @@ author: |
 
 date: |
  |
- | Version 0.1.1 `r format(Sys.Date(), "%Y-%m-%d")`
+ | Version 0.1.2 `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site
 output: 
@@ -42,7 +42,7 @@ description: "Fish Passage in the Peace Region"
 
 ```{r switch-gitbook-html, echo=FALSE}
 gitbook_on <- TRUE
-# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 ```
 
@@ -88,7 +88,11 @@ Modern civilization has a long journey ahead to acknowledge and address the hist
 
 <br>
 
-Mussi cho to the McLeod Lake members of council that took the time to meet and discuss big picture goals for this collaboration. Mussi to Nathan Prince for guidance, viewing sites in the field, liaising with numerous players and tying this work together with the numerous other initiatives the Nation is advising and steering.
+Mussi cho to the McLeod Lake members of council that took the time to meet and discuss big picture goals for this collaboration. Margie Chingee, Jayde Durnleau, Jenin Solonas, Sundance Inyallie, Yasmin Prince and Fay Masear. Thank you.
+
+<br>
+
+Mussi to Nathan Prince from McLeod Lake for guidance, viewing sites in the field, liaising with numerous players and tying this work together with the numerous other initiatives the Nation is advising and steering. Thank you also to the rest of the team that have been contributing - mussi Stephanie Rocheleau, Eran Spence and Debra Pinkston. 
 
 <br>
 
@@ -1000,4 +1004,34 @@ xfun::session_info()
 ```
 
 <!--chapter:end:2100-session-info.Rmd-->
+
+
+
+# **Attachment 1 - Maps** {-}
+
+All georeferenced field maps are presented at [`r knitr::asis_output(maps_location)`](`r knitr::asis_output(maps_location)`) and available for bulk download as [Attachment 1 - `r knitr::asis_output(maps_location_zip)`](`r maps_location_zip`).
+
+
+
+<!--chapter:end:2200-Attachment_1.Rmd-->
+
+
+
+# **Attachment 2 - Bayesian analysis of how stream channel width is influenced by watershed area and precipitation** {-}
+
+[Attachment 2](https://www.poissonconsulting.ca/f/859859031)
+
+
+
+<!--chapter:end:2300-Attachment_2.Rmd-->
+
+
+
+# **Attachment 3 - Bayesian analysis of how lineal fish density varies with stream gradient and/or channel width** {-}
+
+[Attachment 3](https://www.poissonconsulting.ca/f/1386346791)
+
+
+
+<!--chapter:end:2300-Attachment_3.Rmd-->
 
