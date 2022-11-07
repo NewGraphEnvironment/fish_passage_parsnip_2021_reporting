@@ -1,3 +1,8 @@
+# fish_passage_parsnip_2021_reporting 0.1.2
+
+  * make plots not in ggdark
+  * change css for code in pdfs so just italicized and same font
+  
 
 # fish_passage_parsnip_2021_reporting 0.1.1
 
