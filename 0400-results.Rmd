@@ -167,7 +167,8 @@ hab_sum %>%
 hab_sum_names_pdf <- names(hab_sum) %>% 
   str_replace_all(c('bt_'), '') %>% 
   str_replace_all(c('pscis_'), '') %>% 
-  str_replace_all(c('_name'), '')
+  str_replace_all(c('_name'), '') %>% 
+  str_replace_all(c('slopeclass'), 'slope')
   
 
 hab_sum %>%
@@ -178,7 +179,7 @@ hab_sum %>%
          spawning_km,
          rearing_km,
          network_km,
-         slopeclass03_km:slopeclass15_km) %>% 
+         slope03_km:slope15_km) %>% 
   mutate(stream = str_replace_all(stream, 'tributary', 'trib'),
          stream = str_replace_all(stream, 'River', 'R'),
          stream = str_replace_all(stream, 'Creek', 'Ck')) %>% 

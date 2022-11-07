@@ -10,6 +10,7 @@ The Parsnip River watershed is located within the south-eastern portion of the 1
 
 The continental divide separates watersheds flowing north into the Arctic Ocean via the Mackenzie River and south and west into the Pacific Ocean via the Fraser River (Figure \@ref(fig:overview-map)). The Parsnip River is a 6th order stream with a watershed that drains an area of 5597km^2^. The mainstem of the river flows within the Rocky Mountain Trench in a north direction into Williston Reservoir starting from the continental divide adjacent to Arctic Lakes. Major tributaries include the Misinchinka, Colbourne, Reynolds, Anzac, Table, Hominka and Missinka sub-basins which drain the western slopes of the Hart Ranges of the Rocky Mountains.  The Parsnip River has a mean annual discharge of `r round(fasstr::calc_longterm_mean(station_number = "07EE007")$LTMAD,1)` m^3^/s with flow patterns typical of high elevation watersheds on the west side of the northern Rocky Mountains which receive large amounts of precipitation as snow leading to peak levels of discharge during snowmelt, typically from May to July (Figures \@ref(fig:fig-hydrology-plot-flow) - \@ref(fig:fig-hydrology-plot-stats)).
 
+
 <br>
 
 Construction of the 183 m high and 2134 m long W.A.C. Bennett Dam was completed in 1967 at Hudson's Hope, BC, creating the Williston Reservoir [@hirst1991Impactsoperations]. Filling of the 375km^2^ reservoir was complete in 1972 and flooded a substantial portion of the Parsnip River and major tributary valleys forming what is now known as the Peace and Parsnip reaches. The replacement of riverine habitat with an inundated reservoir environment resulted in profound changes to the ecology, resource use and human settlement patterns in these systems [@hagen_etal2015Criticalhabitats; @pearce2019FirstNations; @stamford_etal2017FWCPArctic]. Prior to the filling of the reservoir, the Pack River, into which McLeod Lake flows, was a major tributary to the Parsnip River.  The Pack River currently enters the Williston Reservoir directly as the historic location of the confluence of the two rivers lies within the reservoir's footprint.
@@ -30,9 +31,10 @@ knitr::include_graphics("fig/overview.jpg")
 # img <- png::readPNG("fig/hydrology1.png")
 # grid::grid.raster(img)
 
-knitr::include_graphics("fig/hydrograph_07EE007.png")
+knitr::include_graphics("fig/hydrograph_pdf_07EE007.png")
 
 ```
+
 
 <br>
 
@@ -40,11 +42,11 @@ knitr::include_graphics("fig/hydrograph_07EE007.png")
 # img <- png::readPNG("fig/hydrology2.png")
 # grid::grid.raster(img)
 
-knitr::include_graphics("fig/hydrology_stats_07EE007.png")
+knitr::include_graphics("fig/hydrology_stats_pdf_07EE007.png")
 ```
 
 ## Fisheries {-}
-Fish species recorded in the Parsnip River watershed are detailed in Table \@ref(tab:table-fish) [@data_fish_obs]. In addition to flooding related to the formation of the Williston Reservoir, transmission lines, gas pipelines, rail, road networks, forestry, elevated water temperatures, interrupted connectivity, invasion from non-native species and insect infestations affecting forested areas pose threats to fisheries values in the Parsnip River watershed  [@hagen_2015_critical_habs; @stamfordFWCPArcticGrayling; @bull_trout_synthesis; @bt_cosewic]. A brief summary of trends and knowledge status related to Arctic grayling, bull trout, kokanee, mountain whitefish and rainbow trout in Williston Watershed streams is provided in @fishandwildlifecompensationprogram2020PeaceRegion with a more detailed review of the state of knowledge for Parsnip River watershed populations of Arctic grayling and bull trout provided below.
+Fish species recorded in the Parsnip River watershed are detailed in Table \@ref(tab:fiss-species-table) [@data_fish_obs]. In addition to flooding related to the formation of the Williston Reservoir, transmission lines, gas pipelines, rail, road networks, forestry, elevated water temperatures, interrupted connectivity, invasion from non-native species and insect infestations affecting forested areas pose threats to fisheries values in the Parsnip River watershed  [@hagen_2015_critical_habs; @stamfordFWCPArcticGrayling; @bull_trout_synthesis; @bt_cosewic]. A brief summary of trends and knowledge status related to Arctic grayling, bull trout, kokanee, mountain whitefish and rainbow trout in Williston Watershed streams is provided in @fishandwildlifecompensationprogram2020PeaceRegion with a more detailed review of the state of knowledge for Parsnip River watershed populations of Arctic grayling and bull trout provided below.
 
 <br>
 
@@ -98,9 +100,6 @@ fiss_sum_grad <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/
 fiss_sum_width <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_width.csv'))
 fiss_sum_wshed <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_wshed.csv')) 
   
-
-
-
 # A summary of historical westslope cutthrout trout observations in the Elk River watershed group by average gradient category of associated stream segment is provided in Figure \@ref(fig:fish-wct-bar). Of `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(total)` observations, `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(Percent) + wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent) + wct_elkr_grad %>% filter(gradient_id == 8) %>% pull(Percent)`% were within stream segments with average gradients ranging from 0 - 8%.  A total of `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(Percent)`% of historic observations were within stream segments with gradients between 0 - 3%, `r wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent)`% were within stream segments with gradients ranging from 3 - 5% and `r wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent)`% were within stream segments with gradients between 5 - 8% [@data_fish_obs; @norris2020bcfishobs]. 
 ```
 
@@ -114,14 +113,14 @@ fiss_sum_grad %>%
 
 
 <br>
-```{r fish-plot-grad, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.', eval=T}
+```{r fish-plot-grad, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.', eval=gitbook_on}
 ##bar graph
 plot_grad <- fiss_sum_grad %>% 
   filter(gradient_id != 99) %>% 
   ggplot(aes(x = Gradient, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
+  # ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Average Stream Gradient", y = "Occurrences (%)")
 plot_grad
 
@@ -139,17 +138,18 @@ fiss_sum_width %>%
 
 <br>
 
-```{r fish-plot-width, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.', eval=T}
+```{r fish-plot-width, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.', eval=gitbook_on}
 ##bar graph
 plot_width <- fiss_sum_width %>% 
   filter(!is.na(width_id)) %>%
   ggplot(aes(x = Width, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
+  # ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Channel Width", y = "Occurrences (%)")
 plot_width
 ```
+
 
 <br>
 
@@ -163,15 +163,16 @@ fiss_sum_wshed %>%
 
 <br>
 
-```{r fish-plot-wshed, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.', eval=T}
+```{r fish-plot-wshed, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.', eval=gitbook_on}
 plot_wshed <- fiss_sum_wshed %>%
   # filter(!is.na(upstream_area_ha)) %>%
   ggplot(aes(x = Watershed, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
+  # ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Watershed Area", y = "Occurrences (%)")+
   theme(axis.text.x=element_text(angle = 45, hjust = 1))
 plot_wshed
 ```
+
 

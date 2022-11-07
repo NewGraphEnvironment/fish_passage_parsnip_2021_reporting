@@ -42,7 +42,7 @@ description: "Fish Passage in the Peace Region"
 
 ```{r switch-gitbook-html, echo=FALSE}
 gitbook_on <- TRUE
-gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 ```
 
@@ -63,6 +63,13 @@ font_set <- 11
 ```{r settings-paged-html, eval= identical(gitbook_on, FALSE)}
 photo_width <- "80%"
 font_set <- 9
+```
+
+```{css, eval= identical(gitbook_on, FALSE), echo=FALSE}
+code {
+  font-style: italic;
+  font-family: Helvetica;
+}
 ```
 
 
