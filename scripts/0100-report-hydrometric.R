@@ -1,4 +1,4 @@
-source('R/packages.R')
+source('scripts/packages.R')
 
 ##08NK002 is elk river at Fernie  - 08NK016 is near sparwood
 ##08NK016
@@ -18,7 +18,7 @@ tidyhat_info <- search_stn_name("Parsnip")
 
 #Parsnip River Above Misinchinka
 station <- '07EE007'
-# start_year = 1970
+
 
 flow_raw <- tidyhydat::hy_daily_flows(station)
 
@@ -26,7 +26,10 @@ tidyhat_info <- search_stn_number(station) #08EE003 is near houston
 hy_stn_data_coll('station')
 
 min(flow_raw$Date)
+max(flow_raw$Date)
 
+start_year = 1970
+end_year = 2019
 ##build caption for the figure - We just jused the old one
 caption_info <- mutate(tidyhat_info, title_stats = paste0(stringr::str_to_title(STATION_NAME),
                                                     " (Station #",STATION_NUMBER," - Lat " ,round(LATITUDE,6),
@@ -45,6 +48,15 @@ hydrograph_stats_print
 
 ggsave(plot = hydrograph_stats_print, file=paste0("fig/hydrology_stats_", station, ".png"),
        h=3.4, w=5.11, units="in", dpi=300)
+
+hydrograph_stats_print_pdf <- fasstr::plot_data_screening(station_number = station
+                                                      # start_year = start_year
+)[["Data_Screening"]]
+hydrograph_stats_print_pdf
+
+ggsave(plot = hydrograph_stats_print_pdf, file=paste0("fig/hydrology_stats_pdf_", station, ".png"),
+       h=3.4, w=5.11, units="in", dpi=300)
+
 
 ##another way to make the graph
 flow <- flow_raw %>%
@@ -84,6 +96,32 @@ plot
 ggsave(plot = plot, file=paste0("./fig/hydrograph_", station, ".png"),
        h=3.4, w=5.11, units="in", dpi=300)
 
+plot_pdf <- ggplot()+
+  geom_ribbon(data = flow, aes(x = Date, ymax = max,
+                               ymin = min),
+              alpha = 0.3, linetype = 1)+
+  # geom_ribbon(data = flow_UDR, aes(x = Date, ymax = daily_ave + 2 * daily_sd,
+  #                                  ymin = daily_ave - 2 * daily_sd),
+  #             alpha = 0.4, linetype = 1)+
+  # geom_ribbon(data = flow_UDR, aes(x = Date, ymax = q975,
+  #                                  ymin = q025),
+  #             alpha = 0.3, linetype = 1)+
+
+  scale_x_date(date_labels = "%b", date_breaks = "2 month") +
+  labs(x = NULL, y = expression(paste("Mean Daily Discharge (", m^3, "/s)", sep="")))+
+  # ggdark::dark_theme_bw() +
+  # ylim(0,600) +
+  # theme(axis.text.y=element_blank())+
+  # scale_y_continuous() +
+  geom_line(data = flow, aes(x = Date, y = daily_ave),
+            linetype = 1, size = 0.7) +
+  scale_colour_manual(values = c("grey10", "red"))
+# coord_cartesian(ylim = c(0, 600))
+plot_pdf
+
+ggsave(plot = plot_pdf, file=paste0("./fig/hydrograph_pdf_", station, ".png"),
+       h=3.4, w=5.11, units="in", dpi=300)
+
 ########----------------------------------------------------------------------------------
 #08NK016 is near sparwood
 station <- '08NK016'
@@ -110,6 +148,7 @@ hydrograph2_stats_caption <- caption_info$title_stats
 
 
 hydrograph_stats_print <- fasstr::plot_data_screening(station_number = station)[["Data_Screening"]] + ggdark::dark_theme_bw()
+hydrograph_stats_print_pdf <- fasstr::plot_data_screening(station_number = station)[["Data_Screening"]]
 hydrograph_stats_print
 
 ggsave(plot = hydrograph_stats_print, file=paste0("./fig/hydrology_stats_", station, ".png"),
@@ -153,4 +192,28 @@ plot <- ggplot()+
 plot
 
 ggsave(plot = plot, file=paste0("./fig/hydrograph_", station, ".png"),
+       h=3.4, w=5.11, units="in", dpi=300)
+
+plot_pdf <- ggplot()+
+  geom_ribbon(data = flow, aes(x = Date, ymax = max,
+                               ymin = min),
+              alpha = 0.3, linetype = 1)+
+  # geom_ribbon(data = flow_UDR, aes(x = Date, ymax = daily_ave + 2 * daily_sd,
+  #                                  ymin = daily_ave - 2 * daily_sd),
+  #             alpha = 0.4, linetype = 1)+
+  # geom_ribbon(data = flow_UDR, aes(x = Date, ymax = q975,
+  #                                  ymin = q025),
+  #             alpha = 0.3, linetype = 1)+
+
+  scale_x_date(date_labels = "%b", date_breaks = "2 month") +
+  labs(x = NULL, y = expression(paste("Mean Daily Discharge (", m^3, "/s)", sep="")))+
+  # ggdark::dark_theme_bw() +
+  # ylim(0,600) +
+  # theme(axis.text.y=element_blank())+
+  # scale_y_continuous() +
+  geom_line(data = flow, aes(x = Date, y = daily_ave),
+            linetype = 1, size = 0.7) +
+  scale_colour_manual(values = c("grey10", "red"))
+
+ggsave(plot = plot_pdf, file=paste0("./fig/hydrograph_", station, ".png"),
        h=3.4, w=5.11, units="in", dpi=300)
