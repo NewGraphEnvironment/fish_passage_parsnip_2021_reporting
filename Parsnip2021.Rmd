@@ -42,7 +42,7 @@ description: "Fish Passage in the Peace Region"
 
 ```{r switch-gitbook-html, echo=FALSE}
 gitbook_on <- TRUE
-gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
+# gitbook_on <- FALSE  ##we just need turn  this on and off to switch between gitbook and pdf via paged.js
 
 ```
 
@@ -63,6 +63,13 @@ font_set <- 11
 ```{r settings-paged-html, eval= identical(gitbook_on, FALSE)}
 photo_width <- "80%"
 font_set <- 9
+```
+
+```{css, eval= identical(gitbook_on, FALSE), echo=FALSE}
+code {
+  font-style: italic;
+  font-family: Helvetica;
+}
 ```
 
 
@@ -179,14 +186,6 @@ Although remediation and replacement of stream crossing structures can have sign
 
 # Introduction {-}
 
-`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the most up to date pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
-
-`r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br>")}`
-
-This document can be considered a living document.  Version numbers are logged for each release with modifications, enhancements and other changes tracked [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/blob/master/NEWS.md) with issues and proposed/planned enhancements tracked [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/issues). 
-
-<br>
-
 The health and viability of freshwater fish populations can depend on access to tributary and off channel areas which provide refuge during high flows, opportunities for foraging, overwintering habitat, spawning habitat and summer rearing habitat [@Bramblett_2002; @swalesRoleOffChannelPonds1989; @diebel_etal2015EffectsRoad].  Culverts can present barriers to fish migration due to low water depth, increased water velocity, turbulence, a vertical drop at the culvert outlet and/or maintenance issues [@slaneyFishHabitatRehabilitation1997; @cote_etal2005Fishpassage]. As road crossing structures are commonly upgraded or removed there are numerous opportunities to restore connectivity by ensuring that fish passage considerations are incorporated into repair, replacement, relocation and deactivation designs. 
 
 <br>
@@ -205,13 +204,21 @@ In 2021/2022, through this collaborative project, and leveraging numerous other 
 
 Through the ongoing development of open source analysis and data presentation tools (including pdf and web-hosted mapping tools) we are identifying new restoration opportunities, clarifying restoration benefits, communicating with the broader community and planning on the ground works. Partner engagement, planning, field assessments and reporting planned for 2022/2023 will continue to include relationship building with road/rail/forest tenure holders, build awareness for connectivity issues in the wider community, assess opportunities, build capacity for ecosystem restoration and provide the data necessary to implement and monitor restoration actions. 
 
+<br>
+
+`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online [interactive report](https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/) at https://newgraphenvironment.github.io/fish_passage_parsnip_2021_reporting/. We recommend viewing online as the web-hosted version contains more features and is more easily navigable. Please reference the website for the latest version number and download the most up to date pdf from https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/raw/master/docs/parsnip2021.pdf")` 
+
+`r if(identical(gitbook_on, FALSE)){knitr::asis_output("<br>")}`
+
+This document can be considered a living document.  Version numbers are logged for each release with modifications, enhancements and other changes tracked [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/blob/master/NEWS.md) with issues and proposed/planned enhancements tracked [here](https://github.com/NewGraphEnvironment/fish_passage_parsnip_2021_reporting/issues). 
+
 
 <!--chapter:end:0100-intro.Rmd-->
 
 
 # Goal and Objectives {-}
 
-The project engages FWCP partners and stakeholders to clearly communicate fish passage issues in the Parsnip River watershed while collaboratively planning and executing the steps necessary to realize fish passage restorations. Work completed and ongoing aligns with the Fish and Wildlife Compensation Program Rivers, Lakes and Reservoirs Action Plan [@fishandwildlifecompensationprogram2020PeaceRegion] sub objective 6 of addressing fish passage issues in streams to enhance productivity of priority species.  Project activities undertaken coincide with the following actions:
+The project engages FWCP partners and stakeholders to clearly communicate fish passage issues in the Parsnip River watershed while collaboratively planning and executing the steps necessary to realize fish passage restorations. Work completed and ongoing aligns with the Fish and Wildlife Compensation Program Rivers, Lakes and Reservoirs Action Plan [@fishandwildlifecompensationprogram2020PeaceRegion] sub objective 6 of addressing fish passage issues in streams to enhance productivity of priority species.  Project activities undertaken fullfill with the following actions:
 
   * PEA.RLR.S06.RI.20 - Conducting engagement to prioritize options for fish passage improvement-P1 
   * PEA.RLR.S06.RI.19 - Conducting research to prioritize fish passage actions-P1
@@ -230,6 +237,7 @@ The Parsnip River watershed is located within the south-eastern portion of the 1
 <br>
 
 The continental divide separates watersheds flowing north into the Arctic Ocean via the Mackenzie River and south and west into the Pacific Ocean via the Fraser River (Figure \@ref(fig:overview-map)). The Parsnip River is a 6th order stream with a watershed that drains an area of 5597km^2^. The mainstem of the river flows within the Rocky Mountain Trench in a north direction into Williston Reservoir starting from the continental divide adjacent to Arctic Lakes. Major tributaries include the Misinchinka, Colbourne, Reynolds, Anzac, Table, Hominka and Missinka sub-basins which drain the western slopes of the Hart Ranges of the Rocky Mountains.  The Parsnip River has a mean annual discharge of `r round(fasstr::calc_longterm_mean(station_number = "07EE007")$LTMAD,1)` m^3^/s with flow patterns typical of high elevation watersheds on the west side of the northern Rocky Mountains which receive large amounts of precipitation as snow leading to peak levels of discharge during snowmelt, typically from May to July (Figures \@ref(fig:fig-hydrology-plot-flow) - \@ref(fig:fig-hydrology-plot-stats)).
+
 
 <br>
 
@@ -251,9 +259,10 @@ knitr::include_graphics("fig/overview.jpg")
 # img <- png::readPNG("fig/hydrology1.png")
 # grid::grid.raster(img)
 
-knitr::include_graphics("fig/hydrograph_07EE007.png")
+knitr::include_graphics("fig/hydrograph_pdf_07EE007.png")
 
 ```
+
 
 <br>
 
@@ -261,11 +270,11 @@ knitr::include_graphics("fig/hydrograph_07EE007.png")
 # img <- png::readPNG("fig/hydrology2.png")
 # grid::grid.raster(img)
 
-knitr::include_graphics("fig/hydrology_stats_07EE007.png")
+knitr::include_graphics("fig/hydrology_stats_pdf_07EE007.png")
 ```
 
 ## Fisheries {-}
-Fish species recorded in the Parsnip River watershed are detailed in Table \@ref(tab:table-fish) [@data_fish_obs]. In addition to flooding related to the formation of the Williston Reservoir, transmission lines, gas pipelines, rail, road networks, forestry, elevated water temperatures, interrupted connectivity, invasion from non-native species and insect infestations affecting forested areas pose threats to fisheries values in the Parsnip River watershed  [@hagen_2015_critical_habs; @stamfordFWCPArcticGrayling; @bull_trout_synthesis; @bt_cosewic]. A brief summary of trends and knowledge status related to Arctic grayling, bull trout, kokanee, mountain whitefish and rainbow trout in Williston Watershed streams is provided in @fishandwildlifecompensationprogram2020PeaceRegion with a more detailed review of the state of knowledge for Parsnip River watershed populations of Arctic grayling and bull trout provided below.
+Fish species recorded in the Parsnip River watershed are detailed in Table \@ref(tab:fiss-species-table) [@data_fish_obs]. In addition to flooding related to the formation of the Williston Reservoir, transmission lines, gas pipelines, rail, road networks, forestry, elevated water temperatures, interrupted connectivity, invasion from non-native species and insect infestations affecting forested areas pose threats to fisheries values in the Parsnip River watershed  [@hagen_2015_critical_habs; @stamfordFWCPArcticGrayling; @bull_trout_synthesis; @bt_cosewic]. A brief summary of trends and knowledge status related to Arctic grayling, bull trout, kokanee, mountain whitefish and rainbow trout in Williston Watershed streams is provided in @fishandwildlifecompensationprogram2020PeaceRegion with a more detailed review of the state of knowledge for Parsnip River watershed populations of Arctic grayling and bull trout provided below.
 
 <br>
 
@@ -319,9 +328,6 @@ fiss_sum_grad <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/
 fiss_sum_width <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_width.csv'))
 fiss_sum_wshed <- readr::read_csv(file = paste0(getwd(), '/data/inputs_extracted/fiss_sum_wshed.csv')) 
   
-
-
-
 # A summary of historical westslope cutthrout trout observations in the Elk River watershed group by average gradient category of associated stream segment is provided in Figure \@ref(fig:fish-wct-bar). Of `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(total)` observations, `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(Percent) + wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent) + wct_elkr_grad %>% filter(gradient_id == 8) %>% pull(Percent)`% were within stream segments with average gradients ranging from 0 - 8%.  A total of `r wct_elkr_grad %>% filter(gradient_id == 3) %>% pull(Percent)`% of historic observations were within stream segments with gradients between 0 - 3%, `r wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent)`% were within stream segments with gradients ranging from 3 - 5% and `r wct_elkr_grad %>% filter(gradient_id == 5) %>% pull(Percent)`% were within stream segments with gradients between 5 - 8% [@data_fish_obs; @norris2020bcfishobs]. 
 ```
 
@@ -335,14 +341,14 @@ fiss_sum_grad %>%
 
 
 <br>
-```{r fish-plot-grad, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.', eval=T}
+```{r fish-plot-grad, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. stream gradient category for the Parsnip River watershed group.', eval=gitbook_on}
 ##bar graph
 plot_grad <- fiss_sum_grad %>% 
   filter(gradient_id != 99) %>% 
   ggplot(aes(x = Gradient, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
+  # ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Average Stream Gradient", y = "Occurrences (%)")
 plot_grad
 
@@ -360,17 +366,18 @@ fiss_sum_width %>%
 
 <br>
 
-```{r fish-plot-width, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.', eval=T}
+```{r fish-plot-width, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. channel width category for the Parsnip River watershed group.', eval=gitbook_on}
 ##bar graph
 plot_width <- fiss_sum_width %>% 
   filter(!is.na(width_id)) %>%
   ggplot(aes(x = Width, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
+  # ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Channel Width", y = "Occurrences (%)")
 plot_width
 ```
+
 
 <br>
 
@@ -384,17 +391,18 @@ fiss_sum_wshed %>%
 
 <br>
 
-```{r fish-plot-wshed, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.', eval=T}
+```{r fish-plot-wshed, out.width = photo_width, fig.cap= 'Summary of historic salmonid observations vs. watershed size category for the Parsnip River watershed group.', eval=gitbook_on}
 plot_wshed <- fiss_sum_wshed %>%
   # filter(!is.na(upstream_area_ha)) %>%
   ggplot(aes(x = Watershed, y = Percent)) +
   geom_bar(stat = "identity")+
   facet_wrap(~species_code, ncol = 2)+
-  ggdark::dark_theme_bw(base_size = 11)+
+  # ggdark::dark_theme_bw(base_size = 11)+
   labs(x = "Watershed Area", y = "Occurrences (%)")+
   theme(axis.text.x=element_text(angle = 45, hjust = 1))
 plot_wshed
 ```
+
 
 
 <!--chapter:end:0200-background.Rmd-->
@@ -716,7 +724,8 @@ hab_sum %>%
 hab_sum_names_pdf <- names(hab_sum) %>% 
   str_replace_all(c('bt_'), '') %>% 
   str_replace_all(c('pscis_'), '') %>% 
-  str_replace_all(c('_name'), '')
+  str_replace_all(c('_name'), '') %>% 
+  str_replace_all(c('slopeclass'), 'slope')
   
 
 hab_sum %>%
@@ -727,7 +736,7 @@ hab_sum %>%
          spawning_km,
          rearing_km,
          network_km,
-         slopeclass03_km:slopeclass15_km) %>% 
+         slope03_km:slope15_km) %>% 
   mutate(stream = str_replace_all(stream, 'tributary', 'trib'),
          stream = str_replace_all(stream, 'River', 'R'),
          stream = str_replace_all(stream, 'Creek', 'Ck')) %>% 
