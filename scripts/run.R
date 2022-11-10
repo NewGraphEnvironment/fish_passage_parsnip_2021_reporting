@@ -6,19 +6,19 @@ preview_chapter('0100-intro.Rmd')
 #################################################################################################
 source('scripts/packages.R')
 {
-  # These files are included in the gitbook version already so we move them out of the build
-  files_to_move <- list.files(pattern = ".Rmd$") %>%
-    stringr::str_subset(., '2200|2300|2400', negate = F) #move the attachments out
-  files_destination <- paste0('hold/', files_to_move)
+  # # These files are included in the gitbook version already so we move them out of the build
+  # files_to_move <- list.files(pattern = ".Rmd$") %>%
+  #   stringr::str_subset(., '2200|2300|2400', negate = F) #move the attachments out
+  # files_destination <- paste0('hold/', files_to_move)
 
   ##move the files
-  mapply(file.rename, from = files_to_move, to = files_destination)
+  # mapply(file.rename, from = files_to_move, to = files_destination)
 
   rmarkdown::render_site(output_format = 'bookdown::gitbook',
                          encoding = 'UTF-8')
 
   ##move the files from the hold file back to the main file
-  mapply(file.rename, from = files_destination, to = files_to_move)
+  # mapply(file.rename, from = files_destination, to = files_to_move)
 }
 
 

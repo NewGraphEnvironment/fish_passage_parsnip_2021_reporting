@@ -1,3 +1,8 @@
+
+# fish_passage_parsnip_2021_reporting 0.1.2
+ * As Jen requested, please add reference to our FWCP action plan and priority action alignment in your Executive Summary.
+ * fix the figure error reference on page 20 of pdf.
+
 # fish_passage_parsnip_2021_reporting 0.1.2
 
   * make plots not in ggdark

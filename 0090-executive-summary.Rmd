@@ -10,6 +10,14 @@ The Society for Ecosystem Restoration in Northern BC (SERNbc) is working togethe
 
 <br>
 
+The project engages FWCP partners and stakeholders to clearly communicate fish passage issues in the Parsnip River watershed while collaboratively planning and executing the steps necessary to realize fish passage restorations. Work completed and ongoing aligns with the Fish and Wildlife Compensation Program Rivers, Lakes and Reservoirs Action Plan [@fishandwildlifecompensationprogram2020PeaceRegion] sub objective 6 of addressing fish passage issues in streams to enhance productivity of priority species.  Project activities undertaken fullfill with the following actions:
+
+  * PEA.RLR.S06.RI.20 - Conducting engagement to prioritize options for fish passage improvement-P1 
+  * PEA.RLR.S06.RI.19 - Conducting research to prioritize fish passage actions-P1
+  * PEA.RLR.S06.HB.21 - Restoring fish access to streams-P1
+  
+<br>
+
 This project builds on Society for Ecosystem Restoration Northern BC (SERNbc) work in 2019 - 2020 which can be referenced [here](https://newgraphenvironment.github.io/Parsnip_Fish_Passage/) [@irvine2020ParsnipRiver]. In 2019, following a literature review, analysis of fish habitat modelling data, the Provincial Stream Crossing Inventory System (PSCIS) and a community scoping exercise within the McLeod Lake Indian Band habitat confirmation assessments were conducted at 17 sites throughout the Parsnip River watershed with 10 crossings rated as high priorities for rehabilitation and three crossings rated as moderate priorities for restoration.
 
 <br>
